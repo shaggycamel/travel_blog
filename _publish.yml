@@ -1,0 +1,7 @@
+- source: project
+  quarto-pub:
+    - id: de904882-b211-4e0b-88b4-8c49749d5324
+      url: 'https://quartopub.com/sites/shaggycamel/travel-blog'
+  netlify:
+    - id: 6ee92754-7561-4cb8-b229-b000c2e19682
+      url: 'https://shaggycamel-travelblog.netlify.app'

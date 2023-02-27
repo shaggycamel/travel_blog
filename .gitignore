@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# Quarto files
+/.quarto/
+
+# Blog photos
+*.JPG
+*.jpg
