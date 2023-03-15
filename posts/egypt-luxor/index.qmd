@@ -1,0 +1,103 @@
+---
+title: "Egypt - Luxor"
+author: "Oliver Eaton"
+date: "2023-03-10"
+categories: [Egypt, Luxor]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/tour/_DSC2534.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+The ticket machine at Aswan train station was not working when we attempted to purchase tickets for the 4pm train to Luxor, these small things are typical in Egypt. We waited until fifteen minutes before departure before trying one last time. The man accepted \$15USD **cash** for one, handing us two tickets to Luxor with unmarked seat numbers. Walking through the station multiple officials stopped us to inspect our tickets, cleaners followed ensuring we got to the correct platform then asked for a tip, a train worker took our bags stored them in the overhead space then held out his hand for a tip. I wish to be left alone sometimes, these faint but "necessary" tip-worthy acts are starting to piss me off...
+
+We made it onto our train with minutes to spare, for a while I thought we would have to stay *another* night in Aswan. The train journey took three hours, we arrived around 7.30 in the evening and walked from the station to our hostel. Surprisingly, after leaving the immediate surroundings of the train station, we weren't hassled by taxi or horse-drawn carriage drivers. Our room was private, as opposed to a dormitory, sometimes a few nights alone is nice. You meet fewer people but can sprawl out belongings, stretch in the mornings, play music, etc.
+
+We stayed three nights in Luxor and did a few touristy things, they were:
+
+-   Luxor Temple
+-   Joined a tour which included:
+    -   Colossi of Memnon
+    -   Hatshepsut Temple
+    -   Valley of the Kings
+    -   Habu Temple
+-   Ride a hot air balloon
+-   Karnak Temple
+
+# Luxor Temple
+
+On our first day in Luxor, we chilled until early after afternoon, planning to meet a Mexican friend, whom we meet in the Aswan hostel, to visit Karnak Temple with. Following that up with an evening visit to Luxor Temple. Through a miscommunication (not helped by shoddy internet) we missed the opportunity to meet our Mexican friend, and because of this Karnak Temple took a back seat. Instead, we made our way to Luxor Temple which is the only temple in Egypt with opening hours that extend beyond 5pm.
+
+The crowds at the Luxor Temple were insane. Just outside, hordes of locals had congregated to pray and mingle at a mosque, which probably happens every night. Inside, tourists were aplenty. The statues and columns were huge! Luxor Temple was originally built for King Ramses, but various other pharaohs including Roman leaders added and amended the temple with their own flavour. Outside the Temple, Sphinx statues line a path that originally ran all the way to Karnak Temple but now lasts just around a mile. In ancient times Pharaohs were carried on a float between the temples to mark some annual festival.
+
+<br>
+
+```{r luxor_temple}
+carousel("luxor_temple", yaml.load_file(here("posts", "egypt-luxor", "image_data", "luxor_temple", "luxor_temple.yml")))
+```
+
+# Tour
+
+On our second day, we joined a tour booked through the hostel, this was the cheapest way to be transported between all the tourist sights that lie on the East Bank across the river.
+
+The Colossi of Memnon was our first stop, long ago it was damaged by an earthquake cracking the lower half. Following its rupture, it was reputed to *sing* on various occasions most likely caused by wind moving through the cracks.
+
+Hatshepsut Temple was extremely busy, she was a female pharaoh who lead for twenty-one years. A section within a mountain was cleared to make way for her temple, sitting nestled in the depression it is extremely beautiful. Ancient Egyptians described the surrounding mountain as arms that "hugged" the temple. One local man adjusted my headscarf "correcting" it and then asked for a tip. I walked away. Not long afterwards another man approached insisting my headscarf was tied wrongly, funny that!
+
+Valley of the Kings is a valley in which, for nearly 500 years, rock-cut tombs were excavated for pharaohs and powerful nobles. I've forgotten whose tombs we visited, but they were beautiful. One in particular still retained its blue colouring.
+
+Habu Temple was the final stop. Only Trav & I entered this temple, everyone else from the tour was too tired. They missed out! The temple was lovely, with large steep walls it was really pretty.
+
+Joining the tour was a great way to meet other tourists. We got along with a few people and will most likely bump into them elsewhere along the tourist trail.
+
+<br>
+
+```{r tour}
+carousel("tr", yaml.load_file(here("posts", "egypt-luxor", "image_data", "tour", "tour.yml")))
+```
+
+# Hot Air Balloon
+
+The one thing Dad pleaded with us not to do on this holiday was a ride in a hot air balloon. Naturally, this made it one of our *must-do* activities. A ride in Luxor was about an eighth of the price of one in Cappadocia, Turkey.
+
+On our third day in Luxor, we woke at 5.30am and were transported to the take-off point across the river. Balloons dotted the sky making an extremely pretty morning vista. My camera was confiscated for the ride. National Egyptian jurisdiction forbids cameras from being taken into air space, but nowadays everyone takes photos with their phone so it didn't make much sense. Trav was able to snap a few shots while we were airborne.
+
+We met our balloon pilot, and funnily enough, one side of his face was burnt off, so I now understand Dad's concern with Hot Air Balloon safety, in combination with the fact that balloons only have vertical control. Lateral movement is wist entirely upon unpredictable winds.
+
+It was fun, and the views were great! For me, once is enough, I don't think I'll do another.
+
+<br>
+
+```{r hot_air_balloon}
+carousel("hot_air_balloon", yaml.load_file(here("posts", "egypt-luxor", "image_data", "hot_air_balloon", "hot_air_balloon.yml")))
+```
+
+# Karnak Temple
+
+After the Balloon, in the afternoon we visited Karnak Temple. Again, this temple was built for Ramses but was altered by various following Pharaohs. It is massive! The temple seemed to sprawl forever. The large columns were impressive.
+
+<br>
+
+```{r karnak_temple}
+carousel("karnak_temple", yaml.load_file(here("posts", "egypt-luxor", "image_data", "karnak_temple", "karnak_temple.yml")))
+```
+
+# Wrap Up
+
+I enjoyed Luxor more than Aswan, I think this is because I wasn't feeling sick. Also, I felt far less pressure from touts and drivers trying to scam me into emptying my pockets. Maybe I'm just getting better at dealing with them?
+
+After Luxor, we organised transportation to Dahab. This entails a ten-hour overnight GoBus to Cairo, with a two-hour layover, and finally a twelve-hour Minibus to Dahab. Which is like a full day of bus travel, yuck! But this is by the far the cheapest and best way for us to make it to the Sinai Coast. If the ferry was still operating between Hurghada & Dahab this would make travel to Sinai easy, but for some reason, it isn't...it's just one of those small typical things.
+
+<br>
+
+![](./image_data/misc/_DSC2329.JPG)
