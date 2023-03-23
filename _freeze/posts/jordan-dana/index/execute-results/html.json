@@ -1,0 +1,14 @@
+{
+  "hash": "64f80a07fd65d08bbcc6854b9df4f73a",
+  "result": {
+    "markdown": "---\ntitle: \"Jordan - Dana\"\nauthor: \"Oliver Eaton\"\ndate: \"2023-03-26\"\ncategories: [Jordan, Dana]\nformat: \n  html:\n    theme: \n      - pandoc\nimage: \"./image_data/hike/_DSC2705.JPG\"\ndraft: true\n---\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n# Hike\n\n\n<br>\n\n\n::: {.cell}\n\n:::\n\n\n# Wrap up\n\n\n<!-- ![](./image_data/misc/_DSC2705.JPG) -->\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

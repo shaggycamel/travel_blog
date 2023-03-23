@@ -1,0 +1,32 @@
+---
+title: "Jordan - Dana"
+author: "Oliver Eaton"
+date: "2023-03-26"
+categories: [Jordan, Dana]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/hike/_DSC2705.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+# Hike
+
+<br>
+
+```{r hike}
+# carousel("hike", yaml.load_file(here("posts", "jordan-aqaba", "image_data", "hike", "hike.yml")))
+```
+
+# Wrap up
+
+<!-- ![](./image_data/misc/_DSC2705.JPG) -->

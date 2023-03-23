@@ -1,0 +1,44 @@
+---
+title: "Jordan - Aqaba"
+author: "Oliver Eaton"
+date: "2023-03-20"
+categories: [Jordan, Aqaba]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/misc/_DSC2705.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+Our ferry crossing from Nuweibaa to Aqaba took a whole day, it wasn't the journey itself that took a long time, it was the amount of security & passport checks and waiting around for *who knows what*. After leaving the hostel around 9am, we met Mike & Anita (M&A) at the ferry terminal and were sitting on the boat by 1pm. The boat didn't depart from the dock until around 3.30pm. Trav & I were exhausted from a terrible sleep the night prior, complete with bed bugs, flies & mosquitoes, so we essentially slept the whole three-hour crossing. Jordan is an hour ahead of Egypt, so we arrived around 7.30pm local time, split a taxi to the city with M&A, said our farewells to each other (knowing we'll probably meet again), and walked to our hostel.
+
+The atmosphere in Aqaba is a stark contrast to Egypt. Instantly things feel more relaxed, touts aren't as insistent and take *"no"* for an answer, accepting it, and walking away. The streets are cleaner, the air feels fresher and there is less hustle & bustle. Although, everything is more expensive, it is a similar price to goods & services in NZ. A feeling swept over me that we would enjoy our time in Jordan.
+
+After finding our hostel, the owner offered us a free dinner, eating with others at the hostel and cooked by a Palestinian guy who was volunteering there. A big platter of rice & chicken with tomato salad on the side was served. It was absolutely divine! Cardamon and other Arabic spices could be tasted, and best of all, it was, **in fact**, *free*, there was no bullshit hidden fees snaked in there.
+
+We didn't plan to see or visit anything in Aqaba, it was used as a point to recharge, do some washing, purchase some necessities (such as underwear) and organise our journey through Jordan.
+
+# Beach
+
+After purchasing some small items, we spent the majority of the day at the public beach swimming & sunbathing, and reading our books. It's a nice atmosphere there as local families relax under the awning shade, swim, listen to music, laugh and have fun. No one bothered us to buy cheap plastic crap or drugs, we relished the peace.
+
+<br>
+
+```{r beach}
+carousel("bch", yaml.load_file(here("posts", "jordan-aqaba", "image_data", "beach", "beach.yml")))
+```
+
+# Wrap up
+
+After smoking shisha and eating falafel for two peaceful nights in Aqaba, we organised a trip to Wadi Rum, which is a nature reserve in the desert, through the hostel owner.
+
+![](./image_data/misc/_DSC2705.JPG)
