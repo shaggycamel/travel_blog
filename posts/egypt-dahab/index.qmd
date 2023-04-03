@@ -1,0 +1,86 @@
+---
+title: "Egypt - Dahab"
+author: "Oliver Eaton"
+date: "2023-03-15"
+categories: [Egypt, Beach, Hike]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/hike/WAI811.jpeg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+Dahab is a really relaxed place on the Sinai Coast of the Red Sea with a beautiful mountain range to the north that makes for a picturesque backdrop. We arrived in the evening after a twenty-three-hour bus journey, there were five or six police checkpoints between Cairo and Dahab which is why the trip ended up being so lengthy. I'm not sure why this area of Egypt is so heavily guarded. After walking to our hostel from the bus-stop we went straight to bed. Darcy, whom we met in Aswan, was in our (four person) dormitory.
+
+Most people we met here had stayed for weeks, even months, some actually lived there, usually for snorkelling, scuba-diving & free-diving. Life at the hostel felt like a small commune where everyone ate together and organised things to do in the evenings. Locals in town are easy-going, contrasting with the rest of Egypt's in-your-face culture. Very few times sales-people approached or pressured us to purchase something.
+
+We didn't have anything concrete planned to do while here, the whole purpose was to relax and unwind. During the four days we spent in Dahab, we played volleyball for two, swam at the beach, snorkelled at the Blue Hole Coral Reef and hiked with friends Mike & Anita (who we also met in Aswan).
+
+Because Dahab wasn't focused on attractions, I did not carry the camera as often, which meant I captured very few photos (too busy relaxing). Most of the images in this post were taken by Trav, Anita or someone else.
+
+# Volleyball
+
+Rafiki Hostel had a very active WhatsApp group (which is handy, although the notifications became overwhelming). On our first day a message was sent mentioning that beach volleyball will be played, both Trav & I played volleyball at school (indoor & beach), so we were excited to tag along.
+
+A beach volleyball court had been set up on the private beach of one of the resorts; locals, back-packers & ex-pats who were keen on volleyball also got the message and showed up to play. It was really fun blowing off the cobwebs and playing volleyball again, I think I'll take it up when I arrive back in NZ. It was funny watching the locals passionately *discuss* the rules in Arabic, often the game would play-on/continue when no-one was really sure what was happening, even including the locals. This feeling of uncertainty is common throughout Egypt, although it interested me that the locals felt uncertain about things during the match...it makes me wonder if they also feel uncertainty about things that happen in the street (similar to foreigners).
+
+We enjoyed volleyball so much that we spent a whole other day playing.
+
+<br>
+
+```{r volleyball}
+carousel("vball", yaml.load_file(here("posts", "egypt-dahab", "image_data", "volleyball", "volleyball.yml")))
+```
+
+# Blue Hole
+
+The Blue Hole Coral Reef is probably the most popular diving & snorkelling spot in Dahab, it is suitable for both beginner & experienced divers and snorkelling on the water's surface.
+
+Trav & I rented bikes from the hostel and biked in the heat for thirty minutes or so to get there. It felt nice being independent and cycling, I miss my bike back home in NZ. When we arrived we hired gear and snorkelled the reef, which drops abruptly ten metres or so out from the coastline. Fish of all colours could be seen, it was amazing to see such an abundance of marine life all centred around the coral. It makes one realise just how important coral is to the ocean eco-system.
+
+For some reason wearing flippers gave me cramp in my toes, this always happens. So I was a bit uncomfortable out there in the ocean, especially because the water was seeping in through my cheap goggles. I don't think I am cut out for diving, honestly, I experience a feeling of claustrophobia when I'm stuck in a place with no exit, like underwater or the ocean depths for example. Perhaps this is an irrational fear, something I should attempt to overcome in the future?
+
+Regardless of me being a wimp, snorkelling the Blue Hole was awesome! We chilled out on the sunny balcony of a cafe afterwards, reading our books, then biked home.
+
+<br>
+
+```{r blue-hole}
+carousel("bluehl", yaml.load_file(here("posts", "egypt-dahab", "image_data", "blue_hole", "blue_hole.yml")))
+```
+
+# Hike
+
+Mike & Anita asked in the WhatsApp group if anyone was keen to join them on a hike to St Catherine's Monastery, which is a monastery situated at the top of the highest peak in Sinai. Trav & I were keen so responded. After talking with the hostel about transportation we were hit with a price of \$40USD which included transportation, a permit into the national park & a guide. We thought this was a bit expensive for what was seemingly a simple hike, in typical Egyptian fashion simple things get blown out of proportion and become expensive as everyone tries to feed off the tourist-teat. So we researched hiking in the hills that could be seen from the hostel and found a suitable circuit.
+
+It was a scorching hot morning when we left, I remember sweating balls in the dormitory. We caught a taxi to the foot-hills and started making our way upwards, surprisingly ground was covered quite quickly and within an hour or so we had already made it to the top ridge-line. The view from the top was incredible! The whole of Dahab could be seen, as well as distant mountains and Saudi Arabia was in full view. Rock formation was interesting in the sense that it was different to what is seen in NZ, whilst hiking it would've be nice to have a geologist explain how and why the rocks formed these ways.
+
+After walking the ridge line for a bit we made a descent following a dried-up river bed. This led us to a weir, used to stop the town from flooding during the rainy season. It appeared odd to prepare for something like this, the idea of heavy rains in this area seems so strange. In saying that, it was forecast to rain the following day so there was a chance we would witness it.
+
+It was great getting out and doing a hike, strengthening our friendship with Mike & Anita along the way. They are following a very similar travel route to us so no doubt we will see them in the future.
+
+<br>
+
+```{r hike}
+carousel("hk", yaml.load_file(here("posts", "egypt-dahab", "image_data", "hike", "hike.yml")))
+```
+
+# Wrap up
+
+Dahab was lovely! I felt so relaxed here and would definitely return, maybe to stay for a longer period. We checked out of the hostel in preparation for the 11am bus to Nuweibaa. By the time we arrived at the bus stop the rains had begun. Holy shit, the rains came down strong! The winds also picked up, it was like a desert storm as sand darkened the sky. Not far from the bus stop water was streaming off the mountain ranges creating rivers that flowed into the ocean, cars were driving through flooded roads. The weather turned around extremely quickly, from nice & warm to windy, wet and flooded. Luckily weirs at the bottom of the hills temp the flow of water.
+
+Our bus was three hours late. We took the bus to Nuweibaa so we could ferry to Jordan the following day. As we arrived in Nuweibaa my initial thoughts were that it is a shit-hole, and it was. It's an industrial town with no tourists and everyone rips you off feigning a lack of English (which is probably true) charging insane prices for bottled water and taxis. The *hostel* we stayed at was disgusting! We were two of four or so people staying there. Human feces festered in every toilet, flies, mosquitoes and bed bugs pestered us all night & the man running the show was so stoned he groaned instead of talked. Everything was a mess, although it had the potential to be an amazing place. I guess the town Nuweibaa just doesn't have much going for it so tourists don't really visit.
+
+We only had £1500EGP left so we needed to ration what we had until arriving in Jordan.
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "egypt-dahab", "image_data", "misc", "misc.yml")))
+```

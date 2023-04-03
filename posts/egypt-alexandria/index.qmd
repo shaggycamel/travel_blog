@@ -2,7 +2,7 @@
 title: "Egypt - Alexandria"
 author: "Oliver Eaton"
 date: "2023-02-27"
-categories: [Egypt, Alexandria]
+categories: [Egypt, Historical Site, City]
 format: 
   html:
     theme: 

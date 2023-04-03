@@ -2,7 +2,7 @@
 title: "Egypt - Cairo"
 author: "Oliver Eaton"
 date: "2023-02-24"
-categories: [Egypt, Cairo]
+categories: [Egypt, Historical Site, City]
 format: 
   html:
     theme: 

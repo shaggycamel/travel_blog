@@ -2,7 +2,7 @@
 title: "Egypt - Bahariya Oasis"
 author: "Oliver Eaton"
 date: "2023-02-26"
-categories: [Egypt, Bahariya, Oasis]
+categories: [Egypt, Desert]
 format: 
   html:
     theme: 

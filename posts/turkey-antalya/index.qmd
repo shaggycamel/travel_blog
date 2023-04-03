@@ -1,0 +1,27 @@
+---
+title: "Turkey - Antalya"
+author: "Oliver Eaton"
+date: "2023-04-03"
+categories: [Turkey, City, Nature]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/jeep_tour/_DSC2943.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+<br>
+
+```{r jeep}
+carousel("jeep", yaml.load_file(here("posts", "jordan-wadi-rum", "image_data", "jeep_tour", "jeep_tour.yml")))
+```
