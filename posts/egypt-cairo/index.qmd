@@ -1,0 +1,118 @@
+---
+title: "Egypt - Cairo"
+author: "Oliver Eaton"
+date: "2023-02-24"
+categories: [Egypt, Historical Site, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/islamic/_DSC1049.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+Cairo was the first stop on this seven month endeavour. After landing, Trav & I negotiated a taxi from the airport to our accommodation for a reasonable price of £300EGP (\$15NZD). The initial taxi ride was a shock to the senses, noises & sights were overwhelming. Car horns, in particular, dominate airwaves, and beeps and bops blend into one continuous stream of alerts. The architecture of buildings and infrastructure that whiz past the window is curved and majestic, very different and foreign to the squared, angled buildings in Australasia. In contrast, half-finished apartment blocks lie adjacent drenched in rubble and construction waste. We have only been in Egypt for 30 minutes so far...a slight fear of integration gripped my mind on the initial taxi ride.
+
+We spent five incredible days in Cairo and our time was distributed across a few themes, they were:
+
+-   Pyramids, which we took a guided tour.
+-   Sighting ancient artefacts in museums.
+-   Visiting mosques in Islamic Cairo.
+-   Visiting churches in Coptic Cairo.
+-   Lastly, just wandering around...it never seemed to bore.
+
+Before delving into each theme, I would like to describe the general atmosphere. Cairo has a population of 20 million, it is an extremely busy place this is what adds to its wondrous nature! The traffic is crazy, and merely crossing the road is a challenge, something that takes time to grasp. Our first attempt at crossing the road took minutes, we were waiting for a gap in the traffic to allow safe passage across the street although the gap never came. Locals seem to just drip into the traffic like flour moving through a cake-sifter, somehow emerging safely on the other side. After a few days, we seemed to get the hang of it, although not at the same level of confidence as the locals. The trick is to spot a section of traffic with no motorcycles (they're nimble and unpredictable), raise your hand, step onto the road, make eye contact with drivers and feign a resolute air. Under no circumstances should you hesitate, stride with the perceived confidence of a fashion model on the runway. The fastest, loudest and most dangerous runway you've ever walked.
+
+Touts and salesmen approach you consistently. We must have looked the brightest shade of green when we first arrived because we were pulled into gift stores so many times. They're all full of junk nik-naks such as plastic pyramid figures, unauthentic papyrus paper & perfume and shisha pipes. Everyone who approaches you on the street is an *artist* willing to show you their life's work, and sell for a "good" price. Tour guide salespeople working for a "government-run" tourist agency try to vie a way into your schedule by approaching with "Where you from? - NZ, ahh, Kia Ora! *\<Insert proceeding sales pitch...\>*". We found it more pleasant to organise tours directly through the hostel or hotel. Another common scam we were stung by a few times is the water scam. Sometimes when ordering food or coffee, the server will place a bottle of water on your table. Being ignorant Westerners we assumed this water was gratis, on the house, however when paying, the bottle of water gets added to the tab at an insanely exorbitant price. Whenever an extra service is included in your order but not initially discussed it becomes an entrepreneurial way for a few extra bucks to be squeezed from tourists. Everything is an add-on in Egypt, we learnt to say "no, thank you" when something additional makes its way into service. We also learnt to just ignore and walk away from insistent touts pushing you to empty your pockets one way or another. It becomes easy to identify when someone approaches with the aim to scam you.
+
+Scams aside, people are friendly, and welcoming and just want to talk. Only once we felt unwanted and unsafe which happened to be in a backstreet neighbourhood. In saying that, our most genuine experiences were also experienced in backstreet neighbourhoods, so it's a dicey situation when venturing from the beaten path, mainly geared toward positive experiences.
+
+# Pyramids
+
+Our first full day at Cairo included a tour of the pyramids. There are four main sites, they are:
+
+1.  Saqqarah
+2.  Memphis
+3.  Dahshur
+4.  Giza
+
+## Saqqarah
+
+Our first stop on the tour was Saqqarah, which is where early attempts at large tomb building takes place, the famous **Step Pyramid** lies here. Accompanying the Step Pyramid is the **Pyramid of Userkaf**, which kinda looks like a big, triangle-shaped pile of rocks.
+
+## Memphis
+
+Next was Memphis. No pyramids actually lie here, although its historical origins stem from the fact that it was the capital of Egypt during the union of Upper & Lower Egypt into one country. The main attraction is a large, damaged, horizontal lying statue of King Ramses II, which was discovered face-down in a swamp in an Egyptian slum in 1820.
+
+## Dahshur
+
+Dahshur is home to the **Bent Pyramid** and its replacement the **Red Pyramid**. During the construction of the first tomb for Pharaoh Sneferu, original slope calculations made by architects & engineers were too steep and halfway up the pyramid a change in gradient is seen, which gave rise to the Bent Pyramid. A conscious display of project scope alteration in history's finest. Brilliant! Because of this miscalculation another pyramid was constructed nearby, the Red Pyramid. I'm unsure why the original project wasn't abandoned and resources salvaged to build the replacement pyramid.
+
+We were able to enter the pyramids here, which was exciting! Clambering down the steep entranceways into the pyramids felt like we were discovering something for the first time. It was a special feeling. Deep inside the tombs it is hot and deprived of oxygen, a spiritual feeling nonetheless.
+
+## Giza
+
+Giza is where the **Sphinx**, **Great Pyramid**, and two other large pyramids lie, six small pyramids are also situated here. Giza was crawling with tourists, it was easily the most crowded of sites. We paid £8000EGP to ride camels around the base of the pyramids. This is an insane price to pay, but riding camels really added to the flavour of being in the desert beneath the largest pyramids, which were the biggest structures on earth for thousands of years (until the Eiffel Tower). It was an incredible and fulfilling experience I have dreamed of since I was a child. We couldn't enter the pyramids here, which [did not]{.underline} detract from the wonder.
+
+```{r pyramids}
+carousel("pmid", yaml.load_file(here("posts", "egypt-cairo", "image_data", "pyramids", "pyramids.yml")))
+```
+
+# Museums
+
+There a few museums in Cairo, the two we visited were:
+
+1.  National Egyptian Museum
+2.  The Civilization Museum
+
+## National Egyptian Musuem
+
+The National Egyptian Museum is the oldest of the museums and contains thousands of ancient artefacts. It comprises two floors and took us two hours to complete. Near the end, we were only partially reading information and gazing for slightly less time than at the beginning. The main displays here are statues, mummy sarcophagi, jewellery and the earliest signs of Ancient Egyptian life such as hieroglyphic writing on papyrus, agricultural tools and my personal favourite, dice and board games.
+
+## The Civilization Museum
+
+The Civilization Museum is relatively new. The main attraction here is mummies, actual mummies. We saw twenty intact mummies and gained an insight into who these people were, their personalities, achievements, and how the general populous perceived them during their time of rule. It was an eerie, creepy and sombre feeling. These people have been preserved for thousands of years using a technique that developed and improved throughout the Ancient Egyptian era. They would have had no idea how successful their preservation techniques actually were/are. Strangely, when staring into the faces of these once-living beings I felt some kind of deep connection that is hard to describe. Perhaps some ancient Egyptian reincarnation has settled somewhere deep inside my soul?
+
+```{r museums}
+carousel("msm", yaml.load_file(here("posts", "egypt-cairo", "image_data", "museums", "museums.yml")))
+```
+
+# Islamic Cairo / Mosques
+
+Islamic Cairo was probably my favourite place in Cairo. The number of mosques with their incredible architecture is overwhelming. We visited many, the main ones were:
+
+-   Mohamed Ali Mosque.
+-   Al Hakim Mosque.
+-   Ibn-Tulun Mosque (a scene from Star Wars was filmed here).
+
+Another aspect of Islamic Cairo is the Khan Al-Khalili market. The number of layers to this market is insane, it doesn't seem to end. You can find anything here, most of which is junk, but being surrounded by so many people, squandering down tight alleyways and being shouted at by sales people makes for a different way to spend your evening. We came here a few times just because it was so much fun.
+
+```{r islamic}
+carousel("islamic", yaml.load_file(here("posts", "egypt-cairo", "image_data", "islamic", "islamic.yml")))
+```
+
+# Coptic Cairo / Churches
+
+Coptic faith (Christianity) is prevalent in Cairo second to the Islamic faith. The Coptic Cairo area contains lots of churches with beautiful architecture, the most famous being **The Hanging Church**. Walking into this church you can just feel a wave of history in the air, some people began to pray upon entry. The building's interior is incredibly beautiful.
+
+Next to The Hanging Church is a Coptic museum. In typical Christian fashion information on display is glazed over, where only positive and somewhat ignorant details are presented. I left here with so many questions and a reinforcement for my disdain of Christianity.
+
+```{r coptic}
+carousel("coptic", yaml.load_file(here("posts", "egypt-cairo", "image_data", "coptic", "coptic.yml")))
+```
+
+# Wandering / Misc
+
+Just wandering around Cairo was always fun. Our most genuine experience was exploring the backstreets of Islamic Cairo and ordering coffee & shisha at a coffee shop named **Dr Joe**. The coffee was delicious, unlike something I have ever tasted. It was malty, creamy, flavourful, small and strong. Amazing! We spent days trying to find a similar coffee elsewhere to no avail. I love the head rush shisha gives you, I understand why older locals spend so much time at these coffee shops puffing away, drinking coffee and playing dominoes, backgammon or chess. During our time there the owner played a football match on the television, and lots of people wandering by stopped to watch the football and chat with us. When Trav went up to pay the owner didn't specify a price saying he was happy with whatever. He was genuine in his generosity and was purely happy to have us at his store, which is what made this one of the most precious experiences in Cairo. Trav ended up paying £50EGP for the coffee and shisha, a steal.
+
+```{r wander}
+carousel("wander", yaml.load_file(here("posts", "egypt-cairo", "image_data", "wander", "wander.yml")))
+```

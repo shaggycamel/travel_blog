@@ -1,0 +1,105 @@
+---
+title: "Jordan - Amman"
+author: "Oliver Eaton"
+date: "2023-03-30"
+categories: [Jordan, Nature, Historical Site, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/jerash/_DSC3438.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+We set out with the plan to hitchhike from Dana to Amman. Standing on the main road, one hour walk up the hill from our Dana accommodation, the first vehicle to pick us up was the public mini-bus (haha!), which terminated at a Tafilah, halfway to Amman and cost 3JOD each (cheap).
+
+While passing through a checkpoint, police pulled the driver and a passenger off the bus and heavily queried them about something. Quickly this turned into a shouting match and a small scuffle. This lasted for about fifteen minutes, the whole time Trav & I tried to sit inconspicuously in the back seat with our heads down hoping not to get dragged into it. At one point we considered taking our bags and getting out of the situation, it was kind of scary. Something switched up and our driver + passenger, who were fuming, just got back in the van and off we drove, onward from the checkpoint. This was a scary yet exciting experience, we had no idea what the argument was about, but I think the police were vying for a bribe which didn't eventuate.
+
+At Tafilah, our driver assisted us with finding a local bus to Amman. We boarded a large bus, paid 3JOD and were on our way. Damn, this whole experience was smooth and cheap. Everything just lined up, we arrived at our Amman hostel early and celebrated with a hot shower.
+
+There were a few things we wanted to do while in Amman, they were:
+
+1.  Visit the Citadel Ruins
+2.  Visit the Roman Amphitheatre
+3.  Float in the Dead Sea
+4.  Make a day trip to the town of Jerash, which has its own set of city ruins & a castle
+
+After day two we hired a car, which made transportation between sites and general organisation of the day much simpler and quicker. Driving in Amman is insane, streets in the city centre are lawless, car indication and sometimes traffic lights have no bearing, it is quite fun. On the highways outside of the city, driving is fine, drivers still carry out crazy maneuvers but there are fewer cars on the road so it's manageable.
+
+# Citadel Ruins
+
+Our hostel was next to the Citadel Ruins. The owner gave us walking directions which meant that we ended up jumping the fence to the compound and not paying for the site. Great! We'll do anything to save a few bucks at this stage, Jordan is expensive. A panoramic view of Jordan from the top of the ruins is amazing, the largest flagpole in the world can be seen from the top. Sadly, no flag was flying.
+
+<br>
+
+```{r citadel}
+carousel("citadel", yaml.load_file(here("posts", "jordan-amman", "image_data", "citadel", "citadel.yml")))
+```
+
+# Roman Amphitheatre
+
+We walked from the Ruins to the Amphitheatre. We were hungry and tried to find a bakery for some bread, but it was actually the first day of Ramadan, so everything was closed! Eventually, we found a bakery and spread jam on pita bread in the streets for lunch. Everyone was looking at us, scowling. We felt really, really bad! Later, we discovered that eating in public during Ramadan is illegal, so we're lucky no police saw us (although our western ignorance may have saved us).
+
+The Amphitheatre is right in the city, it was a nice place to chill out. We sat at the top, smoked a cigarette and took in the relaxed atmosphere. By this stage, we've seen a few Roman Amphitheatres.
+
+<br>
+
+```{r amphitheatre}
+carousel("amphitheatre", yaml.load_file(here("posts", "jordan-amman", "image_data", "amphitheatre", "amphitheatre.yml")))
+```
+
+# Dead Sea - day one
+
+The Dead Sea was so enjoyable that we went twice.
+
+We met a Scottish guy in the hostel (Nathan) and organised a day trip to the Dead Sea with him, but first, we had to obtain a rental car. In the morning, we took an Uber to Thrifty car rentals and drove back to the hostel with a Nissan Sunny, it cost 25JOD a day and was much easier to organise the rental in person as opposed to online.
+
+Trav was braver than I driving the vehicle, so he manned the wheel on the first day. It was a couple hours drive to the Dead Sea. We stopped at Salt Beach and walked over a thick crust of salt to get to the water. Walking barefoot on the salt hurts quite a bit, it's really sharp. Wading into the water it feels very viscous, kind of like tuna brine in a can. And, all of a sudden, you just float! It's like sunbathing on the surface of the water, such an incredible feeling. A few drops of water made it into my mouth, the taste was disgusting. I'm glad my head stayed above water. A large bottle of fresh water came in handy to wash the thick slimy salt off afterwards.
+
+<br>
+
+```{r onedeadsea}
+carousel("onedeadsea", yaml.load_file(here("posts", "jordan-amman", "image_data", "onedeadsea", "onedeadsea.yml")))
+```
+
+# Jerash
+
+Hitomi, a friend whom we met in Aswan, appeared at our hostel one evening. We spoke over breakfast and she was keen to join us & Nathan for the day trip to Jerash. Jerash was a two-hour drive from Amman. We saw a couple historic sights there, they were: the old city ruins and Ajloun Castle.
+
+<br>
+
+```{r jerash}
+carousel("jrsh", yaml.load_file(here("posts", "jordan-amman", "image_data", "jerash", "jerash.yml")))
+```
+
+# Dead Sea - day two
+
+Nathan continued his travels the day after Jerash, so we lost a travelling companion. Although, a Portugese guy named Bruno, who hitchhikes around the world full time, was keen to join us on our second trip to the Dead Sea. We filled up the car with Trav & me, Hitomi and Bruno and drove the familiar roads out to our favourite beach spot.
+
+<br>
+
+```{r twodeadsea}
+carousel("twodeadsea", yaml.load_file(here("posts", "jordan-amman", "image_data", "twodeadsea", "twodeadsea.yml")))
+```
+
+# Wrap up
+
+We stayed in Amman for a week and really enjoyed the city. Honestly, I could live there. People are friendly, the city is interesting, and there is a lot of history and culture. Ramadan really threw a spanner in the works for us, it makes getting food & drink quite difficult. City streets are quiet during the day, and very few people are out and about, although at night, the streets become alive, and a buzz can be felt in the air until early morning. Even young children are running around, rejoicing in the Ramadan street atmosphere with friends.
+
+It was great travelling with friends on this leg of the journey, meeting Nathan, Hitomi & Bruno was awesome, and driving a car in a third-world country was an experience. Somehow, without road rules, things still seem to work. In fact, I think the traffic flowed more efficiently without road rules than with them. There are so many factors to consider with this, abolishing road rules in Western society would not placate well with the regimented way our brains operate. Although, with the loose and funky way third-world country locals manifest thoughts, the lack of road rules seems to work.
+
+Amman is our last stop in Jordan, I really liked the laid-back nature and small feeling of Jordan. If only it was cheaper I would have spent more time there. To begin the next leg of our journey, we booked the cheapest flight to our next stop (Antalya, Turkey), which departs at three in the morning (uhhhh...).
+
+<br>
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "jordan-amman", "image_data", "misc", "misc.yml")))
+```

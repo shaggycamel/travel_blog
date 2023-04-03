@@ -1,0 +1,131 @@
+---
+title: "Excitement Post"
+author: "Oliver Eaton"
+date: "2023-01-29"
+categories:
+image: "world.jpg"
+---
+
+*\*It is two weeks out from my journey, I thought I'd write the first entry in my travel blog.*
+
+# How did I end up here?
+
+I'm excited about this trip; it's been a long time coming. The past three years have been hampered by covid, and in early 2022 my six-year relationship ended and I moved home to Aotearoa, New Zealand.
+
+*Home*, that's a funny word. What does it mean? - Surely it has a different meaning for everyone. I consider NZ to be home because I grew up here, although, the year I've been back NZ hasn't felt like home. At least, I haven't *felt* at peace here, something is amiss. I'm not entirely sure what it is, but I know one thing: coming out of a long-term relationship is extremely difficult, and the seemingly never-ending roller-coaster ride of emotions that follows makes normal day existence difficult to navigate.
+
+# Why?
+
+Spending Christmas with my parents & brother in 2022, I wasn't feeling my best self, I was in a rut, down in the dumps and my mental state was in desperate need of recalibration. It was on Christmas day Mum & Dad suggested I extend my already planned six-week holiday. What a great idea! But what about life in Wellington? I only moved there last August. It didn't take me long to decide that resigning and moving from Wellington for the purpose of soul-searching was the right thing to do. At this stage in my life, most of my peers are married and have started families and own houses, but I need to do some serious internal contemplation before I'm ready for that.
+
+Mum suggested applying for a UK working holiday visa. A recent agreement between the UK and NZ had just been announced to raise the qualifying age for the *Youth Mobility Scheme Visa* to 35. So I got to work applying for a UK visa and extending plans for my current six-week holiday to seven months! Seven months seems like an odd timeframe to plan for. Why seven and not six or twelve? Well, my sister is getting married in September 2023, so her wedding is the cutoff period, the calling to return to this side of the world.
+
+# Re-planning
+
+My brother (Travis) and I had already been planning a six-week blat around Northern Africa/The Mediterranean, first exploring Egypt, then Jordan and finally Turkey. So we decided to stretch this leg of the journey out to three months, spending around about one month in each country. Lastly, after exploring Istanbul we will split off and do our own thing for a bit. The remaining four months are unplanned and probably will remain unplanned until actually in the thick of it. Although, I have vague ideas of spending time in Tunisia and Morocco and finally settling into the UK with a job lined up (fingers crossed).
+
+# UK Visa Update
+
+The outcome of my UK visa application has been decided. It was declined, I'm too old! Apparently, the age limit is yet to be officially raised to 35. Fuck, that puts things into perspective. I'm old, too old and creaky for the UK, at least. Ah well, this now just means I have to travel for seven months and ration/budget my money because there's no chance of legitimate income anymore.
+
+# Potential Excursion
+
+The first three months with a vague framework of planning currently look like this:
+
+```{r echo=FALSE}
+library(purrr)
+library(leaflet)
+source(here::here("functions", "plot_hybrid_route_flex_o.R"))
+
+destinations <- list(
+  "Cairo" = list(label="1: Cairo", transport=NA, label_pos="left", label_ind="0em"),
+  "Luxor" = list(label="2: Luxor", transport="car", label_pos="right", label_ind="0em"), 
+  "Aswan" = list(label="3: Aswan", transport="car", label_pos="bottom", label_ind="0em"), 
+  "Kharga Oasis" = list(label="4: Kharga Oasis", transport="car", label_pos="left", label_ind="0em"), 
+  "Alexandria" = list(label="5: Alexandria", transport="car", label_pos="left", label_ind="0em"), 
+  "Sharm el-Sheikh" = list(label="6: Sharm el-Sheikh", transport="car", label_pos="bottom", label_ind="0em"), 
+  "Aqaba" = list(label="7: Aqaba", transport="flight", label_pos="bottom", label_ind="0em"), 
+  # "Wadi Rum" = list(label="Wadi Rum", transport="car", label_pos="right", label_ind="0em"), 
+  "Wadi Musa" = list(label="8: Wadi Musa", transport="car", label_pos="right", label_ind="0em"), 
+  "Amman" = list(label="9: Amman", transport="car", label_pos="left", label_ind="0em"), 
+  "Antalya" = list(label="10: Antalya", transport="flight", label_pos="right", label_ind="0em"), 
+  "Bodrum" = list(label="11: Bodrum", transport="car", label_pos="left", label_ind="0em"), 
+  "Izmir" = list(label="12: Izmir", transport="car", label_pos="left", label_ind="0em"), 
+  "Gelibolu" = list(label="13: Gallipoli", transport="car", label_pos="left", label_ind="0em"), 
+  "Istanbul" = list(label="14: Istanbul", transport="car", label_pos="left", label_ind="0em")
+)
+```
+
+```{r echo=FALSE, message=FALSE}
+plot_hybrid_route_flex_o(
+  addresses = names(destinations),
+  label_text = map_chr(destinations, "label"),
+  how = na.omit(map_chr(destinations, "transport")),
+  weight=3,
+  colour="purple",
+  zoomControl = c(0.5, 0.8, 0.5, 0.8)
+) |> 
+  addScaleBar(position = "bottomleft")
+```
+
+<br>
+
+## Egypt
+
+### [Cairo]{.underline}
+
+Starting off in Cairo, a lifelong dream has been to visit the monumental pyramid structures slightly north of the city. Next, the Egyptian Museum, which houses an impressive historical catalogue of artifacts, is a must. The minarets, domes, bazaars and alleyways which make up Islamic Cairo are slated to be the area for our first few nights of accommodation. I am looking forward to sitting in a tiny, quaint cafe sipping black syrupy coffee, smoking shisha, playing backgammon and talking shit with the locals. Witnessing the mesmerising and trance-like whirling ritual of the Dervish is also on the list of things to experience in Cairo.
+
+### [Nile Valley]{.underline}
+
+Travelling south to Luxor, which is described as the world's largest open-air museum. Luxor grew out of the ruins of Thebes, once the capital of ancient Egypt (1550 - 1069 BC). To foil thieves, and to little avail, Thebean Kings and Queens hid their tombs deep in the surrounding hills, away from the Karnak and Thebes temples. These valleys amongst the hills are known as The Valley of Kings and The Valley of Queens, around sixty tombs have been discovered (so far), including the tomb of Tutankhamun.
+
+Continuing south to Aswan, Egypt's southernmost city. Aswan is known for its laid-back atmosphere and the most enchanting part of the Nile, where desert meets the water's edge. It will be nice to travel here by Felucca (sailboat). From Aswan a day trip to Abu Simbel can be undertaken, Abu Simbel is a historic site comprising two massive rock-cut temples. In 1968 the temples were relocated to make way for a dam to be built across the Nile river, the relocation process itself is an engineering feat, manifesting an intersection between ancient and modern-day engineering.
+
+### [The Western Desert]{.underline}
+
+The oasis of Kharga, or any other oasis town/village, will be fascinating. The desert is virtually uninhabited except for five oases dotted around. To experience a feeling of isolation, see fantastic rock formations and dunes, and observe Egyptian life outside of the cities with mud-brick housing and traditional ways of life is the purpose of visiting Kharga. Hopefully, it will be possible to spend a night under the stars, uninterrupted by light and noise pollution.
+
+### [The Delta & North Coast]{.underline}
+
+Alexandria is low on the list and might even be culled, annual flooding and plundering over centuries has ensured little remains testifying to the importance of the Delta in ancient Egyptian times. However, the port of Rosetta is where the famous Rosetta Stone was discovered, this stone enabled a system to be formulated for deciphering/translating hieroglyphics. The stone has been acquired by the Brits and sits within the Museum of London (not surprised).
+
+### [The Red Sea Coast]{.underline}
+
+Sham El-Sheikh, where the location of 2022's Climate Change Conference (COP) was held, is known for coral reefs and scuba diving/snorkelling. Time here will be spent swimming/snorkelling in turquoise water and sighting marine life.
+
+## Jordan
+
+### [Gulf of Aqaba]{.underline}
+
+Aqaba is the only coastal town in Jordan. Essentially, it will be our entry point into Jordan travelling here by boat. Doing so allows us to bypass Israel. A night or two here will allow us to plan Jordan in a bit more detail.
+
+### [Ard as Sawwan Desert]{.underline}
+
+Wadi Musa is the town closest to the Lost City of Petra. Exploring the ruins of Petra is a multi-day event and contains more than just the lost city, it beholds the Siq Corridor, The High Place of Sacrifice and a Monastery hidden high in the hills. I'm anticipating this to be one of the highlights of the trip.
+
+### [Amman]{.underline}
+
+Amman is the capital of Jordan. A day trip to the Dead Sea is planned, a cleansing float in the salt-rich water of the Dead Sea is something I've always wanted to do. We'll also explore historic sites such as The Citadel and Roman Theatre. Being the capital, and a somewhat younger establishment than the rest of Jordan, Amman might be a city where Trav and I blow off some steam in the nightclubs of Arabia, which will be an experience in itself because Muslims don't drink alcohol. - Maybe nightclubs and bars, as Westerners know them, don't exist here?
+
+## Turkey
+
+### [South Coast]{.underline}
+
+Flying from Amman to Antalya is the cheapest option. Antalya is the biggest city in the south, I don't think we'll stay for long, and will organise transit to Bodrum quite quickly. It might be easiest to hire a car in Turkey?
+
+### [West Coast]{.underline}
+
+Journeying across the South and up the West Coast, our first stop might be the small port town of Bodrum. Of course, Bodrum has historical components to it, however, the picturesque view overlooking the Mediterranean ocean is what drew our attention here. Bodrum will be a way to relax and ease into Turkey.
+
+Following Bodrum is Izmir. Again, we're unsure why we chose Izmir. Our main purpose for travelling up the West Coast is to eventually make it to Gallipoli.
+
+### [North]{.underline}
+
+We plan on being in Gallipoli for Anzac day. I remember being a kid at school and learning about the Anzacs, how they landed on the beaches of Gallipoli and were met with literal nightmares. Being there to commemorate the sacrifice young men and women undertook seems the right thing to do. Not that I condone war, the whole notion of it doesn't make sense to me, particularly in these modern times.
+
+Our final destination in Turkey is Istanbul. What was once called Constantinople and occupied by the Romans, was the centre of the world for a long time. Merely holding this territory in the early 1000s, with its high impenetrable walls, ensured economic stability for it strategically straddled various trade routes. The Ottoman empire called Constantinople "the Red Apple" and took it over in the 1480s, which is when Christianity was replaced with the Muslim religion. The architecture and historical importance of Istanbul is what attracted us here.
+
+## Next...
+
+After Istanbul Trav and I will go separate ways, travelling on our own for a bit. This part of the journey is unplanned, although Trav's high school friend is getting married in Morocco in June, so meeting up for this ceremony will most likely happen.

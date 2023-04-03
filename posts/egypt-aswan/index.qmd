@@ -1,0 +1,92 @@
+---
+title: "Egypt - Aswan"
+author: "Oliver Eaton"
+date: "2023-03-06"
+categories: [Egypt, Historical Site, Hike]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/felucca/_DSC2034.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+source(here("functions", "carousel.R"))
+```
+
+We arrived in Aswan around 11 am. Rest on the sleeper train between Cario and Aswan was surprisingly refreshing, there's something about the rocking motion which puts you into a deep sleep. After settling into our hostel, we explored the city to get our bearings and decided to have a chill day putting off any sightseeing for later. Both of us had sea legs long into the afternoon as a result of the sleeper train. I could feel a slight tickle in my throat and thought I've caught the cold that knocked Trav out in Alexandria.
+
+The next day I woke up ill and unable to get out of bed, I've definitely got what Trav had. So I slept all day and left Trav to explore. The activities we ended up doing in Aswan were:
+
+-   Felucca
+-   Tombs of the Nobles / Hike
+-   Abu Simbel
+
+# Felucca
+
+During my day in bed Trav met an Aussie (Darcy) and a Russian (Nikita) who were keen to stay on a felucca sail boat for an evening. Of course, we were keen as well so we joined them. We met the boat owner in the city and got a ride out to where the felucca was situated, 30mins out of the city. I wasn't exactly sure what to expect, as in, how the felucca would be laid out, where we would sleep, etc... But, it's literally like a big sailing mattress. Up the front is the sail, captain's hull & toilet, in the middle is a massive flatbed mattress under shade, at the back is the rudder. A very simple layout for carting tourists up & down the Nile.
+
+Boy oh boy, this was like the ultimate chill experience. Standing on the felucca was awkward so we lay upon the big mattress and just meandered down the river, moving slowly with the wind. It was extremely relaxing and quiet, which is not often the case in Egypt. One of the felucca workers lit a huge hasish spliff and passed it around the boat, now this is the life.
+
+That evening we moored at a grassy area with other boats. Workers from the cruise ships and sail-boats were playing soccer, which we joined in for a bit. Sleeping on the felucca wasn't the best. Diesel generators from passing cruise ships were quite loud, mosquitos were relentless and the temperature was too hot at the beginning of the night, then too cold in the early morning. We all woke up tired.
+
+The following day we sailed until Kom Ombo temple. The wind had dropped and we couldn't go any further, or return. We ventured around the temple and returned to the felucca for lunch. We tried to get an understanding when we could return to Aswan city, but the felucca driver's most knowledgable respose was "Inshallah" meaning "God willing", so...sometime within the next week I guess. Obviously, us being spoilt Westerners, we needed more certainty about a return time, so we decided to take a train back to Aswan after lunch.
+
+One night on a felucca was enough, I was looking forward to using my legs.
+
+<br>
+
+```{r felucca}
+carousel("flca", yaml.load_file(here("posts", "egypt-aswan", "image_data", "felucca", "felucca.yml")))
+```
+
+### Food poisoning
+
+The day after returning from the felucca I was vomiting and had diarrhea from suspected food poisoning, maybe also from swimming in the Nile, although I never put my head under. Anyway, I was drained and spent a second full day in bed. This was a real shame because Trav and Nikita visited Abu Simbel.
+
+# Tombs of the Nobles / Hike
+
+There is a walk on the west side of the Nile that has been beckoning us since we got here. In the morning Trav & I got the public ferry to the Tombs of the Nobles which we explored for a bit then walked through the desert for an hour or so to a small village, exploring monuments, such as the Dome of Abu Al-Hawa, along the way. The village is perched beneath the Aga Khan Mausoleum which is a beautiful structure but sadly has been shut for the last twenty-five years, not sure why.
+
+At the village, DJs were setting up a stage and playing loud desert psytrance, some kind of celebration was happening. It started to kick off so we went over for a geez. A lot of young locals were gathered around the stage in a horseshoe shape, dancing, clapping hands and singing. The woman was making that "YeYeYeYeYe" desert sound. Fuck, this is nuts! We found out that the nursing students of Aswan have just graduated and this is their grad party.
+
+Trav and I joined in for a bit, dancing with locals to the beat of the drum, then we skipped off taking a rowboat to Elephantine Island. It was insanely hot so we went for a swim, afterwards making our way back to the hostel. That evening it was possible to hear the nursing students still celebrating across the Nile, most likely sober albeit.
+
+While in Aswan it would be sacrilege [not]{.underline} to see Abu Simbel, so I booked minivan transportation leaving from the hostel at 4am the next morning. Abu Simbel is three hours away by car.
+
+<br>
+
+```{r noble_tombs_hike}
+carousel("noble_tombs_hike", yaml.load_file(here("posts", "egypt-aswan", "image_data", "noble_tombs_hike", "noble_tombs_hike.yml")))
+```
+
+# Abu Simbel
+
+[Abu Simbel](https://www.wikiwand.com/en/Abu_Simbel) is the site of two massive rock-cut temples. They serve as monuments to King Ramesses II and his wife (1270 BC).
+
+I mustn't be fully over my food poisoning, just before the minivan left at 4.30am I threw up my dinner from the night before. This is not a good way to start the day! Exhausted, I slept the whole way to Abu Simbel.
+
+The monument is mind-blowing! Twenty-metre statues originally carved into the cliff face (but relocated due to rising waters from the dam construction in the 60s) stand towering over everything else in the area. It would have been a sight to behold in ancient times, and it still is.
+
+I was feeling like shit, so a fellow Aussie lass (Beth) gave me a super strong panadol which knocked me out. I slept the whole way back to Aswan as well.
+
+<br>
+
+```{r abu_simbel}
+carousel("abu_simbel", yaml.load_file(here("posts", "egypt-aswan", "image_data", "abu_simbel", "abu_simbel.yml")))
+```
+
+# Aswan wrap up
+
+Most time spent in Aswan I was sick, which was a bummer. The Nile views here are beautiful and we stayed in a really social hostel where we met lots of cool people. I found the constant push from touts in Aswan a bit insistent. Even walking in and out of the hostel, you're swamped by children smashing you with the same questions "What's your name?", and "Where you from?" and then asking for money. It's the same routine shop owners and taxi, horse & felucca drivers hit you with when walking the Corniche (Nile foreshore), although theirs has developed around an area of business.
+
+Maybe the constant *in-your-face* nature of Egypt is wearing me down? - I wonder if Luxor will be different?
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "egypt-aswan", "image_data", "misc", "misc.yml")))
+```
