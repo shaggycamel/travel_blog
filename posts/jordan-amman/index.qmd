@@ -16,10 +16,32 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 We set out with the plan to hitchhike from Dana to Amman. Standing on the main road, one hour walk up the hill from our Dana accommodation, the first vehicle to pick us up was the public mini-bus (haha!), which terminated at a Tafilah, halfway to Amman and cost 3JOD each (cheap).
+
+```{r}
+destinations <- list(
+  "ضانا" = list(label="Dana", transport=NA, label_pos="top"),
+  "Amman" = list(label="Amman", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 While passing through a checkpoint, police pulled the driver and a passenger off the bus and heavily queried them about something. Quickly this turned into a shouting match and a small scuffle. This lasted for about fifteen minutes, the whole time Trav & I tried to sit inconspicuously in the back seat with our heads down hoping not to get dragged into it. At one point we considered taking our bags and getting out of the situation, it was kind of scary. Something switched up and our driver + passenger, who were fuming, just got back in the van and off we drove, onward from the checkpoint. This was a scary yet exciting experience, we had no idea what the argument was about, but I think the police were vying for a bribe which didn't eventuate.
 

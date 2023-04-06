@@ -16,10 +16,31 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 We secured a taxi from the Wadi Rum visitors centre to Wadi Musa for 40JOD, showing up at a hostel with no booking, a capsule room (like Japan) with a double bed was available. We booked two nights.
+
+```{r}
+destinations <- list(
+  "Wadi Rum" = list(label="Wadi Rum", transport=NA, label_pos="bottom"),
+  "Wadi Musa" = list(label="Wadi Musa", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 Our main purpose in Wadi Musa was to visit the Lost City of Petra, the Jordan Pass (which is essentially a tourist visa into Jordan, purchased before entering the country) allowed us three days to visit Petra. We spent two days hiking through it and exploring.
 

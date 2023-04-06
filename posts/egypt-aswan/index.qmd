@@ -16,10 +16,31 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 We arrived in Aswan around 11 am. Rest on the sleeper train between Cario and Aswan was surprisingly refreshing, there's something about the rocking motion which puts you into a deep sleep. After settling into our hostel, we explored the city to get our bearings and decided to have a chill day putting off any sightseeing for later. Both of us had sea legs long into the afternoon as a result of the sleeper train. I could feel a slight tickle in my throat and thought I've caught the cold that knocked Trav out in Alexandria.
+
+```{r}
+destinations <- list(
+  "Cairo" = list(label="Cairo", transport=NA, label_pos="top"),
+  "Aswan" = list(label="Aswan", transport="car", label_pos="bottom")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 The next day I woke up ill and unable to get out of bed, I've definitely got what Trav had. So I slept all day and left Trav to explore. The activities we ended up doing in Aswan were:
 

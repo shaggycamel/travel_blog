@@ -1,0 +1,14 @@
+{
+  "hash": "a30c9b2b903e14f420cdd80b83429664",
+  "result": {
+    "markdown": "---\ntitle: \"Turkey - Pamukelle\"\nauthor: \"Oliver Eaton\"\ndate: \"2023-04-05\"\ncategories: [Turkey, Nature]\nformat: \n  html:\n    theme: \n      - pandoc\nimage: \"./image_data/waterfalls/_DSC2943.JPG\"\ndraft: true\n---\n\n\n\n::: {.cell}\n\n:::\n\n\nThe bus to Pamukelle from Antalya took four hours. It was acutally a bus t o [town], which is about fifteen mins drive to Palmukalle. We found a minibus to Palmukalle for 14TL and paid the 200TL entrance fee into the [Salt flats].\n\n\n::: {.cell}\n\n:::\n\n\n<br>\n\n# Salt Flats\n\n\n\n::: {.cell}\n\n:::\n\n\n<br>\n\nMy god the szlt flats were pretty! We had to remove our shoes in order to walk upon them, i'm not sure the exactly reason, but muddy shoes would difinetlt standout on th white backdrop.\n\n# List City\n\nPalmukalle is the runis of a huge anctient city. While there was also visited an Roman Amphitheate, various old chrcuhes, buildings and casual everyay homes.\n\nWe finished the day by swimming in a pool heated by hot water from the spring. It was cool, the water fel somewhat viscicous and the warmth was relaxing. It was really cool, a tad expensive, but worht the morney \n\n# Wrap Up\n\nPalmukalle was essentialy just a day-tip from Antalya, even though our bus leaving [Town] was a ten-hour ride to Goreme. We left Palmukalle back to [town], ate dinner and prepared ourselves for an overnight bus ride (ugghhhh.....).",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

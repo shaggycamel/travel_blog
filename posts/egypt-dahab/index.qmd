@@ -16,10 +16,32 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 Dahab is a really relaxed place on the Sinai Coast of the Red Sea with a beautiful mountain range to the north that makes for a picturesque backdrop. We arrived in the evening after a twenty-three-hour bus journey, there were five or six police checkpoints between Cairo and Dahab which is why the trip ended up being so lengthy. I'm not sure why this area of Egypt is so heavily guarded. After walking to our hostel from the bus-stop we went straight to bed. Darcy, whom we met in Aswan, was in our (four person) dormitory.
+
+```{r}
+destinations <- list(
+  "Luxor" = list(label="Luxor", transport=NA, label_pos="bottom"),
+  "Cairo" = list(label="Cairo", transport="car", label_pos="top"),
+  "Dahab" = list(label="Dahab", transport="car", label_pos="bottom")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 Most people we met here had stayed for weeks, even months, some actually lived there, usually for snorkelling, scuba-diving & free-diving. Life at the hostel felt like a small commune where everyone ate together and organised things to do in the evenings. Locals in town are easy-going, contrasting with the rest of Egypt's in-your-face culture. Very few times sales-people approached or pressured us to purchase something.
 

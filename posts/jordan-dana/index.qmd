@@ -16,10 +16,32 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 The road was shrouded in a thick fog all the way from Wadi Musa to Dana. The taxi driver drove extremely slowly and cautiously because the road could not be seen. Dana is a small village nestled in the mountains, livelihood in the village is either olive farming or tourism, which relies entirely upon the Dana Trail hike which Trav and I had planned. Steep cliff drops on the mountain road added to the cautious driving of our taxi-man.
+
+```{r}
+destinations <- list(
+  "Wadi Musa" = list(label="Wadi Musa", transport=NA, label_pos="bottom"),
+  "ضانا" = list(label="Dana", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 Finally we arrived in Dana around 5pm, after arriving he requested 40JOD, the original quote was 30JOD, given the dangerous state of driving we had no problem paying the extra 10JOD. Mist obscured the supposedly stunning valley view and a light rain refreshed and hydrated the skin's pores. Our accommodation that Trav booked could not be found, our taxi driver asked someone, they mentioned the place had closed down, how strange. *Why had their online advertisement not been removed?* The man who provided the information actually worked at one of the two hotels in town, he took us in offering a slightly more expensive room to the one we originally booked.
 

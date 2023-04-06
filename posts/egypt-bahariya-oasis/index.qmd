@@ -16,12 +16,33 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 Visiting an Oasis was always part of our schedule, we hadn't decided which Oasis to visit prior to arriving in Egypt and planned on organising it while in the thick of things. There are five Oases in Egypt, each one offering a unique set of desert sights & experience.
 
 After researching transportation for an evening, visiting an Oasis wasn't as simple as we anticipated. There didn't seem to be any (non-tour) buses that ventured from the Nile roads travelling inland towards the desert. We spoke to employees at our hostel about options getting to the desert and found out our hostel actually offered a tour to the Bahariya Oasis for \$90USD per person. This price included transportation to Bahariya, a jeep journey through the Black & White Deserts, one night camping in the White Desert, food and water for the entire tour and transportation back to Cairo. This was a pretty good deal. It relaxed the requirement for us to organise further components beyond transportation and the price wasn't ludicrous. So we snapped this up, and got ready for the mini-bus which left at 6.30am the following morning, packing a small day bag for the trip.
+
+```{r}
+destinations <- list(
+  "Cairo" = list(label="Cairo", transport=NA, label_pos="right"),
+  "Bahariya Oasis" = list(label="Bahariya Oasis", transport="car", label_pos="bottom")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue"
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 The mini-bus to Bahariya took around five hours, picking up tourists from other hostels & hotels along the way. Having other tourists on the tour was great because it gave us an opportunity to meet & talk to other people who came from all over the world. Joining us were Greeks, Chinese, Koreans, Turkish & Taiwanese.
 

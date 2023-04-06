@@ -16,10 +16,33 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
+library(purrr)
+library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
 Cairo was the first stop on this seven month endeavour. After landing, Trav & I negotiated a taxi from the airport to our accommodation for a reasonable price of £300EGP (\$15NZD). The initial taxi ride was a shock to the senses, noises & sights were overwhelming. Car horns, in particular, dominate airwaves, and beeps and bops blend into one continuous stream of alerts. The architecture of buildings and infrastructure that whiz past the window is curved and majestic, very different and foreign to the squared, angled buildings in Australasia. In contrast, half-finished apartment blocks lie adjacent drenched in rubble and construction waste. We have only been in Egypt for 30 minutes so far...a slight fear of integration gripped my mind on the initial taxi ride.
+
+```{r}
+destinations <- list(
+  "Wellington" = list(label="Wellington", transport=NA, label_pos="right"),
+  "Sydney" = list(label="Sydney", transport="flight", label_pos="top"),
+  "Dubai" = list(label="Dubai", transport="flight", label_pos="top"),
+  "Cairo" = list(label="Cairo", transport="flight", label_pos="left")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(map_chr(destinations, "transport")), 
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
 
 We spent five incredible days in Cairo and our time was distributed across a few themes, they were:
 

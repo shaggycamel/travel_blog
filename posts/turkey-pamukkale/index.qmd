@@ -1,0 +1,71 @@
+---
+title: "Turkey - Pamukkale"
+author: "Oliver Eaton"
+date: "2023-04-05"
+categories: [Turkey, Nature]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/calcite_flats/_DSC3691.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+The bus to Pamukkale from Antalya took four hours. It was actually an intercity bus to Denizli, which is about a fifteen minute drive to Pamukkale. We found a minibus to Pamukkale for ₺14TL and paid the ₺200TL entrance fee into the compound.
+
+```{r}
+destinations <- list(
+  "Antalya" = list(label="Antalya", transport=NA, label_pos="top"),
+  "Dinizli" = list(label="", transport="car", label_pos="right"),
+  "Pamukkale" = list(label="Pamukkale", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+)
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# Calcite Flats
+
+My god, the calcite flats were pretty! We had to remove our shoes to walk upon them, I'm not sure the precise reason why, but muddy shoes would definitely stand out on the white backdrop.
+
+```{r calcite_flats}
+carousel("calcite_flats", yaml.load_file(here("posts", "turkey-pamukkale", "image_data", "calcite_flats", "calcite_flats.yml")))
+```
+
+<br>
+
+# Ancient City Ruins
+
+Pamukkale is also the site of huge ancient city ruins which includes a Roman amphitheatre, various old churches, council buildings and casual everyday homes.
+
+We finished the day by swimming in a pool heated by hot water from the spring. It was neat, the water felt somewhat viscous and the warmth was relaxing. It was a tad expensive, but worth the money. Old stones and blocks from the city are scattered throughout the pool.
+
+```{r ruins}
+carousel("ruins", yaml.load_file(here("posts", "turkey-pamukkale", "image_data", "ruins", "ruins.yml")))
+```
+
+<br>
+
+# Wrap Up
+
+Pamukkale was essentially just a day-tip from Antalya. Although, our next destination was Goreme, an additional ten-hour overnight bus journey. We left Pamukkale back to Dinizli, ate dinner and prepared ourselves for the overnight express (ugghhhh.....).
