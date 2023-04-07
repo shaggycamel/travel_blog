@@ -1,0 +1,58 @@
+---
+title: "Turkey - Kaş"
+author: "Oliver Eaton"
+date: "2023-04-10"
+categories: [Turkey, Beach]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./image_data/calcite_flats/_DSC3691.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+The bus to Pamukkale from Antalya took four hours. It was actually an intercity bus to Denizli, which is about a fifteen minute drive to Pamukkale. We found a minibus to Pamukkale for ₺14TL and paid the ₺200TL entrance fee into the compound.
+
+```{r}
+destinations <- list(
+  "Göreme" = list(label="Göreme", transport=NA, label_pos="right"),
+  "Antalya" = list(label="Antalya", transport="car", label_pos="top"),
+  "Kaş" = list(label="Kaş", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# ////
+
+```{r }
+# carousel("calcite_flats", yaml.load_file(here("posts", "turkey-pamukkale", "image_data", "calcite_flats", "calcite_flats.yml")))
+```
+
+<br>
+
+# Wrap Up

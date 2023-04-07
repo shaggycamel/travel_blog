@@ -37,7 +37,9 @@ m <- plot_hybrid_route_flex(
   label_position = as.vector(map_chr(destinations, "label_pos")),
   weight=3,
   colour="blue",
-)
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
 m$x$options$zoomControl <- TRUE
 m
 ```
