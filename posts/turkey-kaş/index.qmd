@@ -1,14 +1,13 @@
 ---
 title: "Turkey - Kaş"
 author: "Oliver Eaton"
-date: "2023-04-10"
+date: "2023-04-08"
 categories: [Turkey, Beach]
 format: 
   html:
     theme: 
       - pandoc
-image: "./image_data/calcite_flats/_DSC3691.JPG"
-draft: true
+image: "./image_data/beach/_DSC3980.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -22,7 +21,7 @@ library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
-The bus to Pamukkale from Antalya took four hours. It was actually an intercity bus to Denizli, which is about a fifteen minute drive to Pamukkale. We found a minibus to Pamukkale for ₺14TL and paid the ₺200TL entrance fee into the compound.
+Travelling by night bus is never fun, the upside of it is a night of accommodation and transportation are paid together. Slinking back to the hostel in Antalya in the early morning, we re-packed our backpacks and stocked up on a few supplies like vape juice and cash monies. It was no hassle catching a Kaş bus, they departed every forty-five minutes, and upon arriving at the bus terminal, we were instantly ushered onto the next awaiting bus - "Yalah, yalah, yalah" (let's go).
 
 ```{r}
 destinations <- list(
@@ -47,12 +46,30 @@ m
 
 <br>
 
-# ////
+I could feel a slight tickle in my throat and was weary that the long travel time and cold days in Capadoccia may have taken a toll on me. In Kaş, we stayed at a hostel that was a fifteen-minute bus ride to town. This was a slight inconvenience, but it was a cheap place and, aside from the location, was actually really nice.
 
-```{r }
-# carousel("calcite_flats", yaml.load_file(here("posts", "turkey-pamukkale", "image_data", "calcite_flats", "calcite_flats.yml")))
+We stayed two nights in Kaş, the main purpose here was to link up with Bara and prepare for the five-day Lycian Way hike. I wasn't feeling well after dinner on the first night, so went to bed early.
+
+Man, I woke up crook! Super congested, sore throat, headache, achy muscles. It was a straight-up flu. I managed to get up for breakfast, meeting a few new people and gritting my teeth through a throbbing headache. Over breakfast, Bara mentioned taking five days off work (he's a digital nomad) is just not possible right now, so he will not be joining us anymore. This was fine by us, honestly, it meant Trav & I can now charge through the trail without having to consider anyone else's fitness level and mental well-being. Although, I was looking forward to spending time with Bara, hearing about Palestine and learning more Arabic. On top of this, the weather forecast for the next week looked terrible, with rain the whole time.
+
+After breakfast, I really wasn't feeling well, so I went back to bed. Trav spent the day at the beach and in Kaş town with a couple Russian girls we ate breakfast with. By evening I was still feeling shite but was well enough to cook dinner with Trav and talk about the hike. Given the weather was about to cave in, we decided to begin the hike from Fethiye and hike five days south instead. That gives a bit of time for me and the weather to recover.
+
+I had a terrible sleep that night, barely resting at all. The next day I *had* to get out of bed and do something. So I joined Trav and Vera (one of the Russians) on a walk to the Beach and into town. It was a pleasant day, we picked and ate various different types of fruit from trees and sunbathed & swam (not me) at a couple beaches on our walk into town....ahhh, the tropical lifestyle. I still felt and sounded ill.
+
+# Beach
+
+```{r beach}
+carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "image_data", "beach", "beach.yml")))
 ```
 
 <br>
 
 # Wrap Up
+
+After two nights in Kaş, it didn't really feel like I had visited because most time was spent in bed sick or with a throbbing headache. I tested for covid, and it came back negative but *I* don't think RAT tests work anyway. *Have a feeling the cigarettes contributed to the flu.* Our next destination was Fethiye, where we will prepare for the hike (it feels like there is always more to prepare). We missed the 1.30pm bus for Fethiye by two or so minutes but boarded the 2.45pm bus instead, they leave every hour and a bit. I'm amazed at the frequency of intercity transportation in Turkey, it is great! But, I don't understand where all these people are going, and why?
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "image_data", "misc", "misc.yml")))
+```
+
+{{< video https://youtu.be/_8YIpb6-hm0 >}}

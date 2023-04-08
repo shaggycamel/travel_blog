@@ -30,6 +30,8 @@ destinations <- list(
   "Pamukkale" = list(label="Pamukkale", transport="car", label_pos="top")
 )
 
+attractions <- list("Pamukkale" = list(lat = 37.91987482668658, lng = 29.14308534187825))
+
 m <- plot_hybrid_route_flex(
   names(destinations),
   how = na.omit(map_chr(destinations, "transport")),
@@ -38,7 +40,12 @@ m <- plot_hybrid_route_flex(
   weight=3,
   colour="blue",
 ) |> 
-  leaflet::addScaleBar(position = "bottomleft")
+  leaflet::addScaleBar(position = "bottomleft") |> 
+  leaflet::addAwesomeMarkers(
+    lat = as.vector(map_dbl(attractions, "lat")), 
+    lng = as.vector(map_dbl(attractions, "lng")),
+    label = names(attractions)
+  )
 
 m$x$options$zoomControl <- TRUE
 m
