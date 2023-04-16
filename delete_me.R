@@ -1,30 +1,24 @@
-library(purrr)
-library(mapBliss)
 
-library(usethis)
 
-destinations <- list(
-  "Cairo" = list(label="1: Cairo", transport=NA, label_pos="left", label_ind="0em"),
-  "Luxor" = list(label="2: Luxor", transport="car", label_pos="right", label_ind="0em"), 
-  "Aswan" = list(label="3: Aswan", transport="car", label_pos="bottom", label_ind="0em"), 
-  "Kharga Oasis" = list(label="4: Kharga Oasis", transport="car", label_pos="left", label_ind="0em"), 
-  "Alexandria" = list(label="5: Alexandria", transport="car", label_pos="left", label_ind="0em"), 
-  "Sharm el-Sheikh" = list(label="6: Sharm el-Sheikh", transport="car", label_pos="bottom", label_ind="0em"), 
-  "Aqaba" = list(label="7: Aqaba", transport="flight", label_pos="bottom", label_ind="0em"), 
-  # "Wadi Rum" = list(label="Wadi Rum", transport="car", label_pos="right", label_ind="0em"), 
-  "Wadi Musa" = list(label="8: Wadi Musa", transport="car", label_pos="right", label_ind="0em"), 
-  "Amman" = list(label="9: Amman", transport="car", label_pos="left", label_ind="0em"), 
-  "Antalya" = list(label="10: Antalya", transport="flight", label_pos="right", label_ind="0em"), 
-  "Bodrum" = list(label="11: Bodrum", transport="car", label_pos="left", label_ind="0em"), 
-  "Izmir" = list(label="12: Izmir", transport="car", label_pos="left", label_ind="0em"), 
-  "Gelibolu" = list(label="13: Gallipoli", transport="car", label_pos="left", label_ind="0em"), 
-  "Istanbul" = list(label="14: Istanbul", transport="car", label_pos="left", label_ind="0em")
-)
+df_token <- 
+    purrr::map_chr(fs::dir_ls(here::here("posts"), type = "directory"), ~{
+    readr::read_file(paste0(.x, "/index.qmd"))
+  }) |> 
+  paste(collapse = " ") |> 
+  stringr::str_split_1(stringr::regex("---|```", ignore_case = TRUE, multiline = TRUE, dotall = TRUE)) |> 
+  tibble::as_tibble_col(column_name = "text") |> 
+  dplyr::filter(!stringr::str_detect(text, "^\\{|title:")) |> 
+  dplyr::mutate(
+    text = textclean::replace_html(text, symbol = FALSE),
+    text = textclean::replace_url(text),
+    text = stringr::str_remove_all(text, "\\d")
+  ) |> 
+  tidytext::unnest_tokens(word, text) |> 
+  dplyr::mutate(word = textstem::lemmatize_words(word)) |> 
+  dplyr::anti_join(tidytext::stop_words, by = "word") |> 
+  dplyr::count(word, name = "freq") |> 
+  dplyr::mutate(len = stringr::str_length(word)) |> 
+  dplyr::filter(len > 2)
 
-m <- plot_hybrid_route_flex(
-  names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos"))
-)
-m$x$options$zoomControl <- TRUE
-m
+wordcloud2::wordcloud2(df_token, hoverFunction = "off")
+

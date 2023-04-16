@@ -1,18 +1,83 @@
 ---
-title: "About"
-image: profile.jpg
+image: profile_pic.jpeg
 about:
   template: jolla
   links:
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/shaggy.camel/
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/shaggycamel
 ---
 
-About this blog
+[Click here to read the blog!](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "Travel Blog" in the top left hand corner.
+
+The journey so far:
+
+```{r echo=FALSE, message=FALSE}
+destinations <- list(
+  "Cairo" = list(transport=NA),
+  "Bahariya Oasis" = list(transport="car"),
+  "Cairo" = list(transport="car"),
+  "Alexandria" = list(transport="car"),
+  "Cairo" = list(transport="car"),
+  "Aswan" = list(transport="car"),
+  "Luxor" = list(transport="car"),
+  "Cairo" = list(transport="car"),
+  "Dahb" = list(transport="car"),
+  "Nuweibaa" = list(transport="car"),
+  "Aqaba" = list(transport="flight"),
+  "Wadi Rum" = list(transport="car"),
+  "Wadi Musa" = list(transport="car"),
+  "ضانا" = list(transport="car"),
+  "Amman" = list(transport="car"),
+  "Antalya" = list(transport="flight"),
+  "Dinizli" = list(transport="car"),
+  "Pamukkale" = list(transport="car"),
+  "Dinizli" = list(transport="car"),
+  "Göreme" = list(transport="car"),
+  "Antalya" = list(transport="car"),
+  "Kas" = list(transport="car"),
+  "Fethiye" = list(transport="car"),
+  "Izmir" = list(transport="car")
+)
+
+m <- mapBliss::plot_hybrid_route_flex(
+  names(destinations), 
+  how = na.omit(purrr::map_chr(destinations, "transport")), 
+  label_text = NULL,
+  weight=3,
+  colour="blue",
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+```{r echo=FALSE}
+df_token <- 
+    purrr::map_chr(fs::dir_ls(here::here("posts"), type = "directory"), ~{
+    readr::read_file(paste0(.x, "/index.qmd"))
+  }) |> 
+  paste(collapse = " ") |> 
+  stringr::str_split_1(stringr::regex("---|```", ignore_case = TRUE, multiline = TRUE, dotall = TRUE)) |> 
+  tibble::as_tibble_col(column_name = "text") |> 
+  dplyr::filter(!stringr::str_detect(text, "^\\{|title:")) |> 
+  dplyr::mutate(
+    text = textclean::replace_html(text, symbol = FALSE),
+    text = textclean::replace_url(text),
+    text = stringr::str_remove_all(text, "\\d")
+  ) |> 
+  tidytext::unnest_tokens(word, text) |> 
+  dplyr::mutate(word = textstem::lemmatize_words(word)) |> 
+  dplyr::anti_join(tidytext::stop_words, by = "word") |> 
+  dplyr::count(word, name = "freq") |> 
+  dplyr::mutate(len = stringr::str_length(word)) |> 
+  dplyr::filter(len > 2)
+
+wordcloud2::wordcloud2(df_token, hoverFunction = "off")
+```

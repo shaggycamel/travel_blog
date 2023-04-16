@@ -26,6 +26,7 @@ Our ferry crossing from Nuweibaa to Aqaba took a whole day, it wasn't the journe
 ```{r}
 destinations <- list(
   "Dahab" = list(label="Dahab", transport=NA, label_pos="bottom"),
+  "Nuweibaa" = list(label="Nuweibaa", transport="car", label_pos="top"),
   "Aqaba" = list(label="Aqaba", transport="flight", label_pos="top")
 )
 
