@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/misc/_DSC2705.JPG"
+image: "./media_data/misc/_DSC2705.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -57,11 +57,11 @@ After purchasing some small items, we spent the majority of the day at the publi
 <br>
 
 ```{r beach}
-carousel("bch", yaml.load_file(here("posts", "jordan-aqaba", "image_data", "beach", "beach.yml")))
+carousel("bch", yaml.load_file(here("posts", "jordan-aqaba", "media_data", "beach", "beach.yml")))
 ```
 
 # Wrap up
 
 After smoking shisha and eating falafel for two peaceful nights in Aqaba, we organised a trip to Wadi Rum, which is a nature reserve in the desert, through the hostel owner.
 
-![](./image_data/misc/_DSC2705.JPG)
+![](./media_data/misc/_DSC2705.JPG)

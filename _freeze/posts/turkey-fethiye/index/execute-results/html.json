@@ -1,0 +1,14 @@
+{
+  "hash": "17f9e2acd068c59eb5632b0829890ecc",
+  "result": {
+    "markdown": "---\ntitle: \"Turkey - Fethiye\"\nauthor: \"Oliver Eaton\"\ndate: \"2023-04-10\"\ncategories: [Turkey, Beach]\nformat: \n  html:\n    theme: \n      - pandoc\nimage: \"./image_data/misc/_DSC.JPG\"\n---\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n:::\n\n\n<br>\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

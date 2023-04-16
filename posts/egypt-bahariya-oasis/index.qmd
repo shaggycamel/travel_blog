@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/black_desert/_DSC1409.JPG"
+image: "./media_data/black_desert/_DSC1409.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -57,7 +57,7 @@ The Black Desert is an old volcanic area. Due to the volcanic activity, I was ha
 <br>
 
 ```{r black-desert}
-carousel("blk", yaml.load_file(here("posts", "egypt-bahariya-oasis", "image_data", "black_desert", "black_desert.yml")))
+carousel("blk", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "black_desert", "black_desert.yml")))
 ```
 
 # White Desert
@@ -67,7 +67,7 @@ Literally across the highway from the Black Desert is the White Desert. The Whit
 <br>
 
 ```{r white-desert}
-carousel("wht", yaml.load_file(here("posts", "egypt-bahariya-oasis", "image_data", "white_desert", "white_desert.yml")))
+carousel("wht", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert.yml")))
 ```
 
 # White Desert - Overnight
@@ -79,7 +79,7 @@ We opted to sleep under the stars instead of the tent, so we set up a thin mattr
 <br>
 
 ```{r white-desert-overnight}
-carousel("white-desert-overnight", yaml.load_file(here("posts", "egypt-bahariya-oasis", "image_data", "white_desert", "white_desert_overnight.yml")))
+carousel("white-desert-overnight", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_overnight.yml")))
 ```
 
 # White Desert - Sunrise
@@ -91,7 +91,7 @@ We then had breakfast and set off in the jeep back to Bawiti.
 <br>
 
 ```{r white-desert-sunrise}
-carousel("white-desert-sunrise", yaml.load_file(here("posts", "egypt-bahariya-oasis", "image_data", "white_desert", "white_desert_sunrise.yml")))
+carousel("white-desert-sunrise", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_sunrise.yml")))
 ```
 
 # Tour End
@@ -103,5 +103,5 @@ If I had the opportunity to do a jeep desert tour again I would organise more th
 <br>
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-bahariya-oasis", "image_data", "misc", "misc.yml")))
+carousel("misc", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "misc", "misc.yml")))
 ```

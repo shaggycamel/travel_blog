@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/jeep_tour/_DSC2943.JPG"
+image: "./media_data/jeep_tour/_DSC2943.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -59,7 +59,7 @@ The rest of the tour we saw interesting rock formations, sifted through the dese
 <br>
 
 ```{r jeep}
-carousel("jeep", yaml.load_file(here("posts", "jordan-wadi-rum", "image_data", "jeep_tour", "jeep_tour.yml")))
+carousel("jeep", yaml.load_file(here("posts", "jordan-wadi-rum", "media_data", "jeep_tour", "jeep_tour.yml")))
 ```
 
 # Glamping
@@ -75,7 +75,7 @@ The next morning we woke around 9am, smashed back a huge breakfast and went on o
 <br>
 
 ```{r rock-scramble}
-carousel("rock-scramble", yaml.load_file(here("posts", "jordan-wadi-rum", "image_data", "rock_scramble", "rock_scramble.yml")))
+carousel("rock-scramble", yaml.load_file(here("posts", "jordan-wadi-rum", "media_data", "rock_scramble", "rock_scramble.yml")))
 ```
 
 # Wrap up

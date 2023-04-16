@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/tour/_DSC2534.JPG"
+image: "./media_data/tour/_DSC2534.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -66,7 +66,7 @@ The crowds at the Luxor Temple were insane. Just outside, hordes of locals had c
 <br>
 
 ```{r luxor_temple}
-carousel("luxor_temple", yaml.load_file(here("posts", "egypt-luxor", "image_data", "luxor_temple", "luxor_temple.yml")))
+carousel("luxor_temple", yaml.load_file(here("posts", "egypt-luxor", "media_data", "luxor_temple", "luxor_temple.yml")))
 ```
 
 # Tour
@@ -86,7 +86,7 @@ Joining the tour was a great way to meet other tourists. We got along with a few
 <br>
 
 ```{r tour}
-carousel("tr", yaml.load_file(here("posts", "egypt-luxor", "image_data", "tour", "tour.yml")))
+carousel("tr", yaml.load_file(here("posts", "egypt-luxor", "media_data", "tour", "tour.yml")))
 ```
 
 # Hot Air Balloon
@@ -102,7 +102,7 @@ It was fun, and the views were great! For me, once is enough, I don't think I'll
 <br>
 
 ```{r hot_air_balloon}
-carousel("hot_air_balloon", yaml.load_file(here("posts", "egypt-luxor", "image_data", "hot_air_balloon", "hot_air_balloon.yml")))
+carousel("hot_air_balloon", yaml.load_file(here("posts", "egypt-luxor", "media_data", "hot_air_balloon", "hot_air_balloon.yml")))
 ```
 
 # Karnak Temple
@@ -112,7 +112,7 @@ After the Balloon, in the afternoon we visited Karnak Temple. Again, this temple
 <br>
 
 ```{r karnak_temple}
-carousel("karnak_temple", yaml.load_file(here("posts", "egypt-luxor", "image_data", "karnak_temple", "karnak_temple.yml")))
+carousel("karnak_temple", yaml.load_file(here("posts", "egypt-luxor", "media_data", "karnak_temple", "karnak_temple.yml")))
 ```
 
 # Wrap Up
@@ -123,4 +123,4 @@ After Luxor, we organised transportation to Dahab. This entails a ten-hour overn
 
 <br>
 
-![](./image_data/misc/_DSC2329.JPG)
+![](./media_data/misc/_DSC2329.JPG)

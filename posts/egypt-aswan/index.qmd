@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/felucca/_DSC2034.JPG"
+image: "./media_data/felucca/_DSC2034.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -65,7 +65,7 @@ One night on a felucca was enough, I was looking forward to using my legs.
 <br>
 
 ```{r felucca}
-carousel("flca", yaml.load_file(here("posts", "egypt-aswan", "image_data", "felucca", "felucca.yml")))
+carousel("flca", yaml.load_file(here("posts", "egypt-aswan", "media_data", "felucca", "felucca.yml")))
 ```
 
 ### Food poisoning
@@ -85,7 +85,7 @@ While in Aswan it would be sacrilege [not]{.underline} to see Abu Simbel, so I b
 <br>
 
 ```{r noble_tombs_hike}
-carousel("noble_tombs_hike", yaml.load_file(here("posts", "egypt-aswan", "image_data", "noble_tombs_hike", "noble_tombs_hike.yml")))
+carousel("noble_tombs_hike", yaml.load_file(here("posts", "egypt-aswan", "media_data", "noble_tombs_hike", "noble_tombs_hike.yml")))
 ```
 
 # Abu Simbel
@@ -101,7 +101,7 @@ I was feeling like shit, so a fellow Aussie lass (Beth) gave me a super strong p
 <br>
 
 ```{r abu_simbel}
-carousel("abu_simbel", yaml.load_file(here("posts", "egypt-aswan", "image_data", "abu_simbel", "abu_simbel.yml")))
+carousel("abu_simbel", yaml.load_file(here("posts", "egypt-aswan", "media_data", "abu_simbel", "abu_simbel.yml")))
 ```
 
 # Aswan wrap up
@@ -111,5 +111,5 @@ Most time spent in Aswan I was sick, which was a bummer. The Nile views here are
 Maybe the constant *in-your-face* nature of Egypt is wearing me down? - I wonder if Luxor will be different?
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-aswan", "image_data", "misc", "misc.yml")))
+carousel("misc", yaml.load_file(here("posts", "egypt-aswan", "media_data", "misc", "misc.yml")))
 ```

@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/islamic/_DSC1049.JPG"
+image: "./media_data/islamic/_DSC1049.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -88,7 +88,7 @@ We were able to enter the pyramids here, which was exciting! Clambering down the
 Giza is where the **Sphinx**, **Great Pyramid**, and two other large pyramids lie, six small pyramids are also situated here. Giza was crawling with tourists, it was easily the most crowded of sites. We paid £8000EGP to ride camels around the base of the pyramids. This is an insane price to pay, but riding camels really added to the flavour of being in the desert beneath the largest pyramids, which were the biggest structures on earth for thousands of years (until the Eiffel Tower). It was an incredible and fulfilling experience I have dreamed of since I was a child. We couldn't enter the pyramids here, which [did not]{.underline} detract from the wonder.
 
 ```{r pyramids}
-carousel("pmid", yaml.load_file(here("posts", "egypt-cairo", "image_data", "pyramids", "pyramids.yml")))
+carousel("pmid", yaml.load_file(here("posts", "egypt-cairo", "media_data", "pyramids", "pyramids.yml")))
 ```
 
 # Museums
@@ -107,7 +107,7 @@ The National Egyptian Museum is the oldest of the museums and contains thousands
 The Civilization Museum is relatively new. The main attraction here is mummies, actual mummies. We saw twenty intact mummies and gained an insight into who these people were, their personalities, achievements, and how the general populous perceived them during their time of rule. It was an eerie, creepy and sombre feeling. These people have been preserved for thousands of years using a technique that developed and improved throughout the Ancient Egyptian era. They would have had no idea how successful their preservation techniques actually were/are. Strangely, when staring into the faces of these once-living beings I felt some kind of deep connection that is hard to describe. Perhaps some ancient Egyptian reincarnation has settled somewhere deep inside my soul?
 
 ```{r museums}
-carousel("msm", yaml.load_file(here("posts", "egypt-cairo", "image_data", "museums", "museums.yml")))
+carousel("msm", yaml.load_file(here("posts", "egypt-cairo", "media_data", "museums", "museums.yml")))
 ```
 
 # Islamic Cairo / Mosques
@@ -121,7 +121,7 @@ Islamic Cairo was probably my favourite place in Cairo. The number of mosques wi
 Another aspect of Islamic Cairo is the Khan Al-Khalili market. The number of layers to this market is insane, it doesn't seem to end. You can find anything here, most of which is junk, but being surrounded by so many people, squandering down tight alleyways and being shouted at by sales people makes for a different way to spend your evening. We came here a few times just because it was so much fun.
 
 ```{r islamic}
-carousel("islamic", yaml.load_file(here("posts", "egypt-cairo", "image_data", "islamic", "islamic.yml")))
+carousel("islamic", yaml.load_file(here("posts", "egypt-cairo", "media_data", "islamic", "islamic.yml")))
 ```
 
 # Coptic Cairo / Churches
@@ -131,7 +131,7 @@ Coptic faith (Christianity) is prevalent in Cairo second to the Islamic faith. T
 Next to The Hanging Church is a Coptic museum. In typical Christian fashion information on display is glazed over, where only positive and somewhat ignorant details are presented. I left here with so many questions and a reinforcement for my disdain of Christianity.
 
 ```{r coptic}
-carousel("coptic", yaml.load_file(here("posts", "egypt-cairo", "image_data", "coptic", "coptic.yml")))
+carousel("coptic", yaml.load_file(here("posts", "egypt-cairo", "media_data", "coptic", "coptic.yml")))
 ```
 
 # Wandering / Misc
@@ -139,5 +139,5 @@ carousel("coptic", yaml.load_file(here("posts", "egypt-cairo", "image_data", "co
 Just wandering around Cairo was always fun. Our most genuine experience was exploring the backstreets of Islamic Cairo and ordering coffee & shisha at a coffee shop named **Dr Joe**. The coffee was delicious, unlike something I have ever tasted. It was malty, creamy, flavourful, small and strong. Amazing! We spent days trying to find a similar coffee elsewhere to no avail. I love the head rush shisha gives you, I understand why older locals spend so much time at these coffee shops puffing away, drinking coffee and playing dominoes, backgammon or chess. During our time there the owner played a football match on the television, and lots of people wandering by stopped to watch the football and chat with us. When Trav went up to pay the owner didn't specify a price saying he was happy with whatever. He was genuine in his generosity and was purely happy to have us at his store, which is what made this one of the most precious experiences in Cairo. Trav ended up paying £50EGP for the coffee and shisha, a steal.
 
 ```{r wander}
-carousel("wander", yaml.load_file(here("posts", "egypt-cairo", "image_data", "wander", "wander.yml")))
+carousel("wander", yaml.load_file(here("posts", "egypt-cairo", "media_data", "wander", "wander.yml")))
 ```

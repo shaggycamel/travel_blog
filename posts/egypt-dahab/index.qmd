@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/hike/WAI811.jpeg"
+image: "./media_data/hike/WAI811.jpeg"
 ---
 
 ```{r setup, include=FALSE}
@@ -62,7 +62,7 @@ We enjoyed volleyball so much that we spent a whole other day playing.
 <br>
 
 ```{r volleyball}
-carousel("vball", yaml.load_file(here("posts", "egypt-dahab", "image_data", "volleyball", "volleyball.yml")))
+carousel("vball", yaml.load_file(here("posts", "egypt-dahab", "media_data", "volleyball", "volleyball.yml")))
 ```
 
 # Blue Hole
@@ -78,7 +78,7 @@ Regardless of me being a wimp, snorkelling the Blue Hole was awesome! We chilled
 <br>
 
 ```{r blue-hole}
-carousel("bluehl", yaml.load_file(here("posts", "egypt-dahab", "image_data", "blue_hole", "blue_hole.yml")))
+carousel("bluehl", yaml.load_file(here("posts", "egypt-dahab", "media_data", "blue_hole", "blue_hole.yml")))
 ```
 
 # Hike
@@ -94,7 +94,7 @@ It was great getting out and doing a hike, strengthening our friendship with Mik
 <br>
 
 ```{r hike}
-carousel("hk", yaml.load_file(here("posts", "egypt-dahab", "image_data", "hike", "hike.yml")))
+carousel("hk", yaml.load_file(here("posts", "egypt-dahab", "media_data", "hike", "hike.yml")))
 ```
 
 # Wrap up
@@ -106,5 +106,5 @@ Our bus was three hours late. We took the bus to Nuweibaa so we could ferry to J
 We only had £1500EGP left so we needed to ration what we had until arriving in Jordan.
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-dahab", "image_data", "misc", "misc.yml")))
+carousel("misc", yaml.load_file(here("posts", "egypt-dahab", "media_data", "misc", "misc.yml")))
 ```

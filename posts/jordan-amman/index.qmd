@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/jerash/_DSC3438.JPG"
+image: "./media_data/jerash/_DSC3438.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -65,7 +65,7 @@ Our hostel was next to the Citadel Ruins. The owner gave us walking directions w
 <br>
 
 ```{r citadel}
-carousel("citadel", yaml.load_file(here("posts", "jordan-amman", "image_data", "citadel", "citadel.yml")))
+carousel("citadel", yaml.load_file(here("posts", "jordan-amman", "media_data", "citadel", "citadel.yml")))
 ```
 
 # Roman Amphitheatre
@@ -77,7 +77,7 @@ The Amphitheatre is right in the city, it was a nice place to chill out. We sat 
 <br>
 
 ```{r amphitheatre}
-carousel("amphitheatre", yaml.load_file(here("posts", "jordan-amman", "image_data", "amphitheatre", "amphitheatre.yml")))
+carousel("amphitheatre", yaml.load_file(here("posts", "jordan-amman", "media_data", "amphitheatre", "amphitheatre.yml")))
 ```
 
 # Dead Sea - day one
@@ -91,7 +91,7 @@ Trav was braver than I driving the vehicle, so he manned the wheel on the first 
 <br>
 
 ```{r onedeadsea}
-carousel("onedeadsea", yaml.load_file(here("posts", "jordan-amman", "image_data", "onedeadsea", "onedeadsea.yml")))
+carousel("onedeadsea", yaml.load_file(here("posts", "jordan-amman", "media_data", "onedeadsea", "onedeadsea.yml")))
 ```
 
 # Jerash
@@ -101,7 +101,7 @@ Hitomi, a friend whom we met in Aswan, appeared at our hostel one evening. We sp
 <br>
 
 ```{r jerash}
-carousel("jrsh", yaml.load_file(here("posts", "jordan-amman", "image_data", "jerash", "jerash.yml")))
+carousel("jrsh", yaml.load_file(here("posts", "jordan-amman", "media_data", "jerash", "jerash.yml")))
 ```
 
 # Dead Sea - day two
@@ -111,7 +111,7 @@ Nathan continued his travels the day after Jerash, so we lost a travelling compa
 <br>
 
 ```{r twodeadsea}
-carousel("twodeadsea", yaml.load_file(here("posts", "jordan-amman", "image_data", "twodeadsea", "twodeadsea.yml")))
+carousel("twodeadsea", yaml.load_file(here("posts", "jordan-amman", "media_data", "twodeadsea", "twodeadsea.yml")))
 ```
 
 # Wrap up
@@ -125,5 +125,5 @@ Amman is our last stop in Jordan, I really liked the laid-back nature and small 
 <br>
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "jordan-amman", "image_data", "misc", "misc.yml")))
+carousel("misc", yaml.load_file(here("posts", "jordan-amman", "media_data", "misc", "misc.yml")))
 ```

@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/hike/_DSC3242.JPG"
+image: "./media_data/hike/_DSC3242.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -66,7 +66,7 @@ When we got back to the hotel, the hot water wasn't working (haha!). So we feste
 <br>
 
 ```{r hike}
-carousel("hke", yaml.load_file(here("posts", "jordan-dana", "image_data", "hike", "hike.yml")))
+carousel("hke", yaml.load_file(here("posts", "jordan-dana", "media_data", "hike", "hike.yml")))
 ```
 
 # Wrap up

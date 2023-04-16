@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/beach/_DSC3980.JPG"
+image: "./media_data/beach/_DSC3980.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -59,7 +59,7 @@ I had a terrible sleep that night, barely resting at all. The next day I *had* t
 # Beach
 
 ```{r beach}
-carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "image_data", "beach", "beach.yml")))
+carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "media_data", "beach", "beach.yml")))
 ```
 
 <br>
@@ -69,7 +69,7 @@ carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "image_data", "beac
 After two nights in Kaş, it didn't really feel like I had visited because most time was spent in bed sick or with a throbbing headache. I tested for covid, and it came back negative but *I* don't think RAT tests work anyway. *Have a feeling the cigarettes contributed to the flu.* Our next destination was Fethiye, where we will prepare for the hike (it feels like there is always more to prepare). We missed the 1.30pm bus for Fethiye by two or so minutes but boarded the 2.45pm bus instead, they leave every hour and a bit. I'm amazed at the frequency of intercity transportation in Turkey, it is great! But, I don't understand where all these people are going, and why?
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "image_data", "misc", "misc.yml")))
+carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "media_data", "misc", "misc.yml")))
 ```
 
 {{< video https://youtu.be/_8YIpb6-hm0 >}}

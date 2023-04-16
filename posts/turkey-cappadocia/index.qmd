@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/love_pigeon_valley_hike/_DSC3947.JPG"
+image: "./media_data/love_pigeon_valley_hike/_DSC3947.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -56,7 +56,7 @@ On our travels, everyone we met said [we must go]{.underline}to Cappadocia becau
 We awoke at six in the morning to watch the sunrise from the viewing platform, an inner city viewing platform where the hot air balloons can be watched. Usually, it costs ₺10TL to enter, but Trav found a free entry point that is an extra 10-minute walk. Afterwards, we went returned to the hostel to sleep.
 
 ```{r sunrise}
-carousel("sunrs", yaml.load_file(here("posts", "turkey-cappadocia", "image_data", "sunrise", "sunrise.yml")))
+carousel("sunrs", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "sunrise", "sunrise.yml")))
 ```
 
 <br>
@@ -66,7 +66,7 @@ carousel("sunrs", yaml.load_file(here("posts", "turkey-cappadocia", "image_data"
 After napping until 10am, we ventured outside, bought a Turkish coffee and literally wandered into the hills for a hike. Not really knowing where we were headed, the valley we ended up hiking in was called "The Red Valley", this is due to the reddish hue seen in the rock formations. We didn't follow a particular route and wound up in some dicey situations. One, in particular, where a steep drop bound us on both sides and we were tiptoeing along an extremely thin ridge of crumbly sandstone. We got out of there quickly and kept to the main path for the rest of the day.
 
 ```{r hike_red_valley}
-carousel("hike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "image_data", "red_valley_hike", "red_valley_hike.yml")))
+carousel("hike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "red_valley_hike", "red_valley_hike.yml")))
 ```
 
 <br>
@@ -80,7 +80,7 @@ We decided on renting bicycles to mountain bike through the valleys. Picking up 
 This was real mountain biking! We were so high up, wheeling along little goat/bike tracks trampled into the side of a hill. The view was incredible. We were moving too fast to make proper photography. The route we took looped the whole city, on one steep section I came off over the handlebars, luckily it was relatively flat and soft ground. Obviously, no helmets were supplied to us upon rental. By the end of the day, we were exhausted, it was only a twenty-kilometre cycle, but the hills really took it out of us.
 
 ```{r bike_red_valley}
-carousel("bike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "image_data", "red_valley_bike", "red_valley_bike.yml")))
+carousel("bike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "red_valley_bike", "red_valley_bike.yml")))
 ```
 
 <br>
@@ -92,7 +92,7 @@ Two red-headed English girls (sisters) ate breakfast with us on our last day in 
 It was a really fun day! Megan project manages a music festival in England called "Smugglers" as her full-time occupation. It plays world and psychedelic music, an event I might check out in September which will probably be my last weekend of the trip.
 
 ```{r love_pigeon_hike}
-carousel("love_pigeon_hike", yaml.load_file(here("posts", "turkey-cappadocia", "image_data", "love_pigeon_valley_hike", "love_pigeon_valley_hike.yml")))
+carousel("love_pigeon_hike", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "love_pigeon_valley_hike", "love_pigeon_valley_hike.yml")))
 ```
 
 <br>
@@ -109,4 +109,4 @@ Cappadocia is an expensive place. It was very hard to find a meal (single) for l
 
 In the evening we boarded a night bus returning to Antalya to retrieve our backpacks. From Antalya, we bus to Kaş, where we will meet Bara and begin hiking the Lucian Way. Fifteen hours on a bus is never fun...
 
-![](image_data/misc/_DSC3963.JPG)
+![](media_data/misc/_DSC3963.JPG)

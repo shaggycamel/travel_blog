@@ -7,7 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./image_data/petra_1/_DSC3133.JPG"
+image: "./media_data/petra_1/_DSC3133.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -63,7 +63,7 @@ All up we hiked around 20km, it was a big day. I started to lose gas around 13km
 <br>
 
 ```{r one_petra}
-carousel("one_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "image_data", "petra_1", "petra_1.yml")))
+carousel("one_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "media_data", "petra_1", "petra_1.yml")))
 ```
 
 # Petra Day Two
@@ -77,7 +77,7 @@ After leaving the cafe we explored the outer-lying buildings where few others he
 <br>
 
 ```{r two_petra}
-carousel("two_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "image_data", "petra_2", "petra_2.yml")))
+carousel("two_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "media_data", "petra_2", "petra_2.yml")))
 ```
 
 # Wrap up
