@@ -1,56 +1,66 @@
 ---
+title: "Journey Summary"
 image: profile_pic.jpeg
-about:
-  template: jolla
+about: 
+  template: solana
   links:
     - icon: instagram
       text: Instagram
       href: https://www.instagram.com/shaggy.camel/
     - icon: github
       text: Github
-      href: https://github.com/shaggycamel
+      href: https://github.com/shaggycamel/
 ---
 
-[Click here to read the blog!](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "Travel Blog" in the top left hand corner.
+Adventures and events experienced on my six month endeavor travelling through Egypt, Jordan, Turkey, the Balkans, Europe & Morocco are captured as diary entries on this blog. I hope you enjoy reading.
+
+[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "**Travel Blog**" in the top left hand corner.
 
 The journey so far:
 
 ```{r echo=FALSE, message=FALSE}
 destinations <- list(
-  "Cairo" = list(transport=NA),
-  "Bahariya Oasis" = list(transport="car"),
-  "Cairo" = list(transport="car"),
-  "Alexandria" = list(transport="car"),
-  "Cairo" = list(transport="car"),
-  "Aswan" = list(transport="car"),
-  "Luxor" = list(transport="car"),
-  "Cairo" = list(transport="car"),
-  "Dahb" = list(transport="car"),
-  "Nuweibaa" = list(transport="car"),
-  "Aqaba" = list(transport="flight"),
-  "Wadi Rum" = list(transport="car"),
-  "Wadi Musa" = list(transport="car"),
-  "ضانا" = list(transport="car"),
-  "Amman" = list(transport="car"),
-  "Antalya" = list(transport="flight"),
-  "Dinizli" = list(transport="car"),
-  "Pamukkale" = list(transport="car"),
-  "Dinizli" = list(transport="car"),
-  "Göreme" = list(transport="car"),
-  "Antalya" = list(transport="car"),
-  "Kas" = list(transport="car"),
-  "Fethiye" = list(transport="car"),
-  "Izmir" = list(transport="car")
+  "Cairo" = list(transport=NA, point_colour="blue"),
+  "Bahariya Oasis" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Alexandria" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Aswan" = list(transport="car", point_colour="blue"),
+  "Luxor" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Dahb" = list(transport="car", point_colour="blue"),
+  "Nuweibaa" = list(transport="car", point_colour="blue"),
+  "Aqaba" = list(transport="flight", point_colour="green"),
+  "Wadi Rum" = list(transport="car", point_colour="green"),
+  "Wadi Musa" = list(transport="car", point_colour="green"),
+  "ضانا" = list(transport="car", point_colour="green"),
+  "Amman" = list(transport="car", point_colour="green"),
+  "Antalya" = list(transport="flight", point_colour="purple"),
+  "Dinizli" = list(transport="car", point_colour="purple"),
+  "Pamukkale" = list(transport="car", point_colour="purple"),
+  "Dinizli" = list(transport="car", point_colour="purple"),
+  "Göreme" = list(transport="car", point_colour="purple"),
+  "Antalya" = list(transport="car", point_colour="purple"),
+  "Kas" = list(transport="car", point_colour="purple"),
+  "Fethiye" = list(transport="car", point_colour="purple"),
+  "Izmir" = list(transport="car", point_colour="black")
 )
 
-m <- mapBliss::plot_hybrid_route_flex(
+m <- mapBliss::plot_hybrid_route(
   names(destinations), 
   how = na.omit(purrr::map_chr(destinations, "transport")), 
   label_text = NULL,
-  weight=3,
-  colour="blue",
+  colour = as.vector(purrr::map_chr(destinations, "point_colour")),
+  opacity = 0.5,
+  radius = 3
 ) |> 
-  leaflet::addScaleBar(position = "bottomleft")
+  leaflet::addScaleBar(position = "bottomleft") |> 
+  leaflet::addLegend(
+    position = "topright",           
+    colors = c("blue", "green", "purple", "black"),
+    labels = c("Egypt", "Jordan", "Turkey", "Current Location"),
+    opacity = 1
+  )
 
 m$x$options$zoomControl <- TRUE
 m

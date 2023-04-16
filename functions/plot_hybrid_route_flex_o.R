@@ -6,6 +6,7 @@ plot_hybrid_route_flex_o <- function (
   weight = 1, 
   radius = 2, 
   label_text = addresses, 
+  popup_text = addresses,
   label_position = "bottom", 
   font = "Lucida Console", 
   font_weight = "bold", 
@@ -57,10 +58,11 @@ plot_hybrid_route_flex_o <- function (
       lat2 = min(address_single$lat) + zoomControl[4]
     ) |>
     leaflet::addTiles(urlTemplate = mapBoxTemplate) |> 
-    leaflet::addAwesomeMarkers(
+    leaflet::addMarkers(
       lat = address_single$lat, 
       lng = address_single$lon,
-      label = label_text
+      label = label_text,
+      popup = popup_text
     ) |> 
     leaflet::addPolylines(
       lng = trip[, 1], 
