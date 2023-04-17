@@ -12,9 +12,9 @@ about:
       href: https://github.com/shaggycamel/
 ---
 
-Adventures and events experienced on my six month endeavor travelling through Egypt, Jordan, Turkey, the Balkans, Europe & Morocco are captured as diary entries on this blog. I hope you enjoy reading.
+Adventures and events experienced on my six month endeavour travelling through Egypt, Jordan, Turkey, the Balkans, Europe & Morocco are captured as diary entries on this blog. I hope you enjoy reading.
 
-[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "**Travel Blog**" in the top left hand corner.
+[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "**Travel Blog**" in the top left hand corner ✋. This summary page can be returned to by clicking "**Journey Summary**" in the top right hard corner 🤚. Best viewing is on larger screens, such as: tablet, laptop or computer.
 
 The journey so far:
 
@@ -33,7 +33,11 @@ destinations <- list(
   "Aqaba" = list(transport="flight", point_colour="green"),
   "Wadi Rum" = list(transport="car", point_colour="green"),
   "Wadi Musa" = list(transport="car", point_colour="green"),
-  "ضانا" = list(transport="car", point_colour="green"),
+  "ضانا" = list(transport="car", point_colour="green"), # Dana
+  "Amman" = list(transport="car", point_colour="green"),
+  "البحر الميت" = list(transport="car", point_colour="green"), # Dead Sea
+  "Amman" = list(transport="car", point_colour="green"),
+  "Jerash" = list(transport="car", point_colour="green"),
   "Amman" = list(transport="car", point_colour="green"),
   "Antalya" = list(transport="flight", point_colour="purple"),
   "Dinizli" = list(transport="car", point_colour="purple"),
@@ -42,6 +46,8 @@ destinations <- list(
   "Göreme" = list(transport="car", point_colour="purple"),
   "Antalya" = list(transport="car", point_colour="purple"),
   "Kas" = list(transport="car", point_colour="purple"),
+  "Fethiye" = list(transport="car", point_colour="purple"),
+  "Belcekız Plajı" = list(transport="foot", point_colour="purple"), # Ölüdeniz
   "Fethiye" = list(transport="car", point_colour="purple"),
   "Izmir" = list(transport="car", point_colour="black")
 )

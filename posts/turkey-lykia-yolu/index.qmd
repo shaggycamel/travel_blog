@@ -8,6 +8,7 @@ format:
     theme: 
       - pandoc
 image: "./media_data/beach/_DSC3980.JPG"
+draft: true
 ---
 
 ```{r setup, include=FALSE}
