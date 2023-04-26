@@ -1,23 +1,26 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/blog.html",
     "items": [
-      "/posts/turkey-kaş/index.html",
-      "/posts/turkey-cappadocia/index.html",
-      "/posts/turkey-pamukkale/index.html",
-      "/posts/turkey-antalya/index.html",
-      "/posts/jordan-amman/index.html",
-      "/posts/jordan-dana/index.html",
-      "/posts/jordan-wadi-musa/index.html",
-      "/posts/jordan-wadi-rum/index.html",
-      "/posts/jordan-aqaba/index.html",
-      "/posts/egypt-dahab/index.html",
-      "/posts/egypt-luxor/index.html",
-      "/posts/egypt-aswan/index.html",
-      "/posts/egypt-alexandria/index.html",
-      "/posts/egypt-bahariya-oasis/index.html",
+      "/posts/first-excitement-post/index.html",
       "/posts/egypt-cairo/index.html",
-      "/posts/first-excitement-post/index.html"
+      "/posts/egypt-bahariya-oasis/index.html",
+      "/posts/egypt-alexandria/index.html",
+      "/posts/egypt-aswan/index.html",
+      "/posts/egypt-luxor/index.html",
+      "/posts/egypt-dahab/index.html",
+      "/posts/jordan-aqaba/index.html",
+      "/posts/jordan-wadi-rum/index.html",
+      "/posts/jordan-wadi-musa/index.html",
+      "/posts/jordan-dana/index.html",
+      "/posts/jordan-amman/index.html",
+      "/posts/turkey-antalya/index.html",
+      "/posts/turkey-pamukkale/index.html",
+      "/posts/turkey-cappadocia/index.html",
+      "/posts/turkey-kaş/index.html",
+      "/posts/turkey-fethiye/index.html",
+      "/posts/turkey-lykia-yolu/index.html",
+      "/posts/turkey-izmir/index.html"
     ]
   }
 ]

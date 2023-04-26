@@ -2,10 +2,10 @@ project:
   type: website
 
 website:
-  title: "Travel Blog"
+  title: "Journey Summary"
   navbar:
     right:
-      - about.qmd
+      - blog.qmd
       - icon: github
         href: https://github.com/shaggycamel/travel_blog
       - icon: instagram

@@ -7,8 +7,6 @@ format:
   html:
     theme: 
       - pandoc
-image: "./media_data/misc/_DSC.JPG"
-draft: true
 ---
 
 ```{r setup, include=FALSE}
@@ -22,7 +20,7 @@ library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
-We arrived in Fethiye and caught the public bus to our accommodation, a quiet, quaint pansion close to the beach and out of the city.
+We arrived in Fethiye and caught the public bus to our accommodation, a quiet, quaint pension close to the beach and out of the city.
 
 ```{r transportation}
 destinations <- list(
@@ -46,12 +44,12 @@ m
 
 <br>
 
-The initial two nights spent here were merely for preparing the Lykia Way hike. We spent a full day planning and purchasing food, spending around 900TL on supplies. This will last us five days, so in the scheme of things it was not too expensive, especially since we tented on the hike, so accommodation was free.
+The initial two nights spent here were merely preparing for the Lykia Way hike. We spent a full day planning and purchasing food, spending around 900TL on supplies. This will last us five days, so in the scheme of things it was not too expensive, especially since we tented on the hike, so accommodation was free.
 
-The strange, queer fella running the pansion allowed us to leave some luggage there, locking it in a place of storage. On the morning of our second day in Fethiye, we took a public bus to the south of the city and began the hike.
+The strange, queer fella running the pension allowed us to leave some luggage there, locking it in a place of storage. On the morning of our second day in Fethiye, we took a public bus to the south of the city and began the hike.
 
-My blog post detailing the Lykia Way can be read here.
+My blog post detailing the Lykia Way can be read by clicking [here](https://shaggycamel-travelblog.netlify.app/posts/turkey-lykia-yolu/).
 
-After finishing the hike, we arrived back at the pansion for one extra night. In the morning we video called mum & dad, sometimes it's hard finding the right space to make personal calls like this, usually we stay in hostels where privacy is limited, or the internet is too shoddy. We were pretty much the only people staying in this accommodation, so we had the internet to ourselves. After the call we caught a public bus to the city and purchased intercity bus tickets for the five hour trip north to the city of Izmir.
+After finishing the hike, we arrived back at the pension for one extra night. In the morning we video-called Mum & Dad, sometimes it's hard finding the right space to make personal calls like this, usually, we stay in hostels where privacy is limited, or the internet is too shoddy. We were pretty much the only people staying in this accommodation, so we had the internet to ourselves. After the call, we caught a public bus to the city and purchased intercity bus tickets for the five-hour trip north to the city of Izmir.
 
-![](media_data/misc/_DSC3963.JPG)
+![](media_data/20230407_191750.jpg)

@@ -1,12 +1,124 @@
 ---
-title: "Travel Blog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: true
-  filter-ui: true
-page-layout: full
-title-block-banner: true
+title: "Journey Summary"
+image: profile_pic.jpeg
+about: 
+  template: solana
+  image-shape: rounded
+  image-width: 15em
+  links:
+    - icon: instagram
+      text: Instagram
+      href: https://www.instagram.com/shaggy.camel/
+    - icon: github
+      text: Github
+      href: https://github.com/shaggycamel/
 ---
+
+Adventures and events experienced on my six month endeavour travelling through Egypt, Jordan, Turkey, the Balkans, Europe & Morocco are captured as diary entries on this blog. I hope you enjoy reading.
+
+[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "**Travel Blog**" in the top right hand corner 🤚. This summary page can be returned to by clicking "**Journey Summary**" in the top left hard corner ✋. Best viewing is on larger screens, such as a tablet, laptop or computer.
+
+*\*\*Details outlining technology, software and methodologies used to maintain this blog can be read following the below visualisations.*
+
+The journey so far:
+
+```{r echo=FALSE, message=FALSE}
+destinations <- list(
+  "Cairo" = list(transport=NA, point_colour="blue"),
+  "Bahariya Oasis" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Alexandria" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Aswan" = list(transport="car", point_colour="blue"),
+  "Luxor" = list(transport="car", point_colour="blue"),
+  "Cairo" = list(transport="car", point_colour="blue"),
+  "Dahb" = list(transport="car", point_colour="blue"),
+  "Nuweibaa" = list(transport="car", point_colour="blue"),
+  "Aqaba" = list(transport="flight", point_colour="green"),
+  "Wadi Rum" = list(transport="car", point_colour="green"),
+  "Wadi Musa" = list(transport="car", point_colour="green"),
+  "ضانا" = list(transport="car", point_colour="green"), # Dana
+  "Amman" = list(transport="car", point_colour="green"),
+  "البحر الميت" = list(transport="car", point_colour="green"), # Dead Sea
+  "Amman" = list(transport="car", point_colour="green"),
+  "Jerash" = list(transport="car", point_colour="green"),
+  "Amman" = list(transport="car", point_colour="green"),
+  "Antalya" = list(transport="flight", point_colour="purple"),
+  "Dinizli" = list(transport="car", point_colour="purple"),
+  "Pamukkale" = list(transport="car", point_colour="purple"),
+  "Dinizli" = list(transport="car", point_colour="purple"),
+  "Göreme" = list(transport="car", point_colour="purple"),
+  "Antalya" = list(transport="car", point_colour="purple"),
+  "Kas" = list(transport="car", point_colour="purple"),
+  "Fethiye" = list(transport="car", point_colour="purple"),
+  "Belcekız Plajı" = list(transport="foot", point_colour="purple"), # Ölüdeniz
+  "Fethiye" = list(transport="car", point_colour="purple"),
+  "Izmir" = list(transport="car", point_colour="purple"),
+  "Selçuk" = list(transport="car", point_colour="purple"),
+  "Izmir" = list(transport="car", point_colour="purple"),
+  "Çeşme" = list(transport="car", point_colour="purple"),
+  "Izmir" = list(transport="car", point_colour="purple"),
+  "Istanbul" = list(transport="car", point_colour="black")
+)
+
+m <- mapBliss::plot_hybrid_route(
+  names(destinations),
+  how = na.omit(purrr::map_chr(destinations, "transport")),
+  label_text = NULL,
+  colour = as.vector(purrr::map_chr(destinations, "point_colour")),
+  opacity = 0.5,
+  radius = 3
+) |>
+  leaflet::addScaleBar(position = "bottomleft") |>
+  leaflet::addLegend(
+    position = "topright",
+    colors = c("blue", "green", "purple", "black"),
+    labels = c("Egypt", "Jordan", "Turkey", "Current Location"),
+    opacity = 1
+  )
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+```{r echo=FALSE}
+df_token <- 
+    purrr::map_chr(fs::dir_ls(here::here("posts"), type = "directory"), ~{
+    readr::read_file(paste0(.x, "/index.qmd"))
+  }) |> 
+  paste(collapse = " ") |> 
+  stringr::str_split_1(stringr::regex("---|```", ignore_case = TRUE, multiline = TRUE, dotall = TRUE)) |> 
+  tibble::as_tibble_col(column_name = "text") |> 
+  dplyr::filter(!stringr::str_detect(text, "^\\{|title:")) |> 
+  dplyr::mutate(
+    text = textclean::replace_html(text, symbol = FALSE),
+    text = textclean::replace_url(text),
+    text = stringr::str_remove_all(text, "\\d")
+  ) |> 
+  tidytext::unnest_tokens(word, text) |> 
+  dplyr::mutate(word = textstem::lemmatize_words(word)) |> 
+  dplyr::anti_join(tidytext::stop_words, by = "word") |> 
+  dplyr::count(word, name = "freq") |> 
+  dplyr::mutate(len = stringr::str_length(word)) |> 
+  dplyr::filter(len > 2)
+
+wordcloud2::wordcloud2(df_token, hoverFunction = "off")
+```
+
+# Details
+
+## Camera
+
+My camera is a Sony Alpha A6400. Usually images are captured using the point and click auto-mode. Sunset images are taken using a preset configuration specifically for sunsets.
+
+## Software
+
+For mapping and visualisations I use the programming language **R**, various opensource packages simplify the process of making stunning visuals.
+
+The blog itself is built upon the opensource publishing software: Quarto. Using Quarto allows me to customise the layout in a way that I think captures the imagination of readers and embed images & videos on a page. It also supports, and works in conjunction with R, Python, Julia & Observerable Javascript, meaning it is possible to leverage an impressive array of technologies.
+
+For fine tuning of image layout; such as the image carousels that underlie most paragraphs within a blog post, and embedding sound-bytes, I use HTML. Which is another bonus of using the Quarto framework.
+
+[***For full visibility of code, please check out my github.***](https://github.com/shaggycamel/travel_blog)
