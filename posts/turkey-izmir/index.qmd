@@ -1,0 +1,104 @@
+---
+title: "Turkey - Izmir"
+author: "Oliver Eaton"
+date: "2023-04-19"
+categories: [Turkey, Historical Site, Beach, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/selçuk/_DSC4275.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+The journey from Fethiye to Izmir was an experience in itself. Air conditioning on the bus was out of service, so we sat, feeling sweaty and sticky, the whole journey. Every time the bus host served water, he poured it onto my lap missing the cup entirely. I understand this happening once, but multiple times in one journey? - Come on man! All of a sudden, a loud bang was felt on the side of the bus, almost as if a tyre popped or a boulder careened into the side. The driver pulled over to understand what happened, but he couldn't figure it out, everyone was confused, and we drove off. Unperturbed by the event.
+
+Arriving in Izmir we caught an Otobüs to a metro station and took a train to the hostel. The Otobüs driver was nuts! Everyone inside was clinging to their seats for dear life, the airwaves littered with honks from our little Otobüs. It was crazy. I don't understand why the traffic was so bad, the population in Izmir is 2.8 million, but the traffic reflected that of a city like Cairo or Delhi. Finally, we made it to the hostel around 9pm, quickly made some friends and played cards drinking a few beers as well.
+
+```{r}
+destinations <- list(
+  "Fethiye" = list(label="Fethiye", transport=NA, label_pos="right"),
+  "Izmir" = list(label="Izmir", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+We stayed four nights in Izmir. While there we visited the ancient Roman city ruins of Efes, had a Hamam (Turkish Bath) and swam at the beach in Çeşme.
+
+# Selçuk
+
+Our first day in Izmir was a 6.30am wake-up to catch the 7am train to Selçuk, which takes an hour and a half. We met an Aussie guy named Lay the night prior who laid out his plan to visit Efes, happily, we agreed to join him. It's nice having someone else do the planning. From Selçuk we took a fifteen-minute Otobüs to Efes.
+
+Wandering through the ruins, I couldn't help but feel like I had seen it all before. It wasn't that I had, in fact, visited Efes before, or read intently about it. It was more that, these ruins look just like all the other Roman ruins that are scattered throughout Europe, Asia, Northern Africa & the Middle East. So I didn't feel the 400TL was really worth the experience.
+
+After Efes, we spent the day exploring Selçuk, which is a quaint, authentic Turkish town. A market, selling fresh produce, fruit, nuts, clothes; & other cheap knock-offs of well-known brands, sprawls through the streets, essentially taking over the town centre. We spent a lot of time here, Trav even bought some tea. In the afternoon we wandered the suburban area that sits beneath the castle, spying some local younguns smoking shisha in the bush, most likely hiding from their parents.
+
+It was a nice day, but I had to hide my true feelings about Efes from other tourists. When fellow travellers ask "How was *XYZ*?", the typical response is to spout "Oh my gosh, it's amazing!!! You have to go.", but I don't feel Efes deserves a pump-up response to this question.
+
+```{r selçuk}
+carousel("selçuk", yaml.load_file(here("posts", "turkey-izmir", "media_data", "selçuk", "selçuk.yml")))
+```
+
+<br>
+
+# Haman
+
+Hamam's are everywhere in Izmir, it is the place to do it, especially given that they are much cheaper than Istanbul Hamam's. One evening we gathered a group of four from the hostel (an Aussie named Liam and a German named Constatine, Consty for short) and strutted into a nearby Haman. The going price was 250TL for a scrub, wash and massage.
+
+Throughout the experience I was constantly asking Hamam Man "What do I do?", little English was spoken and hand gestures were the main form of communication. First off, we undressed in little cupboard rooms with lockable doors, wrapped ourselves in tablecloth-like linen, walked into the bathing room; which is rather warm, moisture can be felt in the air and sat in the sauna for fifteen minutes or so. Next, Mr Hamam would ask one of us to step up. Laying face down on a large slab of slate, Mr Hamam slid off the towel, scrunched it up and placed it on the buttox. He wore a glove that had a slight abrasion and scrubbed the whole backside. Afterwards, he gestured to turn over and lay supine. In doing so, he would swiftly place the towel over your cock. The scrub then continued, it was a tad uncomfortable. Once completely scrubbed he motioned for a shower to be taken. Now began the wash. In the same body rotation, he lathered on bubbles and massaged soap into the body. A quick massage to loosen the muscles finished the process. Afterwards, I moved between sweating in the sauna and plunging in the cold pool.
+
+My skin felt the cleanest it ever had! - It felt like sacrilege to expose my (now) clean body to the dusty streets outside. I tried to hold off punching a dart for as long as possible, in an attempt to keep my insides pure. Hopefully we get the opportunity to do this again while in Turkey because it is such a nice and clean feeling.
+
+# Çeşme
+
+On our last day in Izmir, we ventured to a small town called Çeşme and hung out on the Alaçatı side of town. Çeşme is famous for white and blue buildings (similar to Greece), and a stunningly beautiful beach. The train & bus combination out there took one and a half hours.
+
+Strolling through the old town, we were desperate for coffee and a feed! Stumbling into a Mexican restaurant we asked the owner if they served coffee. They didn't, but he insisted on showing us an *amazing* place that does. Indeed the hotel he took us to was visually stunning, but the coffee was sub-par and the whole thing cost a whopping 275TL. We were charged 50TL per coffee, 100TL for three half-full cups of water and a 10% surcharge. This was ridiculous, who the fuck do these people think they are catering to? - A litre of water on the streets costs 10TL, and Trav & I usually scout coffees for 10-15TL a pop! Aghast, we forgot about the Mexican restaurant and found a *cheapish* place for iskender. Afterwards, we walked to the beach.
+
+Very few people were at the beach. Construction of large, somewhat disgusting, hotels plagues the waterfront. We found a nice spot to get changed and take a dip in the water. The ocean was crystal clear! - The sparkle made me think of brand-new champagne glasses. The ocean was shallow and slightly cold. It was best to sit under the water, poking your head just above and duck under every now and again. We sat like this for a bit and talked some shit. After the swim, we sunbathed on the beach and read our books.
+
+Funnily enough, on the walk to a nearby supermarket, we stumbled across the bus terminal. We hadn't yet organised our way back to Izmir, so this was a pleasant surprise and made the journey home extremely easy. We had two hours to kill waiting for the bus, so we bought some beer and drank it on the beach.
+
+It was a relaxing day, Consty is a nice guy. We'll probably catch up in Istanbul.
+
+```{r çeşme}
+carousel("çeşme", yaml.load_file(here("posts", "turkey-izmir", "media_data", "çeşme", "çeşme.yml")))
+```
+
+# Wrap Up
+
+The feeling in Izmir is good, the hostel we stayed at was chill, and awesome people were met there. We had a night out at the pub with an English guy named Simran and Consty; arriving home at three in the morning munching on warm, freshly baked goods from the bakery. It was fun!
+
+We organised an overnight bus to Istanbul, estimated to be a seven-hour journey, that left Izmir at 11.30pm (Yay 😑).
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "turkey-izmir", "media_data", "misc", "misc.yml")))
+```
+
+<br>
+
+{{< video https://youtu.be/FAEEjtOZKTk >}}

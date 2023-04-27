@@ -16,7 +16,7 @@ about:
 
 Adventures and events experienced on my six month endeavour travelling through Egypt, Jordan, Turkey, the Balkans, Europe & Morocco are captured as diary entries on this blog. I hope you enjoy reading.
 
-[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/) - Alternatively, click "**Travel Blog**" in the top right hand corner 🤚. This summary page can be returned to by clicking "**Journey Summary**" in the top left hard corner ✋. Best viewing is on larger screens, such as a tablet, laptop or computer.
+[[Click here to read the blog!]{.underline}](https://shaggycamel-travelblog.netlify.app/blog.html) - Alternatively, click "**Travel Blog**" in the top right hand corner 🤚. This summary page can be returned to by clicking "**Journey Summary**" in the top left hard corner ✋. Best viewing is on larger screens, such as a tablet, laptop or computer.
 
 *\*\*Details outlining technology, software and methodologies used to maintain this blog can be read following the below visualisations.*
 
@@ -58,7 +58,11 @@ destinations <- list(
   "Izmir" = list(transport="car", point_colour="purple"),
   "Çeşme" = list(transport="car", point_colour="purple"),
   "Izmir" = list(transport="car", point_colour="purple"),
-  "Istanbul" = list(transport="car", point_colour="black")
+  "Istanbul" = list(transport="car", point_colour="purple"),
+  "Çanakkale" = list(transport="car", point_colour="purple"),
+  "Istanbul" = list(transport="car", point_colour="purple"),
+  "Sofia" = list(transport="car", point_colour="black")
+
 )
 
 m <- mapBliss::plot_hybrid_route(
@@ -72,8 +76,8 @@ m <- mapBliss::plot_hybrid_route(
   leaflet::addScaleBar(position = "bottomleft") |>
   leaflet::addLegend(
     position = "topright",
-    colors = c("blue", "green", "purple", "black"),
-    labels = c("Egypt", "Jordan", "Turkey", "Current Location"),
+    colors = c("blue", "green", "purple", "red", "black"),
+    labels = c("Egypt", "Jordan", "Turkey", "Bulgaria", "Current Location"),
     opacity = 1
   )
 
