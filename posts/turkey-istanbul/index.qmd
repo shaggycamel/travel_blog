@@ -1,0 +1,122 @@
+---
+title: "Turkey - Istanbul"
+author: "Oliver Eaton"
+date: "2023-04-27"
+categories: [Turkey, City, Historical Site]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/misc/_DSC4322.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+We arrived in Istanbul at a balmy eleven degrees Celsius, slightly colder than expected. Public transport to the hostel situated on the European side of Istanbul was simple to figure out. The hostel felt more like a hotel; it had six floors, functioning facilities and a buffet breakfast. Honestly, it felt a bit sterile. Trav's friend Sophie was staying there as well, so we made a friend group with her, her friend (Rachel) and funnily enough we bumped into a British guy named Alex, whom we met in Jordan, who joined our group too.
+
+Istanbul is a huge metropolitan city, something like twenty million people live here. I really liked the atmosphere, the blend between Eastern and Western cultures can be felt. Lots of mosques are scattered throughout and the streets are bustling. We were here during Eid Mubarak (the end of Ramadan), so a lot of families were out in the parks celebrating with young children. Young adults were at bars and strolling the streets. It was an electric time to be there. Istanbul is home to a few historic sites, while there we visited the Hagia Sophia Mosque, the Princess Islands, the Blue Mosque, and the Çamlica Mosque, we also did a road trip to Çanakkale (Gallipoli) for the Anzac dawn service, then came back to Istanbul for another couple nights, this time staying at a hostel on the Asian side of Istanbul.
+
+```{r}
+destinations <- list(
+  "Izmir" = list(label="Izmir", transport=NA, label_pos="right"),
+  "Istanbul" = list(label="Istanbul", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# Hagia Sophia
+
+After napping in the hostel in the early morning, we ventured onto the streets for a coffee mission, in doing so we bumped into Sophie and Rachel. They suggested we join them in visiting the Hagia Sophia that evening. The Hagia Sophia mosque originally was a church and used as such between the years 350 - 1453. After the conquest of Constantinople by the Ottoman Empire it was converted to a mosque.
+
+We met in the hostel lobby and took public transport to the Hagia Sophia. Streets surrounding the mosque were bustling, security was everywhere. A courtyard with a large patch of grass lies between the Hagia Sophia and Blue Mosque, families sat there enjoying the evening and waiting for the Iftar call to prayer.
+
+Stunning gold scripture and bright chandeliers stand out inside a somewhat dark & dingy Hagia Sophia. This is an ancient place of worship, and a sacred feeling is felt in the air. We stayed for the Iftar call to prayer and left for dinner.
+
+That evening in the hostel we met Alex, a British guy cycling from Israel to England; whom Trav & I met in Wadi Musa, Jordan, at the bar. He joined us for the rest of our first stint in Istanbul.
+
+<br>
+
+```{r hagia}
+carousel("hagia", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "hagia_sophia", "hagia_sophia.yml")))
+```
+
+# Princess Islands
+
+The Princess Islands is a group of islands situated south of the Asian side of Istanbul. We took an hour-and-a-half ferry to an island called Büyükada. Aside from electric cars and community vehicles (such as rubbish trucks), no cars are allowed on the island. Most people get around by foot, bicycle or electric buggies.
+
+At the ferry port, a strip of shops in the old-town pester tourists. But one hundred metres or so past this, it becomes residential and nice, old, wooden houses occupy the streets. We kind of just wandered around the island, checking out the nooks and crannies and stumbled across an abandoned, creepy orphanage amongst the forest on the highest point of the island.
+
+Afterwards, we took the ferry back to the Asian side of Istanbul to explore and eat food. We wound up at a bar and drank until the late hours before catching a taxi back to the hostel.
+
+<br>
+
+```{r princess}
+carousel("princess", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "princess_islands", "princess_islands.yml")))
+```
+
+# Blue Mosque
+
+All five of us were a bit dusty from the night prior. The last day of Ramadan was yesterday, so Muslims have stopped fasting and Eid Mubarak celebrations have started. Due to this, the streets were packed everyone was out on the streets enjoying the holiday. Eid Mubarak is like Christmas or Easter, a time for family & friends.
+
+We lined up to enter the Blue Mosque, with thousands of others, security was extremely tight! By chance, Erdoğan, the president of Turkey, was speaking publicly at the Blue Mosque, hence why security was insane. Everyone in the group was able to get through security but I was carrying my camera so was rejected, I hid my camera deep in my bag and attempted to enter through another entrance but stupidly was carrying my pocket knife, so was rejected again. I gave up. Security told me to return at 5pm once Erdoğan was finished. Everyone else was able to enter, Trav was even able to see Erdoğan's speech in person.
+
+While security was still lingering we visited another mosque, a small structure built before the Blue Mosque and was a prototype to it. It was a stunning building inside & out. Afterwards, once security had lapsed at the Blue Mosque, we went back and a thunderstorm started, rain was beating down. The Blue Mosque courtyard is amazing, I understand why Erdoğan chose to speak here. A lot of people were still hanging around, mainly taking shelter from the rain. I was separated from the group but managed to find them outside.
+
+Everyone from the group was going in their own direction the next day, so that evening we went out for drinks. The bar we went to was fucking awesome! The DJ played amazing music, pumping up the energy, Trav shazamed most of the tracks. We left early that night to get to bed because everyone was tired from two days of exploration.
+
+<br>
+
+```{r blue}
+carousel("blue", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "blue_mosque", "blue_mosque.yml")))
+```
+
+# Çamlica Mosque
+
+Our group was now back down to two, Trav & me. We decided to visit the largest mosque in Istanbul called Çamlica Mosque. Getting there was really difficult, public transport was slammed with people out and about celebrating Eid Mubarak. It took us hours to finally get there, first taking a bus, ferry and train. Shit, this Mosque is huge! Much larger than the ancient Mosque structures in the central city location.
+
+<br>
+
+```{r çamlica}
+carousel("çamlica", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "çamlica_mosque", "çamlica_mosque.yml")))
+```
+
+# Çanakkale
+
+The following day Trav & I hired a car to visit Çanakkale. The ANZAC commemoration takes place here on the Gelibolu (Gallipoli) coast each year. My Çanakkale post can be read [here.](https://shaggycamel-travelblog.netlify.app/posts/turkey-c%CC%A7anakkale/)
+
+After two nights in Çanakkale, we came back to Istanbul and stayed in a different hostel on the Asian side of town.
+
+# Wrap Up
+
+Istanbul is fucking cool! It is a very developed city, the public transport system is massive and extremely accessible. People here are friendly and trendy. It feels like a metropolitan European city with a blend of Arabic culture, quite possibly my favourite combination. Arabic music fills the airwaves, the smell of Turkish coffee is everywhere, bars are full regardless of what night of the week it is. It is bustling but doesn't feel overly busy, maybe locals find it a tad busy. This is my last place in Turkey and I'm really going to miss it. I enjoy learning the Turkish language, drinking coffee and talking to the locals.
+
+Trav & I are going in different directions after this. I take a night bus to Bulgaria hopefully to find other travellers to do some hiking with. Trav goes to Greece to meet friends from Christchurch. It has been two and a half months travelling with Trav, and it has been great! We never had any tense moments and were happy travelling flexibly and simply. I am going to miss travelling with Trav, we will meet up again either in Italy or France where we fly together to Morocco for Dylan's wedding.
+
+<br>
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "misc", "misc.yml")))
+```

@@ -1,0 +1,55 @@
+---
+title: "Bulgaria - Sofia"
+author: "Oliver Eaton"
+date: "2023-05-03"
+categories: [Bulgaria, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/beach/_DSC3980.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+Travelling by night bus is never fun, the upside of it is a night of accommodation and transportation are paid together. Slinking back to the hostel in Antalya in the early morning, we re-packed our backpacks and stocked up on a few supplies like vape juice and cash monies. It was no hassle catching a Kaş bus, they departed every forty-five minutes, and upon arriving at the bus terminal, we were instantly ushered onto the next awaiting bus - "Yalah, yalah, yalah" (let's go).
+
+```{r}
+destinations <- list(
+  "Istanbul" = list(label="Istanbul", transport=NA, label_pos="right"),
+  "Sofia" = list(label="Sofia", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |> 
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+
+# Wrap Up
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "media_data", "misc", "misc.yml")))
+```
+
+{{< video https://youtu.be/_8YIpb6-hm0 >}}

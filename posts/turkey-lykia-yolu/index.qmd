@@ -19,7 +19,7 @@ library(here)
 source(here("functions", "carousel.R"))
 ```
 
-Probably the main reason we visited Turkey was to hike a section of the Lykia Yolu (Lycian Way in English, but literally every other language uses "Lykia"...*\*shrug\**). Trav was the main driver on this and did most of the planning, although we remained flexible and freestyled bits here and there. We settled for a five-day hike, freedom camping along the way with no designated or prescribed stops, deciding on just walking until we felt the need to set up camp and rest with an underlying goal of trekking around 15km per day.
+Probably the main reason we visited Turkey was to hike a section of the Lykia Yolu (Lycian Way in English, but literally every other language uses "Lykia"...🤷‍♂️). Trav was the main driver on this and did most of the planning, although we remained flexible and freestyled bits here and there. We settled for a five-day hike, freedom camping along the way with no designated or prescribed stops, deciding on just walking until we felt the need to set up camp and rest with an underlying goal of trekking around 15km per day.
 
 ![](media_data/lykia_trail_map.jpg){width="250" fig-align="center"}
 
@@ -101,7 +101,7 @@ The walk to the bus stop was through a large farming village growing tomatoes. E
 
 Luckily, the local bus passed by, swooping in to pick us up as if it knew where we were. It dropped us off at the intercity bus terminal where we were able to catch the five o'clock bus to Fethiye. We arrived back at the pension around seven in the evening, smelly and exhausted. I was self-conscious about the stench we expelled on the bus. Damn, we were tired. It was a long day, and it felt amazing to kick off my stinky hiking boots, indulge in a hot shower and lie on a real mattress.
 
-*\*Later we Googled "Likya Yolu wild animals" and discovered it was a KINDOF-goat, here is the sound:* 
+*\*Later we Googled "Likya Yolu wild animals" and discovered it was a KINDOF-goat, here is the sound:*
 
 {{< video https://youtu.be/NdRFwqEQUzA >}}
 

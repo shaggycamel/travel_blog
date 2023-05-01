@@ -1,0 +1,86 @@
+---
+title: "Turkey - Çanakkale (Gallipoli)"
+author: "Oliver Eaton"
+date: "2023-04-30"
+categories: [Turkey, Beach, Historical Site]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/çanakkale/_DSC4571.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+Gelibolu (Gallipoli), where the ANZAC soldiers attempted to invade during WWI in 1915, is located in the Çanakkale region. Our main purpose for visiting was to attend the ANZAC commemoration dawn service. We planned two nights in the çanakkale region and didn't organise accommodation, instead, we camped in Trav's tent wherever happened to be a convenient location for us. Hiring a car from Istanbul airport gave us the freedom to move around as we pleased.
+
+```{r}
+destinations <- list(
+  "Istanbul" = list(label="Istanbul", transport=NA, label_pos="bottom"),
+  "Gelibolu" = list(label="Gelibolu", transport="car", label_pos="bottom")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |>
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+It was a four-hour drive to çanakkale from Istanbul, we stopped at various beach towns along the way for food and coffee. By this time my Turkish is good enough to order food & drinks from eateries, bars and restaurants. So I feel confident and comfortable eating out.
+
+# Çanakkale
+
+After touching down in the region it was about five in the afternoon, and we needed to find a place to set up camp before sundown. We followed the road out to the coast where a large green patch could be seen on Google Maps. The camping spot was perfect, perched atop a hill on farmland, we had a stunning view across the Aegean Sea. Dinner was cooked on a small fire, we drank a bottle of cheap red wine and smoked cigarettes to seal the vibes.
+
+The next day we toured around the Çanakkale region scoping all the war memorials (there are heaps). For lunch, we stopped in a town called Eceabat to which five or so ANZAC tour buses pulled up. For about an hour, the entire town was filled with Kiwis and Aussies wandering the streets and exploring. Honestly, this was a really bizarre feeling. We had just spent two and half months in Egypt/Jordan/Turkey and now to find ourselves suddenly immersed in the southern hemisphere Australisian culture and accent didn't feel natural.
+
+We expected to bump into the same tour buses at war memorials throughout the day but didn't. I think this was because these tours would only visit ANZAC memorials, whereas Trav & I visited both Turkish & ANZAC memorials.
+
+```{r çanakkale}
+carousel("bch", yaml.load_file(here("posts", "turkey-çanakkale", "media_data", "çanakkale", "çanakkale.yml")))
+```
+
+<br>
+
+# Dawn Service
+
+Finding information about the service was really difficult. Information on the AU and NZ govt websites use English names to describe locations, sure, this makes pronunciation easy, but in reality, these "places" don't exist. So, after managing to find WIFI, we spent an hour or so planning exactly where to stay, understanding how events will fold out, how to actually get to the service; which is harder than it sounds as cars aren't allowed to park at ANZAC cove, instead, free shuttle buses are caught from Kilye Cove (not a real place). In addition, we had to register our attendance through an NZ governmental website. Finding out all this information was very difficult, I guess most that attend are part of a tour, so all is taken care of for them.
+
+To avoid shuttle bus confusion, the night before the service we rocked up to ANZAC Cove and planned to camp there. Security was already set up, and no one was allowed into the location. We parked a kilometre or so down the road and swam in the cold ocean to kill time. When security patrols died down, we darted across the road and found a place to camp amongst a pine tree forest. It was bone dry so lighting a fire to cook dinner wasn't an option, instead we cooked on a gas stove. Police patrol drove up and down the road all night long, I was nervous about our little white Peugeot 306 rental parked smack bang in the middle of a patrolled military zone.
+
+We awoke at four in the morning, donned headlamps and walked along the road to ANZAC Cove. Entrance was hassle-free, no one asked for tickets or passports, most Turkish officials just said "gunaydin" (good morning) and smiled as we walked through a mile of security personnel.
+
+There was a strange air to the service, I personally didn't feel comfortable. The army, who organise event proceedings are very serious. I never really gel with army folk, I think I give off a hippy vibe that sets off alarm bells in their simple brains. Those who spoke were NZ/AU army officials, low-ranking army personnel whose ancestors fought at Gallipoli, NZ/AU politicians, a priest and Turkish army officials. There was a lot of mention of *God* throughout the service, another aspect that I failed to understand. In my opinion, the speeches came from a very wanky perspective and didn't feel genuine. Which kind of makes me question why this commemoration service is still heavily honoured over one hundred years after the fact.
+
+We decided not to attend the afternoon service, and instead made our way slowly back to Istanbul. No issues or questions were faced when we drove our car out of the military zone, where it should not have been.
+
+```{r dawn}
+carousel("dawn", yaml.load_file(here("posts", "turkey-çanakkale", "media_data", "dawn_service", "dawn_service.yml")))
+```
+
+<br>
+
+# Wrap Up
+
+I'm in two minds about the ANZAC service, in general. Sure, men and women gave their lives defending our countries the commemoration service is not a _celebration_ of this, instead, it's a lesson learnt to understand the diabolical nature of war and devastating effects it has on those impacted; families, loved ones, etc. But, have we really learnt from it? Wars rage continuously throughout the world, and right-wing politicians (Chris Luxon) talk about making conscription compulsory again. I think, and this will be an unpopular opinion (I don't care), instead of looking back on this event every year, let's *learn from it* and look forward at the battles we, as a globe, currently face; climate change, and a wave of bittering world peace as examples. How can we overcome those? As long as we continue holding on so **tightly** to things in the past, we are too occupied to apply its learnings to current and future problems. Learn from it, let it go, and get on with making the world a better place.
+
+{{< video https://youtu.be/1e3Lu14RHsE >}}
