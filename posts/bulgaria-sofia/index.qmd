@@ -2,12 +2,12 @@
 title: "Bulgaria - Sofia"
 author: "Oliver Eaton"
 date: "2023-05-03"
-categories: [Bulgaria, City]
+categories: [Bulgaria, City, Hike]
 format: 
   html:
     theme: 
       - pandoc
-image: "./media_data/beach/_DSC3980.JPG"
+image: "./media_data/city/_DSC4746.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -21,7 +21,7 @@ library(mapBliss)
 source(here("functions", "carousel.R"))
 ```
 
-Travelling by night bus is never fun, the upside of it is a night of accommodation and transportation are paid together. Slinking back to the hostel in Antalya in the early morning, we re-packed our backpacks and stocked up on a few supplies like vape juice and cash monies. It was no hassle catching a Kaş bus, they departed every forty-five minutes, and upon arriving at the bus terminal, we were instantly ushered onto the next awaiting bus - "Yalah, yalah, yalah" (let's go).
+My night bus to Sofia left at ten in the evening. I purchased a neck pillow for ₺40TL (\$3NZD) which made sleeping on the journey comfortable, and saved my neck. When the bus arrived at the Turkey/Bulgaria border, around two in the morning, I was fast asleep and a young guy on the bus had to wake me up. If he hadn't woken me up, I probably would've gone through the checkpoint with my passport unchecked, been discovered, and got into a lot of trouble. Passport checks at the border took ages (around two hours)! Everything moved very slowly, it was two in the morning, and everyone was tired. A group of young Turks were on the bus, visiting Bulgaria to spend time at the casinos. Because Turkey is a Muslim country, gambling is illegal, so they all go to Bulgaria to blow money, haha!
 
 ```{r}
 destinations <- list(
@@ -36,7 +36,7 @@ m <- plot_hybrid_route_flex(
   label_position = as.vector(map_chr(destinations, "label_pos")),
   weight=3,
   colour="blue",
-) |> 
+) |>
   leaflet::addScaleBar(position = "bottomleft")
 
 m$x$options$zoomControl <- TRUE
@@ -45,11 +45,36 @@ m
 
 <br>
 
+This was my first stop travelling without Trav, it felt kinda weird, and a tad lonely. The bus arrived in Sofia at seven in the morning, the light was perfect for photography so on my walk to the hostel I took the opportunity to snap a few photos. I didn't have any concrete plans for my time in Sofia, but I explored the city and hiked the hills on the city's outskirts. I also purchased a good mobile phone here, because I lost mine in Alexandria, Egypt. Up until now, I've been using Trav as a proxy for an on-the-go internet connection (accommodation, transportation bookings, etc...).
+
+# City Wandering
+
+I had a great time exploring the city. The day I visited, the weather was perfect for photography, the sun never got too high in the sky. Architecture in the city is reminiscent of the communist era, all buildings are blocky and coloured with a pastel blue, green, or yellow hue. I love it. The sky remained a pale blue all day with not a cloud in the sky, this was probably my favourite day for photography on the trip so far.
+
+I picked up a nice mustard-coloured collared shirt, and a black merino wool jumper at a second-hand store for лв19LEV (\$17NZD), as well.
+
+```{r city}
+carousel("city", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "city", "city.yml")))
+```
+
+<br>
+
+# Hike
+
+While in Bulgaria, I really wanted to make an effort to explore nature. The forests in Bulgaria are dense and somewhat untouched. The Seven Rila Lakes is probably the most well-known hike in Sofia. I researched how the hike can be done but found no information describing how to actually reach it without a vehicle, it appeared only possible by car, which was a shame. Due to this logistical complexity, I instead found a hike on the city's outskirts accessible via public transport.
+
+The forest was really green! A military base was situated at the foot of the hills, so certain areas were fenced off by barbed wire and inaccessible. Waterfalls cascaded down the hills and once at the top, a fantastic view of the city could be seen. The hike itself wasn't too strenuous, only about three hours, but it was great to breathe the fresh air and get my hiking boots muddy.
+
+```{r hike}
+carousel("hke", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "hike", "hike.yml")))
+```
+
+<br>
 
 # Wrap Up
 
-```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "media_data", "misc", "misc.yml")))
-```
+My initial exposure to Bulgaria was interesting, it had big shoes to fill as I came from Turkey which was an absolutely incredible place. A few comparisons between the countries are: Bulgarian locals aren't as friendly, Turkish women are more attractive, the coffee is better and things are slightly cheaper in Turkey. Another reason why I didn't feel as comfortable in Bulgaria compared to Turkey, is because I gained a decent grasp on the Turkish language. In Turkey I was able to order coffee, ask for directions and negotiate prices, in Bulgaria, I lost the ability to do all this in the local language, so I was back to square one as *a tourist*.
 
-{{< video https://youtu.be/_8YIpb6-hm0 >}}
+In the hostel, I met some unique characters. One Tunisian guy, who was living in Bulgaria, had been thrown out by his girlfriend. He described coming home to all his belongings strewn on the sidewalk. He was a die-hard conspiracy theorist and told me stories of how he is wanted in The Netherlands for spreading stories of distrust about the government, haha! Man, no wonder this guy had been thrown out by his girlfriend, he was a nutjob. Anyway, on the morning of my hike, I stumbled across him smoking weed in the park. He offered me a drag, and I listened to his paranoid ramblings for a few minutes, nodding and offering empty, ambiguous words of agreement in return. I also met a group of Chilean jugglers who were travelling Europe, street busking in different countries/cities. They too were interesting, looking like modern-day Bob Marley's, every morning, before busking, they huffed joints and rode their unicycles to the city square.
+
+After two nights and three days in Sofia, I boarded a train heading to Plovdiv, the second largest city in Bulgaria, which cost лв9LEV (\$8NZD).

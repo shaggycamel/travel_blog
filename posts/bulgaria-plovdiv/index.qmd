@@ -1,0 +1,83 @@
+---
+title: "Bulgaria - Plovdiv"
+author: "Oliver Eaton"
+date: "2023-05-05"
+categories: [Bulgaria, City, Hike]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/city/_DSC4746.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+I arrived in Plovdiv on a Sunday, walking from the train station to the hostel all shops were shut. It felt eerie, as the sky was grey and pending rain. The hostel I stayed at was small, just ten or so beds. I met a Chilean & Brazilian there, we introduced ourselves. The Chilean had a guitar and soon after we met, we were drinking beer and singing songs, showing each other our guitar skills, late into the night. All of us could play, the Chilean in particular was amazing!
+
+Again, like Sofia, I didn't have much planned for Plovdiv. I ended up doing a free walking tour of the city and a hike.
+
+```{r}
+destinations <- list(
+  "Sofia" = list(label="Sofia", transport=NA, label_pos="right"),
+  "Plovdiv" = list(label="Plovdiv", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |>
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# City Wandering
+
+This was the first free walking tour of my trip. Most cities offer these, and they are a great way to meet people, but usually I have Trav to accompany me through a city, now I'm solo, this is an opportunity to meet others.
+
+The guide showed us the most historically interesting parts of the city, it was a great tour! The guides live off donations, so I handed him 20LEV for a job well done. During the tour I had met two Ukrainians, a Spaniard and two Bulgarians. We stuck together and found a nice place for lunch. Having the Bulgarians with us made finding an authentic place and ordering food much simpler.
+
+After lunch the Ukrainians and Bulgarians had to leave, the Spaniard (Toni) & I continued exploring the city. In the late afternoon we stopped for coffee & a cocktail and ventured to the top of a big hill, armed with beer, to watch the sunset. Toni was a nice guy, a little creepy with the ladies, but I think that's a Spaniard thing. He had done lots of travelling over the world and showed me photos and told stories. It was a great evening of conversation and beer drinking.
+
+```{r city}
+carousel("city", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "city", "city.yml")))
+```
+
+<br>
+
+# Hike
+
+Again, I really wanted to do a hike while in Plovdiv. A hike to the Bochkovo monastery is probably the most well-known. Alas, I couldn't find transportation to Bochkovo without car, which skewed this idea. Instead, I trained to a town called Asenovgrad and hiked through the forest, over the hills to Bochkovo. My initial plan was to hike from Asenovgrad to Bochkovo and continue on to the monastery. I walked through the Asenovgrad town to the edge of the forest which took about an hour, followed a 4WD track for a bit and lugged myself up a never ending hill. It was a steep incline for about an hour, my god! At the top I was dripping in sweat and stopped to eat some food. I hadn't seen a single other person on the track, so I took off my shirt and shorts and dried the sweat from them in the sun. I relaxed in the sun, listening to Bob Marley on the phone while I ate.
+
+This whole hike I followed an unofficial track visible on the MapsMe application. At the top of the hill, I realised I was still about eight kilometres from Bochkovo, so instead of following the track I bush-bashed my way, following no track at all. It was the most exciting part of the day! The track was steep and I was lucky no thorny or prickly bushes were in the forest, it was pine-trees all the way. Ignorantly, I knew nothing about the wildlife here, and was a tad nervous about bumping into a bear or something. This cut my time to Bochkovo dramattically. But I was exhausted from conquering that huge hill, so I just chilled in the small village of Bochkovo instead of hiking further to the monastery.
+
+Initially I had planned on hiking back to Asenovgrad after vsiting the Bochkovo monastery, but this plan got thrown out the window. After chilling in Bochkovo for a bit, I hitchhiked back to Asenovgrad, with no troulbes being picked up, and, from there, caught a train back to Plovdiv. By the end of the day I was exhausted! Sadly, I didn't get to see the Bochkovo monastery but the makeshift hike I threw together was a blast and really challenging. I think I will use MapsMe more in the future.
+
+```{r hike}
+carousel("hike", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "hike", "hike.yml")))
+```
+
+<br>
+
+# Wrap Up
+
+Interesting characters were met in Plovidiv too. It seems Bulgaria is a place for misfits, which I like. The Brazilian guy in the hostel had no drive and everyday just spent in bed at the hostel on his phone. The locals in Plovdiv are a bit more approachable than those in Sofia, plus, now I have learnt how to say "hello" and "thank you" in Bulgarian. The locals show a bit more respect if you greet them in the local language.
+
+{{ video \<\> }}
