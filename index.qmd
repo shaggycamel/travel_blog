@@ -63,7 +63,8 @@ destinations <- list(
   "Istanbul" = list(transport="car", point_colour="purple"),
   "Sofia" = list(transport="car", point_colour="red"),
   "Plovdiv" = list(transport="car", point_colour="red"),
-  "Sofia" = list(transport="car", point_colour="black")
+  "Sofia" = list(transport="car", point_colour="red"),
+  "Skopje" = list(transport="car", point_colour="black")
 )
 
 m <- mapBliss::plot_hybrid_route(
@@ -77,8 +78,8 @@ m <- mapBliss::plot_hybrid_route(
   leaflet::addScaleBar(position = "bottomleft") |>
   leaflet::addLegend(
     position = "topright",
-    colors = c("blue", "green", "purple", "red", "black"),
-    labels = c("Egypt", "Jordan", "Turkey", "Bulgaria", "Current Location"),
+    colors = c("blue", "green", "purple", "red", "orange", "black"),
+    labels = c("Egypt", "Jordan", "Turkey", "Bulgaria", "North Macedonia", "Current Location"),
     opacity = 1
   )
 
