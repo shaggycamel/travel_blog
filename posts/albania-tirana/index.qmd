@@ -1,0 +1,89 @@
+---
+title: "Albania - Tirana"
+author: "Oliver Eaton"
+date: "2023-05-11"
+categories: [Albania, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/city/_DSC4838.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+I travelled to Tirana from Ohrid by hitchhiking, a French girl, named Dounya, and the hostel owner, from the Ohrid hostel, talked me into it. I took the public bus to a village on the outskirts of Ohrid and attempted to stick out my thumb. After forty-five minutes or so I had no luck hitchhiking, so I found some cardboard and wrote "TIRANA" on it hoping it would increase my chances of being picked up. It didn't. I walked along the main road for another hour or so. Finally, a nice Audi pulled over! The car occupants yelled at me through the window "Are you Serbian?", obviously, I responded "No." and was let into the car. They all had big grins on their faces and were excited to be picking up a hitchhiker/foreigner. The next questions they asked, before we had gotten too far were: "Do you carry drugs?", "Weapons on you?" (we were crossing a border), to which I responded "No." as well, they then handed me a cold bottle of water and a fresh packet of biscuits. The three guys in the car were all Albanian, childhood friends who were thirty-seven years old, and living outside of Albania now. One of them attended psycho-therapy in Tirana and the three childhood friends were making a road trip out of it. The driver, the *smart* one of the group, now lived in Denmark and hadn't seen his friends in six years or so. The one attending therapy sat in the back with me. The last guy sat in the front and spoke little English.
+
+```{r}
+destinations <- list(
+  "Ohrid" = list(label="Ohrid", transport=NA, label_pos="bottom"),
+  "Tirana" = list(label="Tirana", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |>
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+I was so stoked to have been picked up, and these guys weren't much older than me, so we had a lot to share and discuss each other's lives. The *psycho* one, in the back, asked me a lot about religion and politics. First, he asked if I was Muslim or Catholic, I responded by saying "I follow no religion" surprising everyone in the car. "How do you become a Man, if you believe in no life after death?" asked the *psycho* one. I struggled to answer that. After a while, the *smart* one suggested we not discuss religion anymore. The next topic of discussion was war; Ukraine vs Russia. Whose side am I on? Without hesitation, I explained my reason for supporting Ukraine (or rather, not supporting Russia). The car was divided on the topic, the *psycho* one supported Russia, the *smart* one supported Ukraine, and the *quiet* one was indifferent. Good discussion followed up until we completed the three-hour journey to Tirana. Upon arriving, the *psycho* one was dropped at his Therapist's, and the remaining two guys showed me around the city. They showed me the main city square in Tirana, explaining the statues that can be seen; and describing the history surrounding them. We then sat down for dinner, which they insisted on buying me. During dinner the *psycho* one met back up with us. After dinner, we all went out for coffee (espresso) and finally, they bought me a dessert called "trei leche" (three milks" in Italian), which was absolutely divine. Quite possibly, the most delicious thing I've ever eaten. I was so full from dinner that I initially declined their request for dessert, but after insistence and pressure from them, I caved and ate the dessert. I'm extremely glad I did because it was incredible! This was the best introduction to Albaina I could have asked for. The hospitality was unparalleled to anything I've encountered before in my life. It was so awesome!
+
+After the desert, they had to carry on with their trip (a round journey back to North Macedonia where they lived), so I grabbed my belongings from the car and walked to the hostel, which was not far away.
+
+I spent three relaxed days in Albania which consisted of attending a free tour of the city, drinking coffee with the French girl Dounya, and on my last full day Douyna & I just hung out at the park. I didn't do any outdoor activities (like hiking) in Albania which disappointed me.
+
+# City Tour
+
+Albania has a rich history, and the free tour described it quite well. However, I find myself not retaining detailed information from the free tours, instead, leaving with a general message the tour guides try to deliver. I retained: Albania's disdain for Serbia, the impact communism and Yugoslavia had on the country, and finally, how the Albanian language is different and much more ancient than other languages spoken throughout the Balkans (even the world).
+
+The best thing about these free tours is meeting other people. After the tour, I had lunch with two French girls and a German girl. After lunch, I received a message from Douyna saying that she had arrived in Tirana, and wanted to catch up for coffee.
+
+```{r city}
+carousel("city", yaml.load_file(here("posts", "albania-tirana", "media_data", "city", "city.yml")))
+```
+
+<br>
+
+# Coffee / Rakia / Jamming
+
+Dounya was a gorgeous French girl, with Algerian roots. She is hitchhiking around Europe, and we caught up to discuss our most recent hitchhiking experience. We drank coffee in what appeared to be a rock'n'roll bar/cafe, a small nook filled with rock'n'roll memorabilia. I spied a guitar and asked if I could play, it literally turned into five hours or so of us just jamming with four local Albanian guys. Everyone at the cafe was a musician or artist in some way. It started to rain and the cafe doors shut for good, we were locked inside singing, playing guitar, drums, drinking coffee, and rakia and smoking all afternoon. Again, what an experience! By the end of it, I was fully energised, extremely drunk and ready to keep the night going.
+
+Douyna & I returned that evening to attend the concert, but it was really lowkey and one Albanian guy sleaze on Douyna really bad, so the event was a bit of a dud. Regardless, such an incredible/genuine day was had and I will always hold it in my memory.
+
+# Chilling
+
+The next day, Dounya & I hung out at the park. It was a staunching hot day but rained in the afternoon. Nothing special really happened, we walked through the city to a park with a man-made lake and talked about movies. From this interaction/day, it was clear she wasn't really into me and considered us to be just friends, which left me feeling a tad disappointed. Before this, we had discussed hitchhiking together to our next destination.
+
+```{r chilling}
+# carousel("chilling", yaml.load_file(here("posts", "albania-tirana", "media_data", "chilling", "chilling.yml")))
+```
+
+<br>
+
+# Wrap Up
+
+The social interactions I had with locals during my time in Albania were something special (spoiler alert...it continues into Kosovo), everyone was extremely friendly, nice & accommodating. Never once did I feel unsafe or unwelcome, even though the traffic and driving behaviour is a bit erratic (for example, roundabouts exist but have no road rules associated: first there, first served).
+
+I was a bit bummed out about Dounya flaking. Our next destination together was going to be Sckorde, in the north of Albania. But after some deep thought, I decided to make my way further north; with a final destination of Vienna in mind, but making a two/three-day pitstop in Belgrade. I only chose Belgrade because it was en route to Vienna. And Vienna was only chosen because it was the cheapest port to catch a bus to Kôln from. I'm meeting friends in Germany on the eighteenth of May, and I underestimated how difficult it was to travel around Europe. So I ditched Dounya (I think, to her liking as well), and booked an international bus, with a stopover in Kosovo, Peje, arriving at one in the morning in Belgrade.
+
+This was a short stint in Albania, which was a bit of a bummer. Other travellers kept showing me incredible photography of hiking, canyons & beaches in Albania, none of which I did...bit of a bummer. I think I travel better alone, or with Trav; when travelling with others, I tend to not meet as many people because I'm already concerned with those that I am hanging out with, on a side note, I really miss travelling with Trav, he's a great traveller.

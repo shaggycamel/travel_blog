@@ -1,0 +1,70 @@
+---
+title: "Serbia - Belgrade / Kosovo (special mention)"
+author: "Oliver Eaton"
+date: "2023-05-11"
+categories: [Serbia, Kosovo, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/city/_DSC4838.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+Despite having just learnt the basics of the Bulgarian language, I decided to try and make my way to Tirana, Albania. Searching online didn't disclose any results travelling from Plovdiv to Tirana, so my next best option was to return to Sofia and attempt to catch a bus. After arriving in Sofia, I discovered there were no immediate travel options to Tirana either, instead, I booked a bus to Skopje, the capital of North Macedonia. After spending a few hours in a cafe, I boarded the bus. On the bus was Emilio, the Chilean guitarist from Plovdiv. It was just us and two others on the bus. What a pleasant surprise to see him! We talked about future travel plans and it soon became clear that we would accompany each other for a few days.
+
+The hostel I booked in Skopje was probably my least favourite of the journey so far. It was called Hostel Inbox, the dormitory was a corridor of forty or so sleeping pods built into the wall. It felt like the scene in the Matrix where Neo discovers all humans being used as batteries, and are stored in cryogenic pods. It also felt like a Uyghur, Chinese concentration camp, there was definitely a Chinese influence to this hostel design. I didn't talk to a single person there, everyone seemed to avoid eye contact, it was an extremely unsavoury place.
+
+I spent two nights in Skopje, it was merely a stopover for the next destination. The city is quite nice, it feels more "skyscrapperey" (if that is a word) than Sofia. There is definitely more money (or more corruption) here. Additionally, I noticed a greater presence of the Islamic faith here, in Bulgaria Islam wasn't common. I met Emilio for a free walking tour of the city.
+
+```{r}
+destinations <- list(
+  "Plovdiv" = list(label="Plovdiv", transport=NA, label_pos="bottom"),
+  "Sofia" = list(label="Sofia", transport="car", label_pos="top"),
+  "Skopje" = list(label="Skopje", transport="car", label_pos="top")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue",
+) |>
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# City Tour
+
+Three people were part of the free tour. Emilio & I, and a German girl called Amelie. The tour was a tad overwhelming, in the sense that it was small and intimate, I didn't retain any of the history the guide described. Although, I got a sense of tension between North Macedonian and Bulgarian people.
+
+After the tour, Emilio, Amelie & I got lunch together. Our next plan was to go catch the public bus to a forest canyon called Matka Canyon. We waited about an hour for the bus to show, but it never did. So we abandoned the idea and went to the pub instead. Which was a real shame, because Matka Canyon looked beautiful.
+
+```{r city}
+carousel("city", yaml.load_file(here("posts", "north-macedonia-skopje", "media_data", "city", "city.yml")))
+```
+
+<br>
+
+# Wrap Up
+
+A few beers were drunk after the free tour, so I woke a tad dusty. Emilio had been talking about getting a bus to Ohrid, North Macedonia. I messaged him to see what time the bus was, it was a bit of a rush for me to get out of bed, shower and pack my stuff up. But I made it to the bus station.
+
+Skopje was literally just a one-day stopover on the way to Ohrid. Honestly, it is a bit of a boring city. There are heaps of statues everywhere, in an attempt to rally national pride. But, there is a sense of displeasure amongst citizens, I can't quite put my finger on its cause, but I think it goes back to Yugoslavian times and is much more complex than I would ever be able to comprehend.

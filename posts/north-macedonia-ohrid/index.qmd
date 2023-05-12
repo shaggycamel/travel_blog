@@ -1,0 +1,82 @@
+---
+title: "North Macedonia - Ohrid"
+author: "Oliver Eaton"
+date: "2023-05-09"
+categories: [North Macedonia, Nature, Hike]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/misc/20230505_184852.jpg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(mapBliss)
+source(here("functions", "carousel.R"))
+```
+
+I woke in Skopje at ten in the morning, a little hungover from the night before. It was decided at the pub that I would accompany Emilio to Ohrid. I messaged him after waking, asking what time the bus was. He replied saying the bus left at 11am. A frantic rush ensued, packing up my belongings and squeezing in a shower. I really needed to wash my clothes, at this time, I had run out of clean underwear and both my pants are filthy. I ran to the bus station, working up a sweat, lugging my large backpack, looking like a lost tourist. I made it, only to find the bus actually left at 12.30pm. Haha, that gave us time to have breakfast.
+
+We arrived in Ohrid around five in the afternoon. This town is on a lake, the air feels really fresh and everyone is much more laid back than Skopje. We stayed in a really cool hostel, the owners were super friendly, even calling us by name the whole time. A lot of other friendly travellers were also at the hostel, which made the whole Ohrid experience super cool. Our first night there Emilio and I smoked hash on the city jetty. Watching the sunset go down was very relaxing and the lake looked extremely pretty.
+
+While in Ohrid I did a hike over the hills, and spent a day by the lake swimming, playing guitar, drinking and smoking. It was super chill.
+
+```{r}
+destinations <- list(
+  "Skopje" = list(label="Skopje", transport=NA, label_pos="top"),
+  "Ohrid" = list(label="Ohrid", transport="car", label_pos="bottom")
+)
+
+m <- plot_hybrid_route_flex(
+  names(destinations),
+  how = na.omit(map_chr(destinations, "transport")),
+  label_text = as.vector(map_chr(destinations, "label")),
+  label_position = as.vector(map_chr(destinations, "label_pos")),
+  weight=3,
+  colour="blue"
+) |>
+  leaflet::addScaleBar(position = "bottomleft")
+
+m$x$options$zoomControl <- TRUE
+m
+```
+
+<br>
+
+# Hike
+
+Emilio wanted to busk in the city, this is how he makes extra cash to help him on his travels. While he was spent the day practicing songs and performing them on the street, I hiked over the hills that were visible from the hostel.
+
+I didn't follow a particular trail, I just made my way to the base of the hills and made my way upwards. When I wanted to know my precise location I used MapsMe for assistance. Once again, MapsMe is awesome! The hike ended up being a large day, I was walking for five or six hours and covered quite some distance. The lake view from the top of the hills was spectacular. I didn't wear hiking boots, I wore my Tevas instead. They were great for the majority of the trail, but on the down slope they struggle, and by the end of the day my legs were quite sore.
+
+```{r hike}
+carousel("hke", yaml.load_file(here("posts", "north-macedonia-ohrid", "media_data", "hike", "hike.yml")))
+```
+
+<br>
+
+# Beach Chill
+
+My last full day at Ohrid, Emilio and I spent on a beach by the lakeside. We went swimming in the lake, the water was fucking freezing, so we didn't last long in the water. Afterwards we smoked some hash, drank a beer and strummed a guitar. Soon afterwards, two girls from the hostel joined us. It was an awesome day, we all hung out at the beach, played heaps of guitar and sang songs, basked in the sun and had a beautiful view of the lake the whole time.
+
+That evening, we all went to the Irish pub for a beer. What an awesome day.
+
+# Wrap Up
+
+Ohrid had a really great feel to it. I imagine in summer it is a bustling metropolis, full of tourists, and maybe not as pleasant as it is in May. After three nights, I decided to make my way to Albania, following my original plan from Plovdiv. Others in the hostel mentioned they had been travelling through the Balkins by hitchiking, and that Albania, in particular, is a great place to do it. So, I decided that I would give hitchhiking a try on the next part of my journey travelling from Ohrid to Tirana, Albania.
+
+Emilio and I also split here. He decided to visit Istanbul, I think he was influenced by my constant chatter of my love for Turkey. Travelling with him was really fun, it was good having a sidekick again, someone to look after the bags while the other goes toilet, all those small things...I'm gonna miss travelling with him, we'll meet up in Berlin because he is moving there to pursue a career as a musician.
+
+```{r misc}
+carousel("misc", yaml.load_file(here("posts", "north-macedonia-ohrid", "media_data", "misc", "misc.yml")))
+```
+
+<br>
+
+{{< video https://youtu.be/E9CPchGXSHA >}}
