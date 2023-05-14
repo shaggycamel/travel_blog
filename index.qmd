@@ -64,7 +64,13 @@ destinations <- list(
   "Sofia" = list(transport="car", point_colour="red"),
   "Plovdiv" = list(transport="car", point_colour="red"),
   "Sofia" = list(transport="car", point_colour="red"),
-  "Skopje" = list(transport="car", point_colour="black")
+  "Skopje" = list(transport="car", point_colour="red"),
+  "Ohrid" = list(transport="car", point_colour="red"),
+  "Tirana" = list(transport="car", point_colour="red"),
+  "Peja" = list(transport="car", point_colour="red"),
+  "Belgrade" = list(transport="car", point_colour="red"),
+  "Vienna" = list(transport="car", point_colour="black")
+
 )
 
 m <- mapBliss::plot_hybrid_route(
@@ -78,8 +84,8 @@ m <- mapBliss::plot_hybrid_route(
   leaflet::addScaleBar(position = "bottomleft") |>
   leaflet::addLegend(
     position = "topright",
-    colors = c("blue", "green", "purple", "red", "orange", "black"),
-    labels = c("Egypt", "Jordan", "Turkey", "Bulgaria", "North Macedonia", "Current Location"),
+    colors = c("blue", "green", "purple", "red", "grey", "black"),
+    labels = c("Egypt", "Jordan", "Turkey", "The Balkans", "Europe", "Current Location"),
     opacity = 1
   )
 

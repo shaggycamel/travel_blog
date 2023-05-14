@@ -7,8 +7,7 @@ format:
   html:
     theme: 
       - pandoc
-image: "./media_data/city/_DSC4838.JPG"
-draft: true
+image: "./media_data/city/_DSC4902.JPG"
 ---
 
 ```{r setup, include=FALSE}
@@ -26,8 +25,8 @@ I travelled to Tirana from Ohrid by hitchhiking, a French girl, named Dounya, an
 
 ```{r}
 destinations <- list(
-  "Ohrid" = list(label="Ohrid", transport=NA, label_pos="bottom"),
-  "Tirana" = list(label="Tirana", transport="car", label_pos="top")
+  "Ohrid" = list(label="Ohrid", transport=NA, label_pos="top"),
+  "Tirana" = list(label="Tirana", transport="car", label_pos="bottom")
 )
 
 m <- plot_hybrid_route_flex(
@@ -52,6 +51,8 @@ After the desert, they had to carry on with their trip (a round journey back to 
 
 I spent three relaxed days in Albania which consisted of attending a free tour of the city, drinking coffee with the French girl Dounya, and on my last full day Douyna & I just hung out at the park. I didn't do any outdoor activities (like hiking) in Albania which disappointed me.
 
+![](media_data/misc/20230508_175216.JPG)
+
 # City Tour
 
 Albania has a rich history, and the free tour described it quite well. However, I find myself not retaining detailed information from the free tours, instead, leaving with a general message the tour guides try to deliver. I retained: Albania's disdain for Serbia, the impact communism and Yugoslavia had on the country, and finally, how the Albanian language is different and much more ancient than other languages spoken throughout the Balkans (even the world).
@@ -62,6 +63,8 @@ The best thing about these free tours is meeting other people. After the tour, I
 carousel("city", yaml.load_file(here("posts", "albania-tirana", "media_data", "city", "city.yml")))
 ```
 
+{{< video https://youtu.be/795CdYJ4N10 >}}
+
 <br>
 
 # Coffee / Rakia / Jamming
@@ -70,15 +73,11 @@ Dounya was a gorgeous French girl, with Algerian roots. She is hitchhiking aroun
 
 Douyna & I returned that evening to attend the concert, but it was really lowkey and one Albanian guy sleaze on Douyna really bad, so the event was a bit of a dud. Regardless, such an incredible/genuine day was had and I will always hold it in my memory.
 
+{{< video https://youtu.be/GSaXRcyH4Yc >}}
+
 # Chilling
 
 The next day, Dounya & I hung out at the park. It was a staunching hot day but rained in the afternoon. Nothing special really happened, we walked through the city to a park with a man-made lake and talked about movies. From this interaction/day, it was clear she wasn't really into me and considered us to be just friends, which left me feeling a tad disappointed. Before this, we had discussed hitchhiking together to our next destination.
-
-```{r chilling}
-# carousel("chilling", yaml.load_file(here("posts", "albania-tirana", "media_data", "chilling", "chilling.yml")))
-```
-
-<br>
 
 # Wrap Up
 
@@ -87,3 +86,5 @@ The social interactions I had with locals during my time in Albania were somethi
 I was a bit bummed out about Dounya flaking. Our next destination together was going to be Sckorde, in the north of Albania. But after some deep thought, I decided to make my way further north; with a final destination of Vienna in mind, but making a two/three-day pitstop in Belgrade. I only chose Belgrade because it was en route to Vienna. And Vienna was only chosen because it was the cheapest port to catch a bus to Kôln from. I'm meeting friends in Germany on the eighteenth of May, and I underestimated how difficult it was to travel around Europe. So I ditched Dounya (I think, to her liking as well), and booked an international bus, with a stopover in Kosovo, Peje, arriving at one in the morning in Belgrade.
 
 This was a short stint in Albania, which was a bit of a bummer. Other travellers kept showing me incredible photography of hiking, canyons & beaches in Albania, none of which I did...bit of a bummer. I think I travel better alone, or with Trav; when travelling with others, I tend to not meet as many people because I'm already concerned with those that I am hanging out with, on a side note, I really miss travelling with Trav, he's a great traveller.
+
+![](media_data/misc/_DSC4951.JPG)

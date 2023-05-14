@@ -71,7 +71,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -153,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(25)</span></div><div class="category" data-category="Beach">Beach <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Bulgaria">Bulgaria <span class="quarto-category-count">(2)</span></div><div class="category" data-category="City">City <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Desert">Desert <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Egypt">Egypt <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Hike">Hike <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Historical Site">Historical Site <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Jordan">Jordan <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Nature">Nature <span class="quarto-category-count">(6)</span></div><div class="category" data-category="North Macedonia">North Macedonia <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Turkey">Turkey <span class="quarto-category-count">(9)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(26)</span></div><div class="category" data-category="Albania">Albania <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Beach">Beach <span class="quarto-category-count">(8)</span></div><div class="category" data-category="Bulgaria">Bulgaria <span class="quarto-category-count">(2)</span></div><div class="category" data-category="City">City <span class="quarto-category-count">(11)</span></div><div class="category" data-category="Desert">Desert <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Egypt">Egypt <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Hike">Hike <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Historical Site">Historical Site <span class="quarto-category-count">(9)</span></div><div class="category" data-category="Jordan">Jordan <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Nature">Nature <span class="quarto-category-count">(6)</span></div><div class="category" data-category="North Macedonia">North Macedonia <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Turkey">Turkey <span class="quarto-category-count">(9)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -1191,10 +1192,51 @@ Oliver Eaton
 </a>
 </div>
 </div>
+<div class="quarto-post image-right" data-index="25" data-categories="Albania,City" data-listing-date-sort="1683756000000" data-listing-file-modified-sort="1684071295482" data-listing-reading-time-sort="6.975">
+<div class="thumbnail">
+<p><a href="./posts/albania-tirana/index.html"> <img data-src="./posts/albania-tirana/media_data/city/_DSC4902.JPG" class="thumnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./posts/albania-tirana/index.html">
+<h3 class="no-anchor listing-title">
+Albania - Tirana
+</h3>
+<div class="listing-subtitle">
+
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Albania'); return false;">
+Albania
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('City'); return false;">
+City
+</div>
+</div>
+<a href="./posts/albania-tirana/index.html">
+<div class="listing-description">
+I travelled to Tirana from Ohrid by hitchhiking, a French girl, named Dounya, and the hostel owner, from the Ohrid hostel, talked me into it. I took the public bus to a…<em></em>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./posts/albania-tirana/index.html">
+<div class="listing-date">
+May 11, 2023
+</div>
+<div class="listing-author">
+Oliver Eaton
+</div>
+</a>
+</div>
+</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
