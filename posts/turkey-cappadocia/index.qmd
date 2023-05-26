@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 The bus ride from Dinizli to Göreme was a bit stressful. Trav actually booked the wrong date, so when boarding our ticket didn't scan properly, he then realised the mistake and ran to the ticket office to sort it out. We made the bus with literal seconds to spare. Whilst on the bus, I was woken up by the host who asked me via sign language if I could put my shoes back on. It is bad manners to take shoes off when riding the bus in Turkey, and probably in most public situations too.
@@ -29,18 +28,14 @@ destinations <- list(
   "Göreme" = list(label="Göreme", transport="car", label_pos="right")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -56,7 +51,7 @@ On our travels, everyone we met said [we must go]{.underline}to Cappadocia becau
 We awoke at six in the morning to watch the sunrise from the viewing platform, an inner city viewing platform where the hot air balloons can be watched. Usually, it costs ₺10TL to enter, but Trav found a free entry point that is an extra 10-minute walk. Afterwards, we went returned to the hostel to sleep.
 
 ```{r sunrise}
-carousel("sunrs", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "sunrise", "sunrise.yml")))
+carousel("sunrs", here("posts", "turkey-cappadocia", "media_data", "sunrise", "sunrise.yml"))
 ```
 
 <br>
@@ -66,7 +61,7 @@ carousel("sunrs", yaml.load_file(here("posts", "turkey-cappadocia", "media_data"
 After napping until 10am, we ventured outside, bought a Turkish coffee and literally wandered into the hills for a hike. Not really knowing where we were headed, the valley we ended up hiking in was called "The Red Valley", this is due to the reddish hue seen in the rock formations. We didn't follow a particular route and wound up in some dicey situations. One, in particular, where a steep drop bound us on both sides and we were tiptoeing along an extremely thin ridge of crumbly sandstone. We got out of there quickly and kept to the main path for the rest of the day.
 
 ```{r hike_red_valley}
-carousel("hike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "red_valley_hike", "red_valley_hike.yml")))
+carousel("hike_red_valley", here("posts", "turkey-cappadocia", "media_data", "red_valley_hike", "red_valley_hike.yml"))
 ```
 
 <br>
@@ -80,7 +75,7 @@ We decided on renting bicycles to mountain bike through the valleys. Picking up 
 This was real mountain biking! We were so high up, wheeling along little goat/bike tracks trampled into the side of a hill. The view was incredible. We were moving too fast to make proper photography. The route we took looped the whole city, on one steep section I came off over the handlebars, luckily it was relatively flat and soft ground. Obviously, no helmets were supplied to us upon rental. By the end of the day, we were exhausted, it was only a twenty-kilometre cycle, but the hills really took it out of us.
 
 ```{r bike_red_valley}
-carousel("bike_red_valley", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "red_valley_bike", "red_valley_bike.yml")))
+carousel("bike_red_valley", here("posts", "turkey-cappadocia", "media_data", "red_valley_bike", "red_valley_bike.yml"))
 ```
 
 <br>
@@ -92,7 +87,7 @@ Two red-headed English girls (sisters) ate breakfast with us on our last day in 
 It was a really fun day! Megan project manages a music festival in England called "Smugglers" as her full-time occupation. It plays world and psychedelic music, an event I might check out in September which will probably be my last weekend of the trip.
 
 ```{r love_pigeon_hike}
-carousel("love_pigeon_hike", yaml.load_file(here("posts", "turkey-cappadocia", "media_data", "love_pigeon_valley_hike", "love_pigeon_valley_hike.yml")))
+carousel("love_pigeon_hike", here("posts", "turkey-cappadocia", "media_data", "love_pigeon_valley_hike", "love_pigeon_valley_hike.yml"))
 ```
 
 <br>

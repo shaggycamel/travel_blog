@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 The road was shrouded in a thick fog all the way from Wadi Musa to Dana. The taxi driver drove extremely slowly and cautiously because the road could not be seen. Dana is a small village nestled in the mountains, livelihood in the village is either olive farming or tourism, which relies entirely upon the Dana Trail hike which Trav and I had planned. Steep cliff drops on the mountain road added to the cautious driving of our taxi-man.
@@ -29,18 +28,14 @@ destinations <- list(
   "ضانا" = list(label="Dana", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -66,7 +61,7 @@ When we got back to the hotel, the hot water wasn't working (haha!). So we feste
 <br>
 
 ```{r hike}
-carousel("hke", yaml.load_file(here("posts", "jordan-dana", "media_data", "hike", "hike.yml")))
+carousel("hke", here("posts", "jordan-dana", "media_data", "hike", "hike.yml"))
 ```
 
 # Wrap up

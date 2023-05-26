@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 The journey from Fethiye to Izmir was an experience in itself. Air conditioning on the bus was out of service, so we sat, feeling sweaty and sticky, the whole journey. Every time the bus host served water, he poured it onto my lap missing the cup entirely. I understand this happening once, but multiple times in one journey? - Come on man! All of a sudden, a loud bang was felt on the side of the bus, almost as if a tyre popped or a boulder careened into the side. The driver pulled over to understand what happened, but he couldn't figure it out, everyone was confused, and we drove off. Unperturbed by the event.
@@ -31,18 +30,14 @@ destinations <- list(
   "Izmir" = list(label="Izmir", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -60,7 +55,7 @@ After Efes, we spent the day exploring Selçuk, which is a quaint, authentic Tur
 It was a nice day, but I had to hide my true feelings about Efes from other tourists. When fellow travellers ask "How was *XYZ*?", the typical response is to spout "Oh my gosh, it's amazing!!! You have to go.", but I don't feel Efes deserves a pump-up response to this question.
 
 ```{r selçuk}
-carousel("selçuk", yaml.load_file(here("posts", "turkey-izmir", "media_data", "selçuk", "selçuk.yml")))
+carousel("selçuk", here("posts", "turkey-izmir", "media_data", "selçuk", "selçuk.yml"))
 ```
 
 <br>
@@ -86,7 +81,7 @@ Funnily enough, on the walk to a nearby supermarket, we stumbled across the bus 
 It was a relaxing day, Consty is a nice guy. We'll probably catch up in Istanbul.
 
 ```{r çeşme}
-carousel("çeşme", yaml.load_file(here("posts", "turkey-izmir", "media_data", "çeşme", "çeşme.yml")))
+carousel("çeşme", here("posts", "turkey-izmir", "media_data", "çeşme", "çeşme.yml"))
 ```
 
 # Wrap Up
@@ -96,7 +91,7 @@ The feeling in Izmir is good, the hostel we stayed at was chill, and awesome peo
 We organised an overnight bus to Istanbul, estimated to be a seven-hour journey, that left Izmir at 11.30pm (Yay 😑).
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-izmir", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "turkey-izmir", "media_data", "misc", "misc.yml"))
 ```
 
 <br>

@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Despite having just learnt the basics of the Bulgarian language, I decided to try and make my way to Tirana, Albania. Searching online didn't disclose any results travelling from Plovdiv to Tirana, so my next best option was to return to Sofia and attempt to catch a bus. After arriving in Sofia, I discovered there were no immediate travel options to Tirana either, instead, I booked a bus to Skopje, the capital of North Macedonia. After spending a few hours in a cafe, I boarded the bus. On the bus was Emilio, the Chilean guitarist from Plovdiv. It was just us and two others on the bus. What a pleasant surprise to see him! We talked about future travel plans and it soon became clear that we would accompany each other for a few days.
@@ -27,7 +26,6 @@ The hostel I booked in Skopje was probably my least favourite of the journey so 
 
 I spent two nights in Skopje, it was merely a stopover for the next destination. The city is quite nice, it feels more "skyscrapperey" (if that is a word) than Sofia. There is definitely more money (or more corruption) here. Additionally, I noticed a greater presence of the Islamic faith here, in Bulgaria Islam wasn't common. I met Emilio for a free walking tour of the city.
 
-
 ```{r}
 destinations <- list(
   "Plovdiv" = list(label="Plovdiv", transport=NA, label_pos="bottom"),
@@ -35,18 +33,14 @@ destinations <- list(
   "Skopje" = list(label="Skopje", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -57,9 +51,8 @@ Three people were part of the free tour. Emilio & I, and a German girl called Am
 
 After the tour, Emilio, Amelie & I got lunch together. Our next plan was to go catch the public bus to a forest canyon called Matka Canyon. We waited about an hour for the bus to show, but it never did. So we abandoned the idea and went to the pub instead. Which was a real shame, because Matka Canyon looked beautiful.
 
-
 ```{r city}
-carousel("city", yaml.load_file(here("posts", "north-macedonia-skopje", "media_data", "city", "city.yml")))
+carousel("city", here("posts", "north-macedonia-skopje", "media_data", "city", "city.yml"))
 ```
 
 <br>

@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Gelibolu (Gallipoli), where the ANZAC soldiers attempted to invade during WWI in 1915, is located in the Çanakkale region. Our main purpose for visiting was to attend the ANZAC commemoration dawn service. We planned two nights in the çanakkale region and didn't organise accommodation, instead, we camped in Trav's tent wherever happened to be a convenient location for us. Hiring a car from Istanbul airport gave us the freedom to move around as we pleased.
@@ -29,18 +28,14 @@ destinations <- list(
   "Gelibolu" = list(label="Gelibolu", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -56,7 +51,7 @@ The next day we toured around the Çanakkale region scoping all the war memorial
 We expected to bump into the same tour buses at war memorials throughout the day but didn't. I think this was because these tours would only visit ANZAC memorials, whereas Trav & I visited both Turkish & ANZAC memorials.
 
 ```{r çanakkale}
-carousel("bch", yaml.load_file(here("posts", "turkey-çanakkale", "media_data", "çanakkale", "çanakkale.yml")))
+carousel("bch", here("posts", "turkey-çanakkale", "media_data", "çanakkale", "çanakkale.yml"))
 ```
 
 <br>
@@ -74,13 +69,13 @@ There was a strange air to the service, I personally didn't feel comfortable. Th
 We decided not to attend the afternoon service, and instead made our way slowly back to Istanbul. No issues or questions were faced when we drove our car out of the military zone, where it should not have been.
 
 ```{r dawn}
-carousel("dawn", yaml.load_file(here("posts", "turkey-çanakkale", "media_data", "dawn_service", "dawn_service.yml")))
+carousel("dawn", here("posts", "turkey-çanakkale", "media_data", "dawn_service", "dawn_service.yml"))
 ```
 
 <br>
 
 # Wrap Up
 
-I'm in two minds about the ANZAC service, in general. Sure, men and women gave their lives defending our countries the commemoration service is not a _celebration_ of this, instead, it's a lesson learnt to understand the diabolical nature of war and devastating effects it has on those impacted; families, loved ones, etc. But, have we really learnt from it? Wars rage continuously throughout the world, and right-wing politicians (Chris Luxon) talk about making conscription compulsory again. I think, and this will be an unpopular opinion (I don't care), instead of looking back on this event every year, let's *learn from it* and look forward at the battles we, as a globe, currently face; climate change, and a wave of bittering world peace as examples. How can we overcome those? As long as we continue holding on so **tightly** to things in the past, we are too occupied to apply its learnings to current and future problems. Learn from it, let it go, and get on with making the world a better place.
+I'm in two minds about the ANZAC service, in general. Sure, men and women gave their lives defending our countries the commemoration service is not a *celebration* of this, instead, it's a lesson learnt to understand the diabolical nature of war and devastating effects it has on those impacted; families, loved ones, etc. But, have we really learnt from it? Wars rage continuously throughout the world, and right-wing politicians (Chris Luxon) talk about making conscription compulsory again. I think, and this will be an unpopular opinion (I don't care), instead of looking back on this event every year, let's *learn from it* and look forward at the battles we, as a globe, currently face; climate change, and a wave of bittering world peace as examples. How can we overcome those? As long as we continue holding on so **tightly** to things in the past, we are too occupied to apply its learnings to current and future problems. Learn from it, let it go, and get on with making the world a better place.
 
 {{< video https://youtu.be/1e3Lu14RHsE >}}

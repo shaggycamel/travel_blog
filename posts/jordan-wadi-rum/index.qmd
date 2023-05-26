@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 We were excited about visiting Wadi Rum, we had both heard so much about it from other tourists and online blogs. The hostel owner organised camp accommodation (which is more like glamping) for 30JOD each and a mini-bus for us to the Wadi Rum junction for 5JOD each (\$10NZD), where a camp worker picked us up in a ute and drove us into the desert. On the way, we drove past the Wadi Rum visitor's centre, avoiding it altogether, which was a bit confusing. Going through the visitor's centre, and paying an entrance fee is the only way into the nature reserve. Arriving at the camp Trav deduced from his map that the camp was not situated within the nature reserve, he became a bit frustrated, we were under the impression that we would be in the reserve. On top of that, lunch had been served and came with a 15JOD price tag (hefty). Again, we thought food and water were included. They were not.
@@ -31,17 +30,14 @@ destinations <- list(
   "Wadi Rum" = list(label="Wadi Rum", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -59,7 +55,7 @@ The rest of the tour we saw interesting rock formations, sifted through the dese
 <br>
 
 ```{r jeep}
-carousel("jeep", yaml.load_file(here("posts", "jordan-wadi-rum", "media_data", "jeep_tour", "jeep_tour.yml")))
+carousel("jeep", here("posts", "jordan-wadi-rum", "media_data", "jeep_tour", "jeep_tour.yml"))
 ```
 
 # Glamping
@@ -75,7 +71,7 @@ The next morning we woke around 9am, smashed back a huge breakfast and went on o
 <br>
 
 ```{r rock-scramble}
-carousel("rock-scramble", yaml.load_file(here("posts", "jordan-wadi-rum", "media_data", "rock_scramble", "rock_scramble.yml")))
+carousel("rock-scramble", here("posts", "jordan-wadi-rum", "media_data", "rock_scramble", "rock_scramble.yml"))
 ```
 
 # Wrap up

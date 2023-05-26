@@ -1,0 +1,108 @@
+---
+title: "Germany - Cologne"
+author: "Oliver Eaton"
+date: "2023-05-16"
+categories: [Germany, Hike, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/hike/_DSC3242.JPG"
+draft: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(blogme)
+```
+
+The main reason I visited Köln was to see my old high school friend Mila, she was kind enough to let me sleep on her couch for a few nights and picked me up from the airport when I arrived.
+
+During my time, Mila showed me around some of her favourite walking amongst nature, we also did a kiosk beer tour around the city with some of her friends. Mila now has a seven year old son named Oskar, I was able to practice my german speaking with Oskar and showed him a few songs on the guitar.
+
+Alone, I also did a free walking tour of the city.
+
+```{r}
+destinations <- list(
+  "Vienna" = list(label="Vienna", transport=NA, label_pos="top"),
+  "Cologne" = list(label="Köln", transport="flight", label_pos="top")
+)
+
+plot_route(
+  names(destinations), 
+  how = map_chr(destinations, "transport"), 
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
+  weight=3,
+  colour="blue"
+)
+```
+
+<br>
+
+# Wild Park
+
+The weather really turned up for my first day in Köln. It got to 27 degrees throughout the day. That morning Mila took me on a walk through her local nature spot called "Wild Park", which has large fenced off areas where animals can roam. We saw Bison, deer, frogs and birds. The Bison in particular were impressive, they are such large creatures.
+
+We walked alongside the lake and perched in the long grass, enjoying the sun and listening to the frogs. This was like the first day of summer, apparently the weather had been grey and wet up until I arrived. It was a pleasant way to begin the weekend with Mila, we hadn't seen each other in ten years
+
+```{r wild}
+# carousel("wild", here("posts", "germany-cologne", "media_data", "wild_park", "wild_park.yml"))
+```
+
+<br>
+
+# Kiosk Hopping
+
+The following evening we met with Mila's friends in the city and they showed me something called "Kiosk hopping". Drinking in the streets of Germany is legal, it's possible to see people on the street sipping beer from a bottle at all times. In Köln city, every hundred metres or so is something called a *Kiosk*. They are sort of like diaries in NZ, selling general items for a slightly higher price than supermarkets, although in Germany, they also sell beer. Which is probably their main sale item. Beer is cheap, less than 2euro for a 500ml bottle of local Kölsch beer.
+
+Our group walked along the Rhine River as the sun was setting. It was a beautiful, warm evening. Heaps of people were out and about enjoying the warm evening, chilling by the Rhine. We continued to satisfy the Kiosk nature of drinking until about 9pm, where we set up in a bar for one last beer. It was a fun evening, such a unique experience, largely everyone drinking in the streets is responsible. I imagine street drinking would get shut down very quickly in NZ.
+
+```{r kiosk}
+# carousel("kiosk", here("posts", "germany-cologne", "media_data", "kiosk", "kiosk.yml"))
+```
+
+<br>
+
+# KWD
+
+Mila's mum works for the public German radio *KWD*, which speacialises in classical music. Mila organised a tour around the station for me with her mum as the guide. It was interesting to see rooms where live radio broadcasts are carried out and the practice/recording room for the in-house orchestra. Each room is sound proofed to the highest degree, so hearing a reduction in sound as one walks through the door is possible. The building itself is old and under protection, the inside is quite pretty.
+
+```{r kwd}
+# carousel("kwd", here("posts", "germany-cologne", "media_data", "kwd", "kwd.yml"))
+```
+
+<br>
+
+# City
+
+I took a free walking tour through the city. The tour guide was really good, he explained a lot about the behaviour of local Kölners and how it is different to the typical German stereotype.
+
+His enthusiasm made the tour fantastic. I only paid him 10E for his work, which I felt guilty for, because he was great at his job and few others were in attendance.
+
+```{r city}
+# carousel("city", here("posts", "germany-cologne", "media_data", "city", "city.yml"))
+```
+
+<br>
+
+# Wrap up
+
+It was interesting staying with Mila, having not seen her for 10-13 years. We were able to pick up the same feeling that was left hanging when her time at school came to an end.
+
+However, the more I got to know her (again), the more I realised how crazy she is. Her craziness is what attracted me to her at high school, but it was apparent that she is legitimately crazy now. We would often speak deeply about our lives, her's sound much harder being a single-parent where the father to her son pays no child support and has minimal interest in his Oskar.
+
+Our beliefs clashed at times, although I never pointed out the differences. Mila doesn't believe the covid vaccination decreases one's chance of getting covid, when she disclosed this to me it made me feel a little uncomfortable. She, herself, is vaccinated, but didn't receive the jab until late and absolutely necessary. The discrimination she described as receiving from society for not being vaccinated sounded horrible. And, I think is the source of her mental health woes these last two years.
+
+I'm really glad to have met with Mila, it felt like we, and we did, have business that was unfinished from 2009. To finally cuddle and hold her again after all these years felt good. We could finally put some feelings to rest. For me, I felt certain that I do not want to be with her, however, she described feeling differently as we parted for the last time.
+
+Our final parting was quite sad. I had spent the day with Mila, eating lunch and walking through the city, that afternoon I got to spend time with Oskar. He's a smart, quiet and conscientious kid. He showed me his toy cars, we played football and tag at the school nearby. I feel like he's never had a positive male presenece in his life, additionally, his mother (Mila) has her own mental struggles. Mila really liked that I was able to show Oskar how a positive man behaves. Mila described having me as an opportunity for her to unwind and ground herself. It sounded like within the last year she was close to admitting herself into a mental institution.
+
+```{r misc}
+# carousel("misc", here("posts", "germany-cologne", "media_data", "misc", "misc.yml"))
+```

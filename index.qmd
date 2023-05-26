@@ -69,7 +69,9 @@ destinations <- list(
   "Tirana" = list(transport="car", point_colour="red"),
   "Peja" = list(transport="car", point_colour="red"),
   "Belgrade" = list(transport="car", point_colour="red"),
-  "Vienna" = list(transport="car", point_colour="black")
+  "Vienna" = list(transport="car", point_colour="grey"),
+  "Cologne" = list(transport="flight", point_colour="grey"),
+  "Berlin" = list(transport="car", point_colour="black")
 
 )
 

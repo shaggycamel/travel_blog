@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Visiting an Oasis was always part of our schedule, we hadn't decided which Oasis to visit prior to arriving in Egypt and planned on organising it while in the thick of things. There are five Oases in Egypt, each one offering a unique set of desert sights & experience.
@@ -31,17 +30,14 @@ destinations <- list(
   "Bahariya Oasis" = list(label="Bahariya Oasis", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
   colour="blue"
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+)
 ```
 
 <br>
@@ -57,7 +53,7 @@ The Black Desert is an old volcanic area. Due to the volcanic activity, I was ha
 <br>
 
 ```{r black-desert}
-carousel("blk", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "black_desert", "black_desert.yml")))
+carousel("blk", here("posts", "egypt-bahariya-oasis", "media_data", "black_desert", "black_desert.yml"))
 ```
 
 # White Desert
@@ -67,7 +63,7 @@ Literally across the highway from the Black Desert is the White Desert. The Whit
 <br>
 
 ```{r white-desert}
-carousel("wht", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert.yml")))
+carousel("wht", here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert.yml"))
 ```
 
 # White Desert - Overnight
@@ -79,7 +75,7 @@ We opted to sleep under the stars instead of the tent, so we set up a thin mattr
 <br>
 
 ```{r white-desert-overnight}
-carousel("white-desert-overnight", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_overnight.yml")))
+carousel("white-desert-overnight", here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_overnight.yml"))
 ```
 
 # White Desert - Sunrise
@@ -91,7 +87,7 @@ We then had breakfast and set off in the jeep back to Bawiti.
 <br>
 
 ```{r white-desert-sunrise}
-carousel("white-desert-sunrise", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_sunrise.yml")))
+carousel("white-desert-sunrise", here("posts", "egypt-bahariya-oasis", "media_data", "white_desert", "white_desert_sunrise.yml"))
 ```
 
 # Tour End
@@ -103,5 +99,5 @@ If I had the opportunity to do a jeep desert tour again I would organise more th
 <br>
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-bahariya-oasis", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "egypt-bahariya-oasis", "media_data", "misc", "misc.yml"))
 ```

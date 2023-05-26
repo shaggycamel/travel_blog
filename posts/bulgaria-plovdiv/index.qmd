@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 I arrived in Plovdiv on a Sunday, I noticed, when walking from the train station to the hostel all shops were shut. It felt eerie, as the sky was grey and pending rain. The hostel I stayed at was small, with just ten or so beds. I met a Chilean & Brazilian there, we introduced ourselves. The Chilean had a guitar and soon after we met, we were drinking beer and singing songs, showing each other our guitar skills, late into the night. All of us could play, the Chilean in particular was amazing!
@@ -31,18 +30,14 @@ destinations <- list(
   "Plovdiv" = list(label="Plovdiv", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -56,7 +51,7 @@ The guide showed us the most historically interesting parts of the city, it was 
 After lunch the Ukrainians and Bulgarians had to leave, the Spaniard (Toni) & I continued exploring the city. In the late afternoon, we stopped for coffee & a cocktail and ventured to the top of a big hill, armed with beer, to watch the sunset. Toni was a nice guy, a little creepy with the ladies, but I think that's a Spaniard thing. He had done lots of travelling over the world and showed me photos and told stories. It was a great evening of conversation and beer drinking.
 
 ```{r city}
-carousel("city", yaml.load_file(here("posts", "bulgaria-plovdiv", "media_data", "city", "city.yml")))
+carousel("city", here("posts", "bulgaria-plovdiv", "media_data", "city", "city.yml"))
 ```
 
 <br>
@@ -70,7 +65,7 @@ During this whole hike, I followed an unofficial track visible on the MapsMe app
 Initially, I had planned on hiking back to Asenovgrad after visiting the Bochkovo monastery, but this plan got thrown out the window. After chilling in Bochkovo for a bit, I hitchhiked back to Asenovgrad, with no troubles being picked up, and, from there, caught a train back to Plovdiv. By the end of the day, I was exhausted! Sadly, I didn't get to see the Bochkovo monastery but the makeshift hike I threw together was a blast and really challenging. I think I will use MapsMe more in the future.
 
 ```{r hike}
-carousel("hke", yaml.load_file(here("posts", "bulgaria-plovdiv", "media_data", "hike", "hike.yml")))
+carousel("hke", here("posts", "bulgaria-plovdiv", "media_data", "hike", "hike.yml"))
 ```
 
 <br>

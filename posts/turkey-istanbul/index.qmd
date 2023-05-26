@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 We arrived in Istanbul at a balmy eleven degrees Celsius, slightly colder than expected. Public transport to the hostel situated on the European side of Istanbul was simple to figure out. The hostel felt more like a hotel; it had six floors, functioning facilities and a buffet breakfast. Honestly, it felt a bit sterile. Trav's friend Sophie was staying there as well, so we made a friend group with her, her friend (Rachel) and funnily enough we bumped into a British guy named Alex, whom we met in Jordan, who joined our group too.
@@ -31,18 +30,14 @@ destinations <- list(
   "Istanbul" = list(label="Istanbul", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -60,7 +55,7 @@ That evening in the hostel we met Alex, a British guy cycling from Israel to Eng
 <br>
 
 ```{r hagia}
-carousel("hagia", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "hagia_sophia", "hagia_sophia.yml")))
+carousel("hagia", here("posts", "turkey-istanbul", "media_data", "hagia_sophia", "hagia_sophia.yml"))
 ```
 
 # Princess Islands
@@ -74,7 +69,7 @@ Afterwards, we took the ferry back to the Asian side of Istanbul to explore and 
 <br>
 
 ```{r princess}
-carousel("princess", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "princess_islands", "princess_islands.yml")))
+carousel("princess", here("posts", "turkey-istanbul", "media_data", "princess_islands", "princess_islands.yml"))
 ```
 
 # Blue Mosque
@@ -90,7 +85,7 @@ Everyone from the group was going in their own direction the next day, so that e
 <br>
 
 ```{r blue}
-carousel("blue", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "blue_mosque", "blue_mosque.yml")))
+carousel("blue", here("posts", "turkey-istanbul", "media_data", "blue_mosque", "blue_mosque.yml"))
 ```
 
 # Çamlica Mosque
@@ -100,7 +95,7 @@ Our group was now back down to two, Trav & me. We decided to visit the largest m
 <br>
 
 ```{r çamlica}
-carousel("çamlica", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "çamlica_mosque", "çamlica_mosque.yml")))
+carousel("çamlica", here("posts", "turkey-istanbul", "media_data", "çamlica_mosque", "çamlica_mosque.yml"))
 ```
 
 # Çanakkale
@@ -118,5 +113,5 @@ Trav & I are going in different directions after this. I take a night bus to Bul
 <br>
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-istanbul", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "turkey-istanbul", "media_data", "misc", "misc.yml"))
 ```

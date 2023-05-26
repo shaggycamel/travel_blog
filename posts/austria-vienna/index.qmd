@@ -1,0 +1,97 @@
+---
+title: "Austria - Vienna"
+author: "Oliver Eaton"
+date: "2023-05-16"
+categories: [Austria, City]
+format: 
+  html:
+    theme: 
+      - pandoc
+image: "./media_data/city/_DSC5047.JPG"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+```
+
+```{r imports}
+library(here)
+library(purrr)
+library(blogme)
+```
+
+A lot of distance was covered on my journey to Vienna. My first stop was Peja, Kosovo. While waiting for the bus from Tirana, I had a couple hours spare, so I spent my last Albanian Lek on a burek. Whilst eating, a few young Albanian lads, also eating burek, approached me and asked if I would like to join them for coffee. Of course, I said "yes". Only one of them spoke English well, but we all managed to laugh and discuss life topics. *Local encounters in Albania never cease to amaze me.* After a while I left the crew for my bus. Another young Albanian, studying medicine, was on the bus, prior to departure we got talking, his English was perfect, really nice guy. When the bus arrived in Kosovo, he said I had to try the Kosovo burek, so he bought me two large burek's for my journey. He was right, they we delicious, and better than the Albanian burek.
+
+The bus arrived in Peja, which was the last stop for most. I had a three hour layover for my next bus to Belgrade. The driver mentioned his friend had a store across the road with WIFI that I could hangout in. He introduced me to the store owner, it was a coffee house for old guys, all were just hanging out, drinking beers, smoking cigarettes, laughing. I set my belongings in a corner and approached the counter flashing my visa and asking if they accept card as payment. They didn't. Instead, they just handed me a beer and shrugged. I sat at my table and had a few sips. Not long after, a second bottle appeared on my table. A gentlemen across the room had bought it for me. Smiling, I sat at the spare seat at their table. One fella spoke English, another German, the last guy spoke neither. So communicating with these guys happened in a combination of English & German being translated to Albanian. We drank beer and laughed together, all the while they were handing me cigarettes. Soon rakia came out, shots were poured and passed in my direction, *how can I refuse?* Then the whole store is crowded around our table, one guy hands me a bucket of home made cheese, urging me to try, another passes me cigarettes that look like they are literally made of gold, others just wanted to shake my hand. The whole place was ecstatic. Food comes out, burgers, and finger food: tomatoes, onion, chili. After the three hours was up and it was time for me to leave, I was hammered, full and content. Wow, the hospitality in this part of the world is crazy. Everyone wants to look after you, and make sure you feel welcome and are enjoying yourself. It's unbelievable! I wish I had spent a few days in Kosovo, it seemed like such a quaint little mountain country.
+
+I arrived in Belgrade early in the morning, making to the hostel by seven in the morning. I went straight to sleep, getting a good rest on a bus is always challenging. I didn't do anything in Belgrade, instead just caught up on sleep and planned a few things. Belgrade lacked culture, there wasn't much going on. Serbs themselves came across as strange people, no wonder the Albanian's hate them with a passion. After one night in Serbia, I boarded a bus to Vienna at nine in the evening. By midnight we arrived at the Serbia/Hungary border to a line of buses waiting to be processed by border security. The driver spoke over the intercom, speaking in Serbian, and a look of shock appeared on everyone's faces. I asked another passenger what's going on, he responded saying "The driver estimates we'll be waiting until seven in the morning to cross the border". What the fuck? That is seven hours away! How can something simple be so complicated? Listening to mutter from fellow passengers, I made out that this is a common occurrence. Apparently Hungarian border officials are lazy, and once they feel they've worked enough, they stop. Leaving those to cross the border waiting for the next shift of border security staff to start. Finally, at six in the morning we cross the border, making it to Vienna by ten. It was raining cats & dogs. I took the metro to my hostel, and arrived soaking wet. I specifically booked this hostel, which is out of the city, because it had cooking facilities. The only problem was, my day of arrival was a Sunday, meaning all the supermarkets were closed. Fucking hell.
+
+```{r}
+destinations <- list(
+  "Tirana" = list(label="Tirana", transport=NA, label_pos="right"),
+  "Peja" = list(label="Peja", transport="car", label_pos="top"),
+  "Belgrade" = list(label="Belgrade", transport="car", label_pos="right"),
+  "Vienna" = list(label="Vienna", transport="car", label_pos="left")
+)
+
+plot_route(
+  names(destinations), 
+  how = map_chr(destinations, "transport"), 
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
+  weight=3,
+  colour="blue"
+)
+```
+
+<br>
+
+It rained the whole time I was in Vienna, which was a shame because I never really got to obtain a feel for the city. I met an Australian guy in the hostel and we organised wandering through the city together, I also saw live classical music performed (Vivaldi's four seasons). Vienna is famous for classical music (Mozart, Franz Schubert, etc...), and is the main reason why I visited.
+
+# City
+
+I met a big burly Australian named Charles at the hostel, chatting with him was good fun, we organised to tour the city together the following day. Our hostel was 10km from the city (which was a bit painful), so training to the city was necessary. The trains are extremely punctual and clean. I didn't pay for public transport the whole time I was in Vienna, it was like 2.5&euro; a pop and not once did someone check my ticket, I was lucky I guess.
+
+Buildings in the city of Vienna are large and majestic, an air of regality surrounds them. Recently, the sale of marijuana has been legalised in Austria, weed dispensaries are scattered everywhere throughout the city. It felt kinda weird having insanely pristine, clean and regal buildings mixed together with weed-shops. It was 30&euro; a gram, which is triple the price of weed in NZ.
+
+After a beer or two Charles starting telling me about how he knocked up his ex-girlfriend, they split up just a couple months ago. He's been travelling for a year, has a two month old son which he has never seen, and his ex-girlfriend won't allow him to see. I wasn't sure how exactly how to respond to his woes, it felt like he'd been needing to talk about it for some time. I just huffed on cigarettes and nodded my head while he spoke.
+
+```{r city}
+carousel("cty", here("posts", "austria-vienna", "media_data", "city", "city.yml"))
+```
+
+<br>
+
+# Classical Music
+
+Classical music performances take place in the early evening at various locations in Vienna. The evening timing was an inconvenience with my hostel being so far from the city, so I relocated to an inner-city hostel.
+
+One evening I walked through the pouring rain and purchased a standing ticket to a performance of Vivaldi's Four Seasons. I arrived completely soaked, my raincoat didn't stand a chance in the thirty minute walk to the venue.
+
+The performance was macabre, marvelous. With three cello players, one harpsicord/piano player and seven violinists, one of which played lead. Classical music isn't my forte, but I recognised a lot of the pieces. The lead violinist played with such flair, prancing around the stage, it kind of reminded of how Jethro Tull moves on stage with the flute. The crowd was full of upper-class, me; in wet clothes, a shaggy beard and stationed in the cheap standing *seats*, stood out a little bit. The venue (Karlskirche) was also incredible, the orchestra performed using just hall acoustics, no amplification. Quite amazing really. This building was built in the 1800's specifically for the purpose of live music and it still does the job. Photography wasn't allowed during the performance, so photos are at a minimum.
+
+```{r c-mus}
+carousel("c-mus", here("posts", "austria-vienna", "media_data", "classical_music", "classical_music.yml"))
+```
+
+<br>
+
+# Museum
+
+I was growing a bit bored in Vienna, the rain was relentless. I had planned on doing a hike but everything I owned was saturated, the cold wind tore through my wet clothes and doing a hike in these conditions just was not a smart thing to do.
+
+I've grown a bit sick of museums in general, but because it was raining I seeked an activity I could do inside. The Art History museum was rated well, so I visited it. It was 22&euro; entry, quite steep. The first floor was dedicated to Egyptian & Roman antiques. I moved quickly through the Egyptian area because I had already seen a shitload of Egyptian museum content in Cairo.
+
+I was more interested in second floor, which contained oil paintings from various different eras and global locations.
+
+```{r museum}
+carousel("msm", here("posts", "austria-vienna", "media_data", "museum", "museum.yml"))
+```
+
+<br>
+
+# Wrap up
+
+This was my first stop in Western Europe, contrast between the Balkan and European prices is very noticeable. The streets are very sterile, no rubbish is seen and all public transport is punctual...to the second. Honestly, it was a strange feeling coming from wild countries such as Egypt, Jordan, Turkey & Albania then visiting Austria. It was a bit of culture shock. The sterile streets and sterile behaviour of Austrian locals was a tad boring. Mix this with expensive prices of goods and you've got a city that I would definitely not consider living in. I really wish I got to witness the grungy, underground of Austria, but i'm unsure if one exists?
+
+My next location was Köln, Germany. I managed to book a plane for relatively cheap.

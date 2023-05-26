@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 I woke in Skopje at ten in the morning, a little hungover from the night before. It was decided at the pub that I would accompany Emilio to Ohrid. I messaged him after waking, asking what time the bus was. He replied saying the bus left at 11am. A frantic rush ensued, packing up my belongings and squeezing in a shower. I really needed to wash my clothes, at this time, I had run out of clean underwear and both my pants are filthy. I ran to the bus station, working up a sweat, lugging my large backpack, looking like a lost tourist. I made it, only to find the bus actually left at 12.30pm. Haha, that gave us time to have breakfast.
@@ -33,18 +32,14 @@ destinations <- list(
   "Ohrid" = list(label="Ohrid", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
   colour="blue"
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+)
 ```
 
 <br>
@@ -56,7 +51,7 @@ Emilio wanted to busk in the city, this is how he makes extra cash to help him o
 I didn't follow a particular trail, I just made my way to the base of the hills and made my way upwards. When I wanted to know my precise location I used MapsMe for assistance. Once again, MapsMe is awesome! The hike ended up being a large day, I was walking for five or six hours and covered quite some distance. The lake view from the top of the hills was spectacular. I didn't wear hiking boots, I wore my Tevas instead. They were great for the majority of the trail, but on the down slope they struggle, and by the end of the day my legs were quite sore.
 
 ```{r hike}
-carousel("hke", yaml.load_file(here("posts", "north-macedonia-ohrid", "media_data", "hike", "hike.yml")))
+carousel("hke", here("posts", "north-macedonia-ohrid", "media_data", "hike", "hike.yml"))
 ```
 
 <br>
@@ -74,7 +69,7 @@ Ohrid had a really great feel to it. I imagine in summer it is a bustling metrop
 Emilio and I also split here. He decided to visit Istanbul, I think he was influenced by my constant chatter of my love for Turkey. Travelling with him was really fun, it was good having a sidekick again, someone to look after the bags while the other goes toilet, all those small things...I'm gonna miss travelling with him, we'll meet up in Berlin because he is moving there to pursue a career as a musician.
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "north-macedonia-ohrid", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "north-macedonia-ohrid", "media_data", "misc", "misc.yml"))
 ```
 
 <br>

@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 My night bus to Sofia left at ten in the evening. I purchased a neck pillow for ₺40TL (\$3NZD) which made sleeping on the journey comfortable, and saved my neck. When the bus arrived at the Turkey/Bulgaria border, around two in the morning, I was fast asleep and a young guy on the bus had to wake me up. If he hadn't woken me up, I probably would've gone through the checkpoint with my passport unchecked, been discovered, and got into a lot of trouble. Passport checks at the border took ages (around two hours)! Everything moved very slowly, it was two in the morning, and everyone was tired. A group of young Turks were on the bus, visiting Bulgaria to spend time at the casinos. Because Turkey is a Muslim country, gambling is illegal, so they all go to Bulgaria to blow money, haha!
@@ -29,18 +28,14 @@ destinations <- list(
   "Sofia" = list(label="Sofia", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -54,7 +49,7 @@ I had a great time exploring the city. The day I visited, the weather was perfec
 I picked up a nice mustard-coloured collared shirt, and a black merino wool jumper at a second-hand store for лв19LEV (\$17NZD), as well.
 
 ```{r city}
-carousel("city", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "city", "city.yml")))
+carousel("city", here("posts", "bulgaria-sofia", "media_data", "city", "city.yml"))
 ```
 
 <br>
@@ -66,7 +61,7 @@ While in Bulgaria, I really wanted to make an effort to explore nature. The fore
 The forest was really green! A military base was situated at the foot of the hills, so certain areas were fenced off by barbed wire and inaccessible. Waterfalls cascaded down the hills and once at the top, a fantastic view of the city could be seen. The hike itself wasn't too strenuous, only about three hours, but it was great to breathe the fresh air and get my hiking boots muddy.
 
 ```{r hike}
-carousel("hke", yaml.load_file(here("posts", "bulgaria-sofia", "media_data", "hike", "hike.yml")))
+carousel("hke", here("posts", "bulgaria-sofia", "media_data", "hike", "hike.yml"))
 ```
 
 <br>

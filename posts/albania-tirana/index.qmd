@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 I travelled to Tirana from Ohrid by hitchhiking, a French girl, named Dounya, and the hostel owner, from the Ohrid hostel, talked me into it. I took the public bus to a village on the outskirts of Ohrid and attempted to stick out my thumb. After forty-five minutes or so I had no luck hitchhiking, so I found some cardboard and wrote "TIRANA" on it hoping it would increase my chances of being picked up. It didn't. I walked along the main road for another hour or so. Finally, a nice Audi pulled over! The car occupants yelled at me through the window "Are you Serbian?", obviously, I responded "No." and was let into the car. They all had big grins on their faces and were excited to be picking up a hitchhiker/foreigner. The next questions they asked, before we had gotten too far were: "Do you carry drugs?", "Weapons on you?" (we were crossing a border), to which I responded "No." as well, they then handed me a cold bottle of water and a fresh packet of biscuits. The three guys in the car were all Albanian, childhood friends who were thirty-seven years old, and living outside of Albania now. One of them attended psycho-therapy in Tirana and the three childhood friends were making a road trip out of it. The driver, the *smart* one of the group, now lived in Denmark and hadn't seen his friends in six years or so. The one attending therapy sat in the back with me. The last guy sat in the front and spoke little English.
@@ -29,18 +28,14 @@ destinations <- list(
   "Tirana" = list(label="Tirana", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |>
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -60,7 +55,7 @@ Albania has a rich history, and the free tour described it quite well. However, 
 The best thing about these free tours is meeting other people. After the tour, I had lunch with two French girls and a German girl. After lunch, I received a message from Douyna saying that she had arrived in Tirana, and wanted to catch up for coffee.
 
 ```{r city}
-carousel("city", yaml.load_file(here("posts", "albania-tirana", "media_data", "city", "city.yml")))
+carousel("city", here("posts", "albania-tirana", "media_data", "city", "city.yml"))
 ```
 
 {{< video https://youtu.be/795CdYJ4N10 >}}
@@ -83,8 +78,8 @@ The next day, Dounya & I hung out at the park. It was a staunching hot day but r
 
 The social interactions I had with locals during my time in Albania were something special (spoiler alert...it continues into Kosovo), everyone was extremely friendly, nice & accommodating. Never once did I feel unsafe or unwelcome, even though the traffic and driving behaviour is a bit erratic (for example, roundabouts exist but have no road rules associated: first there, first served).
 
-I was a bit bummed out about Dounya flaking. Our next destination together was going to be Sckorde, in the north of Albania. But after some deep thought, I decided to make my way further north; with a final destination of Vienna in mind, but making a two/three-day pitstop in Belgrade. I only chose Belgrade because it was en route to Vienna. And Vienna was only chosen because it was the cheapest port to catch a bus to Kôln from. I'm meeting friends in Germany on the eighteenth of May, and I underestimated how difficult it was to travel around Europe. So I ditched Dounya (I think, to her liking as well), and booked an international bus, with a stopover in Kosovo, Peje, arriving at one in the morning in Belgrade.
+I was a bit bummed out about Dounya flaking. Our next destination together was going to be Shkodër, in the north of Albania. But after some deep thought, I decided to make my way further north; with a final destination of Vienna in mind, but making a two/three-day pitstop in Belgrade. I only chose Belgrade because it was en route to Vienna. And Vienna was only chosen because it was the cheapest port to catch a bus to Köln from. I'm meeting friends in Germany on the eighteenth of May, and I underestimated how difficult it was to travel around Europe. So I ditched Dounya (I think, to her liking as well), and booked an international bus, with a stopover in Peja, Kosovo, arriving at one in the morning in Belgrade.
 
-This was a short stint in Albania, which was a bit of a bummer. Other travellers kept showing me incredible photography of hiking, canyons & beaches in Albania, none of which I did...bit of a bummer. I think I travel better alone, or with Trav; when travelling with others, I tend to not meet as many people because I'm already concerned with those that I am hanging out with, on a side note, I really miss travelling with Trav, he's a great traveller.
+This was a short stint in Albania, which was a bit of a bummer. Other travellers kept showing me incredible photography of hiking, canyons & beaches in Albania, none of which I did...bit of a bummer. I think I travel better alone, or with Trav; when travelling with others, I tend to not meet as many people because I'm already occupied with those that I am hanging out with, on a side note, I really miss travelling with Trav, he's a great travel companion.
 
 ![](media_data/misc/_DSC4951.JPG)

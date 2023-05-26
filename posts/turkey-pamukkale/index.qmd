@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 The bus to Pamukkale from Antalya took four hours. It was actually an intercity bus to Denizli, which is about a fifteen minute drive to Pamukkale. We found a minibus to Pamukkale for ₺14TL and paid the ₺200TL entrance fee into the compound.
@@ -32,23 +31,20 @@ destinations <- list(
 
 attractions <- list("Pamukkale" = list(lat = 37.91987482668658, lng = 29.14308534187825))
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
+  colour="blue"
 ) |> 
-  leaflet::addScaleBar(position = "bottomleft") |> 
   leaflet::addAwesomeMarkers(
     lat = as.vector(map_dbl(attractions, "lat")), 
     lng = as.vector(map_dbl(attractions, "lng")),
     label = names(attractions)
   )
 
-m$x$options$zoomControl <- TRUE
-m
 ```
 
 <br>
@@ -58,7 +54,7 @@ m
 My god, the calcite flats were pretty! We had to remove our shoes to walk upon them, I'm not sure the precise reason why, but muddy shoes would definitely stand out on the white backdrop.
 
 ```{r calcite_flats}
-carousel("calcite_flats", yaml.load_file(here("posts", "turkey-pamukkale", "media_data", "calcite_flats", "calcite_flats.yml")))
+carousel("calcite_flats", here("posts", "turkey-pamukkale", "media_data", "calcite_flats", "calcite_flats.yml"))
 ```
 
 <br>
@@ -70,7 +66,7 @@ Pamukkale is also the site of huge ancient city ruins which includes a Roman amp
 We finished the day by swimming in a pool heated by hot water from the spring. It was neat, the water felt somewhat viscous and the warmth was relaxing. It was a tad expensive, but worth the money. Old stones and blocks from the city are scattered throughout the pool.
 
 ```{r ruins}
-carousel("ruins", yaml.load_file(here("posts", "turkey-pamukkale", "media_data", "ruins", "ruins.yml")))
+carousel("ruins", here("posts", "turkey-pamukkale", "media_data", "ruins", "ruins.yml"))
 ```
 
 <br>

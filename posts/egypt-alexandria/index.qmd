@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Arriving back in Cairo from [Bahariya](https://shaggycamel-travelblog.netlify.app/posts/egypt-bahariya-oasis/) our next destination planned was Aswan, Egypt's southern most city. However, Trav & I counted up how many days remained on our visas and re-estimated how many nights to stay at destinations lined up (which was around 3/4 nights each), and it came out that we had about five days spare on our 30 day visas. Because of this, we changed tact a bit and decided to journey to Alexandria, Egypt's second largest & northern most city situated on the Mediterranean coast. We had originally planned on skipping Alexandria all together. The following morning we went to the tourist intercity bus station (GoBus) and purchased tickets to Alexandria, leaving Cairo at 1.30pm, for £100EGP each (\$5NZD).
@@ -29,17 +28,14 @@ destinations <- list(
   "Alexandria" = list(label="Alexandria", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -62,7 +58,7 @@ One thing I realised moving on from this mosque is that, in general, streets sur
 <br>
 
 ```{r mosque}
-carousel("mosque", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "mosque", "mosque.yml")))
+carousel("mosque", here("posts", "egypt-alexandria", "media_data", "mosque", "mosque.yml"))
 ```
 
 # Fish Market
@@ -74,7 +70,7 @@ The next fish market supposedly lined the entry to Qaitbay Fort. Sadly, this was
 <br>
 
 ```{r fish-market}
-carousel("fish_market", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "fish_market", "fish_market.yml")))
+carousel("fish_market", here("posts", "egypt-alexandria", "media_data", "fish_market", "fish_market.yml"))
 ```
 
 # Citadel Qaitbey Fort
@@ -84,7 +80,7 @@ On the peninsula a citadel call Qaitbay Fort was built in the 1470's. Aside from
 <br>
 
 ```{r qaitbey-fort}
-carousel("qaitbey_fort", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "qaitbey_fort", "qaitbey_fort.yml")))
+carousel("qaitbey_fort", here("posts", "egypt-alexandria", "media_data", "qaitbey_fort", "qaitbey_fort.yml"))
 ```
 
 # GoBus Phone Reclamation Attempt
@@ -111,7 +107,7 @@ The Roman Theatre shows a slice of life in 200AD. I liked the way the Theatre wa
 <br>
 
 ```{r roman-theatre}
-carousel("roman_theatre", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "roman_theatre", "roman_theatre.yml")))
+carousel("roman_theatre", here("posts", "egypt-alexandria", "media_data", "roman_theatre", "roman_theatre.yml"))
 ```
 
 # The Catacombs
@@ -121,7 +117,7 @@ Artefacts at the Catacombs were interesting, they displayed images showing a mix
 <br>
 
 ```{r catacombs}
-carousel("catacombs", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "catacombs", "catacombs.yml")))
+carousel("catacombs", here("posts", "egypt-alexandria", "media_data", "catacombs", "catacombs.yml"))
 ```
 
 # Aswan Sleeper Train
@@ -133,7 +129,7 @@ Now this was an absolute debacle! We spent nearly an hour at the station just tr
 We went out for beers that evening to celebrate my birthday. Drinking in Egypt feels like a sin, the bars (if they can be found) have tinted windows and are dark and seedy inside. We smashed back a few beers and got a burger on the way home.
 
 ```{r birthday}
-carousel("birthday", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "birthday", "birthday.yml")))
+carousel("birthday", here("posts", "egypt-alexandria", "media_data", "birthday", "birthday.yml"))
 ```
 
 # Aswan Sleeper Train - cont
@@ -143,5 +139,5 @@ We set aside a couple hours to sort this out, checking out of our hotel just in 
 Unsuccessful, we felt defeated and went back to the hotel to reevaluate. Our next best option was to get a bus back to Cairo and attempt to purchase a sleeper train ticket from there. This part of the saga went quite smoothly. We swooped in on a GoBus with minutes to spare, arrived at Cairo train station and purchased a sleeper ticket using **credit card** and hung out at the station playing cards for a bit. Tomorrow we will wake up in Aswan to begin the next chapter of our travels.
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-alexandria", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "egypt-alexandria", "media_data", "misc", "misc.yml"))
 ```

@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Our ferry crossing from Nuweibaa to Aqaba took a whole day, it wasn't the journey itself that took a long time, it was the amount of security & passport checks and waiting around for *who knows what*. After leaving the hostel around 9am, we met Mike & Anita (M&A) at the ferry terminal and were sitting on the boat by 1pm. The boat didn't depart from the dock until around 3.30pm. Trav & I were exhausted from a terrible sleep the night prior, complete with bed bugs, flies & mosquitoes, so we essentially slept the whole three-hour crossing. Jordan is an hour ahead of Egypt, so we arrived around 7.30pm local time, split a taxi to the city with M&A, said our farewells to each other (knowing we'll probably meet again), and walked to our hostel.
@@ -30,17 +29,14 @@ destinations <- list(
   "Aqaba" = list(label="Aqaba", transport="flight", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -58,7 +54,7 @@ After purchasing some small items, we spent the majority of the day at the publi
 <br>
 
 ```{r beach}
-carousel("bch", yaml.load_file(here("posts", "jordan-aqaba", "media_data", "beach", "beach.yml")))
+carousel("bch", here("posts", "jordan-aqaba", "media_data", "beach", "beach.yml"))
 ```
 
 # Wrap up

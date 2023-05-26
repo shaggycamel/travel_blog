@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 We arrived at Antalya airport and were on the tram to our hostel by six in the morning. Amazingly, a tram runs from the airport to the city at, seemingly, all hours of the day. After weaving our way through the old-town cobblestone streets on foot, we found an employee sleeping on the couch at the hostel. He awoke, and mumbled sleepily that check-in wasn't until one in the afternoon, "We got nowhere to go, bro!", was our response. He invited us into the worker's quarters, and all three of us slept on the couch together. We booked three nights in Antalya and hadn't necessarily planned to do any activities, although we ended up visiting two different waterfalls and swimming in the ocean. The main bulk of time here was spent planning our upcoming five-day hike in the Lucian Way and socialising with others at the hostel bar.
@@ -29,18 +28,14 @@ destinations <- list(
   "Antalya" = list(label="Antalya", transport="flight", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -58,7 +53,7 @@ After purchasing supplies from the hiking store, we caught a bus to Duden Waterf
 After snapping a few photos, we walked forty minutes or so to the swimming beach. Even though the weather was cold and windy, Trav was eager to take his first dip in the Mediterranean, so we took a satisfying cold plunge and caught the bus home for a few drinks with others at the hostel.
 
 ```{r duden}
-carousel("duden", yaml.load_file(here("posts", "turkey-antalya", "media_data", "duden_waterfall", "duden_waterfall.yml")))
+carousel("duden", here("posts", "turkey-antalya", "media_data", "duden_waterfall", "duden_waterfall.yml"))
 ```
 
 <br>
@@ -72,7 +67,7 @@ We attempted to climb a fence and do some of our own hiking along the riverside,
 That evening, we found a Palestinian guy (Bara) who was keen to join us on the Lycian way. So we have a hiking companion!
 
 ```{r kursunlu}
-carousel("kursunlu", yaml.load_file(here("posts", "turkey-antalya", "media_data", "kurşunlu_waterfall", "kurşunlu_waterfall.yml")))
+carousel("kursunlu", here("posts", "turkey-antalya", "media_data", "kurşunlu_waterfall", "kurşunlu_waterfall.yml"))
 ```
 
 <br>
@@ -86,5 +81,5 @@ carousel("kursunlu", yaml.load_file(here("posts", "turkey-antalya", "media_data"
 For our next destination, we lined up a small side trip to Pamukkale to visit the travertine flats (travertine is calcium like substance) followed by two nights in Göreme (Capadocia) to witness the hot air balloons and do some hiking. This trip was in the complete opposite direction to our initial plan, so we packed enough clothes, necessary electronics and hygiene items into our day packs (my new 30-litre bag!!!), and stored our large backpacks at the hostel in Antalya for four nights. After this short stint, we'll come back to Antalya, pick up our bags and make our way to Kaş to meet Bara and begin hiking the Lucian way.
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-antalya", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "turkey-antalya", "media_data", "misc", "misc.yml"))
 ```

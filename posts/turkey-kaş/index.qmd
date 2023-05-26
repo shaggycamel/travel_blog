@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Travelling by night bus is never fun, the upside of it is a night of accommodation and transportation are paid together. Slinking back to the hostel in Antalya in the early morning, we re-packed our backpacks and stocked up on a few supplies like vape juice and cash monies. It was no hassle catching a Kaş bus, they departed every forty-five minutes, and upon arriving at the bus terminal, we were instantly ushered onto the next awaiting bus - "Yalah, yalah, yalah" (let's go).
@@ -30,18 +29,14 @@ destinations <- list(
   "Kaş" = list(label="Kaş", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations),
-  how = na.omit(map_chr(destinations, "transport")),
-  label_text = as.vector(map_chr(destinations, "label")),
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"),
+  label_text = map_chr(destinations, "label"),
+  label_position = map_chr(destinations, "label_pos"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -59,7 +54,7 @@ I had a terrible sleep that night, barely resting at all. The next day I *had* t
 # Beach
 
 ```{r beach}
-carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "media_data", "beach", "beach.yml")))
+carousel("bch", here("posts", "turkey-kaş", "media_data", "beach", "beach.yml"))
 ```
 
 <br>
@@ -69,7 +64,7 @@ carousel("bch", yaml.load_file(here("posts", "turkey-kaş", "media_data", "beac
 After two nights in Kaş, it didn't really feel like I had visited because most time was spent in bed sick or with a throbbing headache. I tested for covid, and it came back negative but *I* don't think RAT tests work anyway. *Have a feeling the cigarettes contributed to the flu.* Our next destination was Fethiye, where we will prepare for the hike (it feels like there is always more to prepare). We missed the 1.30pm bus for Fethiye by two or so minutes but boarded the 2.45pm bus instead, they leave every hour and a bit. I'm amazed at the frequency of intercity transportation in Turkey, it is great! But, I don't understand where all these people are going, and why?
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "turkey-kaş", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "turkey-kaş", "media_data", "misc", "misc.yml"))
 ```
 
 {{< video https://youtu.be/_8YIpb6-hm0 >}}

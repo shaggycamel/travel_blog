@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 The ticket machine at Aswan train station was not working when we attempted to purchase tickets for the 4pm train to Luxor, these small things are typical in Egypt. We waited until fifteen minutes before departure before trying one last time. The man accepted \$15USD **cash** for one, handing us two tickets to Luxor with unmarked seat numbers. Walking through the station multiple officials stopped us to inspect our tickets, cleaners followed ensuring we got to the correct platform then asked for a tip, a train worker took our bags stored them in the overhead space then held out his hand for a tip. I wish to be left alone sometimes, these faint but "necessary" tip-worthy acts are starting to piss me off...
@@ -29,17 +28,14 @@ destinations <- list(
   "Luxor" = list(label="Luxor", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -66,7 +62,7 @@ The crowds at the Luxor Temple were insane. Just outside, hordes of locals had c
 <br>
 
 ```{r luxor_temple}
-carousel("luxor_temple", yaml.load_file(here("posts", "egypt-luxor", "media_data", "luxor_temple", "luxor_temple.yml")))
+carousel("luxor_temple", here("posts", "egypt-luxor", "media_data", "luxor_temple", "luxor_temple.yml"))
 ```
 
 # Tour
@@ -86,7 +82,7 @@ Joining the tour was a great way to meet other tourists. We got along with a few
 <br>
 
 ```{r tour}
-carousel("tr", yaml.load_file(here("posts", "egypt-luxor", "media_data", "tour", "tour.yml")))
+carousel("tr", here("posts", "egypt-luxor", "media_data", "tour", "tour.yml"))
 ```
 
 # Hot Air Balloon
@@ -102,7 +98,7 @@ It was fun, and the views were great! For me, once is enough, I don't think I'll
 <br>
 
 ```{r hot_air_balloon}
-carousel("hot_air_balloon", yaml.load_file(here("posts", "egypt-luxor", "media_data", "hot_air_balloon", "hot_air_balloon.yml")))
+carousel("hot_air_balloon", here("posts", "egypt-luxor", "media_data", "hot_air_balloon", "hot_air_balloon.yml"))
 ```
 
 # Karnak Temple
@@ -112,7 +108,7 @@ After the Balloon, in the afternoon we visited Karnak Temple. Again, this temple
 <br>
 
 ```{r karnak_temple}
-carousel("karnak_temple", yaml.load_file(here("posts", "egypt-luxor", "media_data", "karnak_temple", "karnak_temple.yml")))
+carousel("karnak_temple", here("posts", "egypt-luxor", "media_data", "karnak_temple", "karnak_temple.yml"))
 ```
 
 # Wrap Up

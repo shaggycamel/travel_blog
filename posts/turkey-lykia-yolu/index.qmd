@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 
 ```{r imports}
 library(here)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Probably the main reason we visited Turkey was to hike a section of the Lykia Yolu (Lycian Way in English, but literally every other language uses "Lykia"...🤷‍♂️). Trav was the main driver on this and did most of the planning, although we remained flexible and freestyled bits here and there. We settled for a five-day hike, freedom camping along the way with no designated or prescribed stops, deciding on just walking until we felt the need to set up camp and rest with an underlying goal of trekking around 15km per day.
@@ -38,7 +38,7 @@ During the last hour-and-a-half of the day, we lugged our heavy bags up a steep 
 *\*The Lykia app alerted us to the shanti shelter that existed at our camp spot.*
 
 ```{r day-one}
-carousel("one_day", yaml.load_file(here("posts", "turkey-lykia-yolu", "media_data", "day1", "day1.yml")))
+carousel("one_day", here("posts", "turkey-lykia-yolu", "media_data", "day1", "day1.yml"))
 ```
 
 <br>
@@ -52,7 +52,7 @@ Scoffing down peanut butter wraps for breakfast we set off in the rain. Despite 
 My body was feeling slightly achy from sleeping on a thin foam mat, but surprisingly my knees were holding up and there was no sign of blisters. We stopped around 5pm, after walking thirteen kilometres and set up camp sheltering under a pine tree. Because we stopped earlyish, we scrounged together kindling and wood for a fire, purely lighting one because we had the time and for fun, not for the necessity of cooking food or anything. A few other hikers walked past saying "hello", none stopping to set up camp. It seems most doing the Lykia Yolu stay in guest houses, which there is no shortage of.
 
 ```{r day-two}
-carousel("two_day", yaml.load_file(here("posts", "turkey-lykia-yolu", "media_data", "day2", "day2.yml")))
+carousel("two_day", here("posts", "turkey-lykia-yolu", "media_data", "day2", "day2.yml"))
 ```
 
 <br>
@@ -70,7 +70,7 @@ The hike after lunch was extremely steep, ropes had been placed at the steepest 
 That evening we met our first tenting companion. We didn't introduce ourselves, waving in a friendly manner instead, he set up a hundred metres or so away from us. The sunset was absolutely stunning.
 
 ```{r day-three}
-carousel("three_day", yaml.load_file(here("posts", "turkey-lykia-yolu", "media_data", "day3", "day3.yml")))
+carousel("three_day", here("posts", "turkey-lykia-yolu", "media_data", "day3", "day3.yml"))
 ```
 
 <br>
@@ -86,7 +86,7 @@ I would describe the terrain after lunch as "treacherous". We moved horizontally
 Wind howled through the camping area! After slurping our two-minute noodles we spent about an hour searching for a flat spot to pitch the tent, sheltered from the wind, had a nice view and ideally rain shelter. The perfect spot didn't exist, but we found a place that had everything, excluding rain shelter, instead, it had three plastic deck chairs. We ate dinner in a comfortable seated position that evening.
 
 ```{r day-four}
-carousel("four_day", yaml.load_file(here("posts", "turkey-lykia-yolu", "media_data", "day4", "day4.yml")))
+carousel("four_day", here("posts", "turkey-lykia-yolu", "media_data", "day4", "day4.yml"))
 ```
 
 <br>
@@ -106,7 +106,7 @@ Luckily, the local bus passed by, swooping in to pick us up as if it knew where 
 {{< video https://youtu.be/NdRFwqEQUzA >}}
 
 ```{r day-five}
-carousel("five_day", yaml.load_file(here("posts", "turkey-lykia-yolu", "media_data", "day5", "day5.yml")))
+carousel("five_day", here("posts", "turkey-lykia-yolu", "media_data", "day5", "day5.yml"))
 ```
 
 <br>

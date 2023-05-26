@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 We secured a taxi from the Wadi Rum visitors centre to Wadi Musa for 40JOD, showing up at a hostel with no booking, a capsule room (like Japan) with a double bed was available. We booked two nights.
@@ -29,17 +28,14 @@ destinations <- list(
   "Wadi Musa" = list(label="Wadi Musa", transport="car", label_pos="top")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -63,7 +59,7 @@ All up we hiked around 20km, it was a big day. I started to lose gas around 13km
 <br>
 
 ```{r one_petra}
-carousel("one_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "media_data", "petra_1", "petra_1.yml")))
+carousel("one_petra", here("posts", "jordan-wadi-musa", "media_data", "petra_1", "petra_1.yml"))
 ```
 
 # Petra Day Two
@@ -77,7 +73,7 @@ After leaving the cafe we explored the outer-lying buildings where few others he
 <br>
 
 ```{r two_petra}
-carousel("two_petra", yaml.load_file(here("posts", "jordan-wadi-musa", "media_data", "petra_2", "petra_2.yml")))
+carousel("two_petra", here("posts", "jordan-wadi-musa", "media_data", "petra_2", "petra_2.yml"))
 ```
 
 # Wrap up

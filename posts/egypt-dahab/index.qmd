@@ -17,8 +17,7 @@ knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
 ```{r imports}
 library(here)
 library(purrr)
-library(mapBliss)
-source(here("functions", "carousel.R"))
+library(blogme)
 ```
 
 Dahab is a really relaxed place on the Sinai Coast of the Red Sea with a beautiful mountain range to the north that makes for a picturesque backdrop. We arrived in the evening after a twenty-three-hour bus journey, there were five or six police checkpoints between Cairo and Dahab which is why the trip ended up being so lengthy. I'm not sure why this area of Egypt is so heavily guarded. After walking to our hostel from the bus-stop we went straight to bed. Darcy, whom we met in Aswan, was in our (four person) dormitory.
@@ -30,17 +29,14 @@ destinations <- list(
   "Dahab" = list(label="Dahab", transport="car", label_pos="bottom")
 )
 
-m <- plot_hybrid_route_flex(
+plot_route(
   names(destinations), 
-  how = na.omit(map_chr(destinations, "transport")), 
-  label_position = as.vector(map_chr(destinations, "label_pos")),
+  how = map_chr(destinations, "transport"), 
+  label_position = map_chr(destinations, "label_pos"),
+  label_text = map_chr(destinations, "label"),
   weight=3,
-  colour="blue",
-) |> 
-  leaflet::addScaleBar(position = "bottomleft")
-
-m$x$options$zoomControl <- TRUE
-m
+  colour="blue"
+)
 ```
 
 <br>
@@ -62,7 +58,7 @@ We enjoyed volleyball so much that we spent a whole other day playing.
 <br>
 
 ```{r volleyball}
-carousel("vball", yaml.load_file(here("posts", "egypt-dahab", "media_data", "volleyball", "volleyball.yml")))
+carousel("vball", here("posts", "egypt-dahab", "media_data", "volleyball", "volleyball.yml"))
 ```
 
 # Blue Hole
@@ -78,7 +74,7 @@ Regardless of me being a wimp, snorkelling the Blue Hole was awesome! We chilled
 <br>
 
 ```{r blue-hole}
-carousel("bluehl", yaml.load_file(here("posts", "egypt-dahab", "media_data", "blue_hole", "blue_hole.yml")))
+carousel("bluehl", here("posts", "egypt-dahab", "media_data", "blue_hole", "blue_hole.yml"))
 ```
 
 # Hike
@@ -94,7 +90,7 @@ It was great getting out and doing a hike, strengthening our friendship with Mik
 <br>
 
 ```{r hike}
-carousel("hk", yaml.load_file(here("posts", "egypt-dahab", "media_data", "hike", "hike.yml")))
+carousel("hk", here("posts", "egypt-dahab", "media_data", "hike", "hike.yml"))
 ```
 
 # Wrap up
@@ -106,5 +102,5 @@ Our bus was three hours late. We took the bus to Nuweibaa so we could ferry to J
 We only had £1500EGP left so we needed to ration what we had until arriving in Jordan.
 
 ```{r misc}
-carousel("misc", yaml.load_file(here("posts", "egypt-dahab", "media_data", "misc", "misc.yml")))
+carousel("misc", here("posts", "egypt-dahab", "media_data", "misc", "misc.yml"))
 ```
